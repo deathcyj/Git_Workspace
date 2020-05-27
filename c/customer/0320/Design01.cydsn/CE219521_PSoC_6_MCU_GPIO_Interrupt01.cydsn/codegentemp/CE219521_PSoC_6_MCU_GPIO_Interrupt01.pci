@@ -1,0 +1,11 @@
+# CE219521_PSoC_6_MCU_GPIO_Interrupt01
+# 2020-05-27 09:04:57Z
+
+dont_use_location p4usbcell -1 -1 0
+dont_use_location USB -1 -1 0
+dont_use_location usbcell -1 -1 0
+set_location "ClockGenBlock" CLK_GEN -1 -1 0
+set_io "CY_CPUSS_SWJ_SWCLK_TCLK(0)" iocell 6 7
+set_io "CY_CPUSS_SWJ_SWDIO_TMS(0)" iocell 6 6
+set_io "KIT_BTN1(0)" iocell 0 4
+set_io "KIT_LED_RED(0)" iocell 13 7

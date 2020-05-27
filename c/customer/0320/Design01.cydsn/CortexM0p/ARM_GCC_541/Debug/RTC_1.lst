@@ -1,0 +1,2290 @@
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0plus
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"RTC_1.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.RTC_1_Start,"ax",%progbits
+  20              		.align	2
+  21              		.global	RTC_1_Start
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	RTC_1_Start, %function
+  25              	RTC_1_Start:
+  26              	.LFB111:
+  27              		.file 1 "Generated_Source\\PSoC6\\RTC_1.c"
+   1:Generated_Source\PSoC6/RTC_1.c **** /*******************************************************************************
+   2:Generated_Source\PSoC6/RTC_1.c **** * \file RTC_1.c
+   3:Generated_Source\PSoC6/RTC_1.c **** * \version 2.0
+   4:Generated_Source\PSoC6/RTC_1.c **** *
+   5:Generated_Source\PSoC6/RTC_1.c **** * This file provides the source code to the API for the RTC Component.
+   6:Generated_Source\PSoC6/RTC_1.c **** *
+   7:Generated_Source\PSoC6/RTC_1.c **** ********************************************************************************
+   8:Generated_Source\PSoC6/RTC_1.c **** * Copyright 2016-2017, Cypress Semiconductor Corporation. All rights reserved.
+   9:Generated_Source\PSoC6/RTC_1.c **** * You may use this file only in accordance with the license, terms, conditions,
+  10:Generated_Source\PSoC6/RTC_1.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  11:Generated_Source\PSoC6/RTC_1.c **** * the software package with which this file was provided.
+  12:Generated_Source\PSoC6/RTC_1.c **** *******************************************************************************/
+  13:Generated_Source\PSoC6/RTC_1.c **** 
+  14:Generated_Source\PSoC6/RTC_1.c **** #include "RTC_1.h"
+  15:Generated_Source\PSoC6/RTC_1.c **** 
+  16:Generated_Source\PSoC6/RTC_1.c **** /** Indicates whether or not the RTC_1 has been initialized. 
+  17:Generated_Source\PSoC6/RTC_1.c **** *  The variable is initialized to 0 and set to 1 the first time 
+  18:Generated_Source\PSoC6/RTC_1.c **** *  RTC_1_Start() is called. This allows the Component to 
+  19:Generated_Source\PSoC6/RTC_1.c **** *  restart without reinitialization after the first call to 
+  20:Generated_Source\PSoC6/RTC_1.c **** *  the RTC_1_Start() routine.
+  21:Generated_Source\PSoC6/RTC_1.c **** */
+  22:Generated_Source\PSoC6/RTC_1.c **** uint8_t RTC_1_initVar = 0u;
+  23:Generated_Source\PSoC6/RTC_1.c **** 
+  24:Generated_Source\PSoC6/RTC_1.c **** /** The instance-specific configuration structure. This should be used in the 
+  25:Generated_Source\PSoC6/RTC_1.c **** *  associated RTC_1_Init() function.
+  26:Generated_Source\PSoC6/RTC_1.c **** */
+  27:Generated_Source\PSoC6/RTC_1.c **** cy_stc_rtc_config_t const RTC_1_config =
+  28:Generated_Source\PSoC6/RTC_1.c **** {
+  29:Generated_Source\PSoC6/RTC_1.c ****     /* Initiate time and date */
+  30:Generated_Source\PSoC6/RTC_1.c ****     .sec       = RTC_1_INITIAL_DATE_SEC,
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 2
+
+
+  31:Generated_Source\PSoC6/RTC_1.c ****     .min       = RTC_1_INITIAL_DATE_MIN,
+  32:Generated_Source\PSoC6/RTC_1.c ****     .hour      = RTC_1_INITIAL_DATE_HOUR,
+  33:Generated_Source\PSoC6/RTC_1.c ****     .hrFormat  = RTC_1_INITIAL_DATE_HOUR_FORMAT,
+  34:Generated_Source\PSoC6/RTC_1.c ****     .dayOfWeek = RTC_1_INITIAL_DATE_DOW,
+  35:Generated_Source\PSoC6/RTC_1.c ****     .date      = RTC_1_INITIAL_DATE_DOM,
+  36:Generated_Source\PSoC6/RTC_1.c ****     .month     = RTC_1_INITIAL_DATE_MONTH,
+  37:Generated_Source\PSoC6/RTC_1.c ****     .year      = RTC_1_INITIAL_DATE_YEAR,
+  38:Generated_Source\PSoC6/RTC_1.c **** };
+  39:Generated_Source\PSoC6/RTC_1.c **** 
+  40:Generated_Source\PSoC6/RTC_1.c ****     /** RTC_1_rtcDstStatus variable which is for DST feature and is 
+  41:Generated_Source\PSoC6/RTC_1.c ****     *  called in Cy_RTC_Interrupt() PDL driver function. This variable is 
+  42:Generated_Source\PSoC6/RTC_1.c ****     *  defined as true if DST is enabled and as false if DST is disabled
+  43:Generated_Source\PSoC6/RTC_1.c ****     */
+  44:Generated_Source\PSoC6/RTC_1.c ****     bool RTC_1_rtcDstStatus = false;
+  45:Generated_Source\PSoC6/RTC_1.c **** 
+  46:Generated_Source\PSoC6/RTC_1.c **** #if(0u != RTC_1_INITIAL_DST_STATUS)
+  47:Generated_Source\PSoC6/RTC_1.c **** 
+  48:Generated_Source\PSoC6/RTC_1.c ****     /** The instance-specific daylight saving time structure. This should be 
+  49:Generated_Source\PSoC6/RTC_1.c ****     * used in the associated DTS functions.
+  50:Generated_Source\PSoC6/RTC_1.c ****     */
+  51:Generated_Source\PSoC6/RTC_1.c ****     cy_stc_rtc_dst_t const RTC_1_dstConfig =
+  52:Generated_Source\PSoC6/RTC_1.c ****     {
+  53:Generated_Source\PSoC6/RTC_1.c ****         /* DST Start time */
+  54:Generated_Source\PSoC6/RTC_1.c ****         .startDst.format      = (cy_en_rtc_dst_format_t) RTC_1_INITIAL_DST_DATE_TYPE,
+  55:Generated_Source\PSoC6/RTC_1.c ****         .startDst.hour        = RTC_1_INITIAL_DST_START_HRS,
+  56:Generated_Source\PSoC6/RTC_1.c ****         .startDst.dayOfMonth  = RTC_1_INITIAL_DST_START_DOM,
+  57:Generated_Source\PSoC6/RTC_1.c ****         .startDst.weekOfMonth = RTC_1_INITIAL_DST_START_WOM,
+  58:Generated_Source\PSoC6/RTC_1.c ****         .startDst.dayOfWeek   = RTC_1_INITIAL_DST_START_DOW,
+  59:Generated_Source\PSoC6/RTC_1.c ****         .startDst.month       = RTC_1_INITIAL_DST_START_MONTH,
+  60:Generated_Source\PSoC6/RTC_1.c **** 
+  61:Generated_Source\PSoC6/RTC_1.c ****         /* DST Stop time */
+  62:Generated_Source\PSoC6/RTC_1.c ****         .stopDst.format      = (cy_en_rtc_dst_format_t) RTC_1_INITIAL_DST_DATE_TYPE,
+  63:Generated_Source\PSoC6/RTC_1.c ****         .stopDst.hour        = RTC_1_INITIAL_DST_STOP_HRS,
+  64:Generated_Source\PSoC6/RTC_1.c ****         .stopDst.dayOfMonth  = RTC_1_INITIAL_DST_STOP_DOM,
+  65:Generated_Source\PSoC6/RTC_1.c ****         .stopDst.weekOfMonth = RTC_1_INITIAL_DST_STOP_WOM,
+  66:Generated_Source\PSoC6/RTC_1.c ****         .stopDst.dayOfWeek   = RTC_1_INITIAL_DST_STOP_DOW,
+  67:Generated_Source\PSoC6/RTC_1.c ****         .stopDst.month       = RTC_1_INITIAL_DST_STOP_MONTH,
+  68:Generated_Source\PSoC6/RTC_1.c ****     };
+  69:Generated_Source\PSoC6/RTC_1.c **** #else
+  70:Generated_Source\PSoC6/RTC_1.c **** 
+  71:Generated_Source\PSoC6/RTC_1.c ****     /* Default DST structure in condition that DST is disabled */
+  72:Generated_Source\PSoC6/RTC_1.c ****     cy_stc_rtc_dst_t const RTC_1_dstConfig;
+  73:Generated_Source\PSoC6/RTC_1.c **** #endif /* (0u != RTC_1_INITIAL_DST_STATUS) */
+  74:Generated_Source\PSoC6/RTC_1.c **** 
+  75:Generated_Source\PSoC6/RTC_1.c **** 
+  76:Generated_Source\PSoC6/RTC_1.c **** /*******************************************************************************
+  77:Generated_Source\PSoC6/RTC_1.c **** * Function Name: RTC_1_Start
+  78:Generated_Source\PSoC6/RTC_1.c **** ****************************************************************************//**
+  79:Generated_Source\PSoC6/RTC_1.c **** *
+  80:Generated_Source\PSoC6/RTC_1.c **** * Optionally calls the RTC_1_Init() when called the first time and 
+  81:Generated_Source\PSoC6/RTC_1.c **** * configure the RTC_1 as it is set in the customizer. For subsequent 
+  82:Generated_Source\PSoC6/RTC_1.c **** * calls the configuration is left unchanged and the component is just 
+  83:Generated_Source\PSoC6/RTC_1.c **** * configured. Invokes RTC_1_EnableDstTime() if the DST is enabled.
+  84:Generated_Source\PSoC6/RTC_1.c **** *
+  85:Generated_Source\PSoC6/RTC_1.c **** * \globalvars
+  86:Generated_Source\PSoC6/RTC_1.c **** * \ref RTC_1_initVar
+  87:Generated_Source\PSoC6/RTC_1.c **** *
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 3
+
+
+  88:Generated_Source\PSoC6/RTC_1.c **** *******************************************************************************/
+  89:Generated_Source\PSoC6/RTC_1.c **** void RTC_1_Start(void)
+  90:Generated_Source\PSoC6/RTC_1.c **** {
+  28              		.loc 1 90 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  91:Generated_Source\PSoC6/RTC_1.c ****     #if(0u != RTC_1_INITIAL_DST_STATUS)
+  92:Generated_Source\PSoC6/RTC_1.c ****         cy_stc_rtc_config_t curTimeAndDate;
+  93:Generated_Source\PSoC6/RTC_1.c ****     #endif /* (0u != RTC_1_INITIAL_DST_STATUS) */
+  94:Generated_Source\PSoC6/RTC_1.c ****     
+  95:Generated_Source\PSoC6/RTC_1.c ****     if(0u == RTC_1_initVar)
+  33              		.loc 1 95 0
+  34 0000 034B     		ldr	r3, .L3
+  35 0002 1B78     		ldrb	r3, [r3]
+  36 0004 002B     		cmp	r3, #0
+  37 0006 02D1     		bne	.L1
+  96:Generated_Source\PSoC6/RTC_1.c ****     {
+  97:Generated_Source\PSoC6/RTC_1.c ****         #if(0u != RTC_1_TIME_RESET_ON_START)
+  98:Generated_Source\PSoC6/RTC_1.c **** 
+  99:Generated_Source\PSoC6/RTC_1.c ****             /* Configure the component if power cycle and the external 
+ 100:Generated_Source\PSoC6/RTC_1.c ****             *  reset occurred
+ 101:Generated_Source\PSoC6/RTC_1.c ****             */
+ 102:Generated_Source\PSoC6/RTC_1.c ****             if(Cy_RTC_IsExternalResetOccurred())
+ 103:Generated_Source\PSoC6/RTC_1.c ****             {
+ 104:Generated_Source\PSoC6/RTC_1.c ****                 (void) Cy_RTC_Init(&RTC_1_config);
+ 105:Generated_Source\PSoC6/RTC_1.c ****             }
+ 106:Generated_Source\PSoC6/RTC_1.c ****         #endif /* (0u != RTC_1_TIME_RESET_ON_START) */
+ 107:Generated_Source\PSoC6/RTC_1.c **** 
+ 108:Generated_Source\PSoC6/RTC_1.c ****         #if(0u != RTC_1_INITIAL_IRQ_STATUS)
+ 109:Generated_Source\PSoC6/RTC_1.c **** 
+ 110:Generated_Source\PSoC6/RTC_1.c ****             /* Hook the interrupt service routine */
+ 111:Generated_Source\PSoC6/RTC_1.c ****             #if defined(RTC_1_RTC_IRQ__INTC_ASSIGNED)
+ 112:Generated_Source\PSoC6/RTC_1.c ****                 (void) Cy_SysInt_Init(&RTC_1_RTC_IRQ_cfg, &RTC_1_Interrupt);
+ 113:Generated_Source\PSoC6/RTC_1.c ****             #endif /* defined(RTC_1_RTC_IRQ__INTC_ASSIGNED) */
+ 114:Generated_Source\PSoC6/RTC_1.c ****         #endif /* (0u != RTC_1_INITIAL_IRQ_STATUS) */
+ 115:Generated_Source\PSoC6/RTC_1.c **** 
+ 116:Generated_Source\PSoC6/RTC_1.c ****         /* The component is configured */
+ 117:Generated_Source\PSoC6/RTC_1.c ****         RTC_1_initVar = 1u;
+  38              		.loc 1 117 0
+  39 0008 0122     		movs	r2, #1
+  40 000a 014B     		ldr	r3, .L3
+  41 000c 1A70     		strb	r2, [r3]
+  42              	.L1:
+ 118:Generated_Source\PSoC6/RTC_1.c ****     }
+ 119:Generated_Source\PSoC6/RTC_1.c **** 
+ 120:Generated_Source\PSoC6/RTC_1.c ****     #if(0u != RTC_1_INITIAL_IRQ_STATUS)
+ 121:Generated_Source\PSoC6/RTC_1.c ****         #if defined(RTC_1_RTC_IRQ__INTC_ASSIGNED)
+ 122:Generated_Source\PSoC6/RTC_1.c ****             NVIC_EnableIRQ(RTC_1_RTC_IRQ_cfg.intrSrc);
+ 123:Generated_Source\PSoC6/RTC_1.c ****         #endif /* defined(RTC_1_RTC_IRQ__INTC_ASSIGNED) */
+ 124:Generated_Source\PSoC6/RTC_1.c **** 
+ 125:Generated_Source\PSoC6/RTC_1.c ****         #if(0u != RTC_1_INITIAL_DST_STATUS)
+ 126:Generated_Source\PSoC6/RTC_1.c ****             #if(0u != RTC_1_TIME_RESET_ON_START)
+ 127:Generated_Source\PSoC6/RTC_1.c ****                 
+ 128:Generated_Source\PSoC6/RTC_1.c ****                 /* Wait for previous RTC update */
+ 129:Generated_Source\PSoC6/RTC_1.c ****                 Cy_SysLib_Delay(RTC_1_DELAY_BEFORE_DST);
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 4
+
+
+ 130:Generated_Source\PSoC6/RTC_1.c ****             #endif /* (0u != RTC_1_TIME_RESET_ON_START) */
+ 131:Generated_Source\PSoC6/RTC_1.c ****                 
+ 132:Generated_Source\PSoC6/RTC_1.c ****             Cy_RTC_GetDateAndTime(&curTimeAndDate);
+ 133:Generated_Source\PSoC6/RTC_1.c ****             
+ 134:Generated_Source\PSoC6/RTC_1.c ****             /* Set the DST configuration */
+ 135:Generated_Source\PSoC6/RTC_1.c ****             if(Cy_RTC_EnableDstTime(&RTC_1_dstConfig, &curTimeAndDate) != CY_RTC_SUCCESS)
+ 136:Generated_Source\PSoC6/RTC_1.c ****             {
+ 137:Generated_Source\PSoC6/RTC_1.c ****                 /* DST Setting failed */
+ 138:Generated_Source\PSoC6/RTC_1.c ****                 CY_ASSERT(0u != 0u);
+ 139:Generated_Source\PSoC6/RTC_1.c ****             }
+ 140:Generated_Source\PSoC6/RTC_1.c ****         #endif /* (0u != RTC_1_INITIAL_DST_STATUS) */
+ 141:Generated_Source\PSoC6/RTC_1.c ****     #endif /* (0u != RTC_1_INITIAL_IRQ_STATUS) */
+ 142:Generated_Source\PSoC6/RTC_1.c **** }
+  43              		.loc 1 142 0
+  44              		@ sp needed
+  45 000e 7047     		bx	lr
+  46              	.L4:
+  47              		.align	2
+  48              	.L3:
+  49 0010 00000000 		.word	.LANCHOR0
+  50              		.cfi_endproc
+  51              	.LFE111:
+  52              		.size	RTC_1_Start, .-RTC_1_Start
+  53              		.comm	RTC_1_dstConfig,48,4
+  54              		.global	RTC_1_rtcDstStatus
+  55              		.global	RTC_1_config
+  56              		.global	RTC_1_initVar
+  57              		.section	.rodata
+  58              		.align	2
+  59              		.type	RTC_1_config, %object
+  60              		.size	RTC_1_config, 32
+  61              	RTC_1_config:
+  62 0000 00000000 		.word	0
+  63 0004 00000000 		.word	0
+  64 0008 0F000000 		.word	15
+  65 000c 00       		.space	1
+  66 000d 00       		.byte	0
+  67 000e 0000     		.space	2
+  68 0010 04000000 		.word	4
+  69 0014 06000000 		.word	6
+  70 0018 05000000 		.word	5
+  71 001c 14000000 		.word	20
+  72              		.bss
+  73              		.set	.LANCHOR0,. + 0
+  74              		.type	RTC_1_initVar, %object
+  75              		.size	RTC_1_initVar, 1
+  76              	RTC_1_initVar:
+  77 0000 00       		.space	1
+  78              		.type	RTC_1_rtcDstStatus, %object
+  79              		.size	RTC_1_rtcDstStatus, 1
+  80              	RTC_1_rtcDstStatus:
+  81 0001 00       		.space	1
+  82              		.text
+  83              	.Letext0:
+  84              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+  85              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+  86              		.file 4 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/device/cy_device.h"
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 5
+
+
+  87              		.file 5 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/rtc/cy_rtc.h"
+  88              		.section	.debug_info,"",%progbits
+  89              	.Ldebug_info0:
+  90 0000 36070000 		.4byte	0x736
+  91 0004 0400     		.2byte	0x4
+  92 0006 00000000 		.4byte	.Ldebug_abbrev0
+  93 000a 04       		.byte	0x4
+  94 000b 01       		.uleb128 0x1
+  95 000c 69060000 		.4byte	.LASF140
+  96 0010 0C       		.byte	0xc
+  97 0011 E7030000 		.4byte	.LASF141
+  98 0015 1D080000 		.4byte	.LASF142
+  99 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 100 001d 00000000 		.4byte	0
+ 101 0021 00000000 		.4byte	.Ldebug_line0
+ 102 0025 02       		.uleb128 0x2
+ 103 0026 02       		.byte	0x2
+ 104 0027 05       		.byte	0x5
+ 105 0028 FF050000 		.4byte	.LASF0
+ 106 002c 02       		.uleb128 0x2
+ 107 002d 01       		.byte	0x1
+ 108 002e 08       		.byte	0x8
+ 109 002f DD050000 		.4byte	.LASF1
+ 110 0033 02       		.uleb128 0x2
+ 111 0034 01       		.byte	0x1
+ 112 0035 06       		.byte	0x6
+ 113 0036 66010000 		.4byte	.LASF2
+ 114 003a 03       		.uleb128 0x3
+ 115 003b 7E000000 		.4byte	.LASF3
+ 116 003f 02       		.byte	0x2
+ 117 0040 1D       		.byte	0x1d
+ 118 0041 2C000000 		.4byte	0x2c
+ 119 0045 03       		.uleb128 0x3
+ 120 0046 B8020000 		.4byte	.LASF4
+ 121 004a 02       		.byte	0x2
+ 122 004b 29       		.byte	0x29
+ 123 004c 25000000 		.4byte	0x25
+ 124 0050 03       		.uleb128 0x3
+ 125 0051 26070000 		.4byte	.LASF5
+ 126 0055 02       		.byte	0x2
+ 127 0056 2B       		.byte	0x2b
+ 128 0057 5B000000 		.4byte	0x5b
+ 129 005b 02       		.uleb128 0x2
+ 130 005c 02       		.byte	0x2
+ 131 005d 07       		.byte	0x7
+ 132 005e 8B070000 		.4byte	.LASF6
+ 133 0062 02       		.uleb128 0x2
+ 134 0063 04       		.byte	0x4
+ 135 0064 05       		.byte	0x5
+ 136 0065 E8010000 		.4byte	.LASF7
+ 137 0069 03       		.uleb128 0x3
+ 138 006a 9D020000 		.4byte	.LASF8
+ 139 006e 02       		.byte	0x2
+ 140 006f 41       		.byte	0x41
+ 141 0070 74000000 		.4byte	0x74
+ 142 0074 02       		.uleb128 0x2
+ 143 0075 04       		.byte	0x4
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 6
+
+
+ 144 0076 07       		.byte	0x7
+ 145 0077 40030000 		.4byte	.LASF9
+ 146 007b 02       		.uleb128 0x2
+ 147 007c 08       		.byte	0x8
+ 148 007d 05       		.byte	0x5
+ 149 007e 58010000 		.4byte	.LASF10
+ 150 0082 02       		.uleb128 0x2
+ 151 0083 08       		.byte	0x8
+ 152 0084 07       		.byte	0x7
+ 153 0085 CD000000 		.4byte	.LASF11
+ 154 0089 04       		.uleb128 0x4
+ 155 008a 04       		.byte	0x4
+ 156 008b 05       		.byte	0x5
+ 157 008c 696E7400 		.ascii	"int\000"
+ 158 0090 02       		.uleb128 0x2
+ 159 0091 04       		.byte	0x4
+ 160 0092 07       		.byte	0x7
+ 161 0093 FD020000 		.4byte	.LASF12
+ 162 0097 03       		.uleb128 0x3
+ 163 0098 15080000 		.4byte	.LASF13
+ 164 009c 03       		.byte	0x3
+ 165 009d 18       		.byte	0x18
+ 166 009e 3A000000 		.4byte	0x3a
+ 167 00a2 03       		.uleb128 0x3
+ 168 00a3 3C010000 		.4byte	.LASF14
+ 169 00a7 03       		.byte	0x3
+ 170 00a8 20       		.byte	0x20
+ 171 00a9 45000000 		.4byte	0x45
+ 172 00ad 03       		.uleb128 0x3
+ 173 00ae B5030000 		.4byte	.LASF15
+ 174 00b2 03       		.byte	0x3
+ 175 00b3 24       		.byte	0x24
+ 176 00b4 50000000 		.4byte	0x50
+ 177 00b8 03       		.uleb128 0x3
+ 178 00b9 4B060000 		.4byte	.LASF16
+ 179 00bd 03       		.byte	0x3
+ 180 00be 30       		.byte	0x30
+ 181 00bf 69000000 		.4byte	0x69
+ 182 00c3 02       		.uleb128 0x2
+ 183 00c4 04       		.byte	0x4
+ 184 00c5 07       		.byte	0x7
+ 185 00c6 8E040000 		.4byte	.LASF17
+ 186 00ca 02       		.uleb128 0x2
+ 187 00cb 08       		.byte	0x8
+ 188 00cc 04       		.byte	0x4
+ 189 00cd FB060000 		.4byte	.LASF18
+ 190 00d1 05       		.uleb128 0x5
+ 191 00d2 B8       		.byte	0xb8
+ 192 00d3 04       		.byte	0x4
+ 193 00d4 34       		.byte	0x34
+ 194 00d5 E2040000 		.4byte	0x4e2
+ 195 00d9 06       		.uleb128 0x6
+ 196 00da B4000000 		.4byte	.LASF19
+ 197 00de 04       		.byte	0x4
+ 198 00df 37       		.byte	0x37
+ 199 00e0 B8000000 		.4byte	0xb8
+ 200 00e4 00       		.byte	0
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 7
+
+
+ 201 00e5 06       		.uleb128 0x6
+ 202 00e6 92020000 		.4byte	.LASF20
+ 203 00ea 04       		.byte	0x4
+ 204 00eb 38       		.byte	0x38
+ 205 00ec B8000000 		.4byte	0xb8
+ 206 00f0 04       		.byte	0x4
+ 207 00f1 06       		.uleb128 0x6
+ 208 00f2 12020000 		.4byte	.LASF21
+ 209 00f6 04       		.byte	0x4
+ 210 00f7 39       		.byte	0x39
+ 211 00f8 B8000000 		.4byte	0xb8
+ 212 00fc 08       		.byte	0x8
+ 213 00fd 06       		.uleb128 0x6
+ 214 00fe CF050000 		.4byte	.LASF22
+ 215 0102 04       		.byte	0x4
+ 216 0103 3A       		.byte	0x3a
+ 217 0104 B8000000 		.4byte	0xb8
+ 218 0108 0C       		.byte	0xc
+ 219 0109 06       		.uleb128 0x6
+ 220 010a 87010000 		.4byte	.LASF23
+ 221 010e 04       		.byte	0x4
+ 222 010f 3B       		.byte	0x3b
+ 223 0110 B8000000 		.4byte	0xb8
+ 224 0114 10       		.byte	0x10
+ 225 0115 06       		.uleb128 0x6
+ 226 0116 BF010000 		.4byte	.LASF24
+ 227 011a 04       		.byte	0x4
+ 228 011b 3C       		.byte	0x3c
+ 229 011c B8000000 		.4byte	0xb8
+ 230 0120 14       		.byte	0x14
+ 231 0121 06       		.uleb128 0x6
+ 232 0122 5D030000 		.4byte	.LASF25
+ 233 0126 04       		.byte	0x4
+ 234 0127 3D       		.byte	0x3d
+ 235 0128 B8000000 		.4byte	0xb8
+ 236 012c 18       		.byte	0x18
+ 237 012d 06       		.uleb128 0x6
+ 238 012e 67000000 		.4byte	.LASF26
+ 239 0132 04       		.byte	0x4
+ 240 0133 3E       		.byte	0x3e
+ 241 0134 B8000000 		.4byte	0xb8
+ 242 0138 1C       		.byte	0x1c
+ 243 0139 06       		.uleb128 0x6
+ 244 013a AF080000 		.4byte	.LASF27
+ 245 013e 04       		.byte	0x4
+ 246 013f 3F       		.byte	0x3f
+ 247 0140 B8000000 		.4byte	0xb8
+ 248 0144 20       		.byte	0x20
+ 249 0145 06       		.uleb128 0x6
+ 250 0146 1B050000 		.4byte	.LASF28
+ 251 014a 04       		.byte	0x4
+ 252 014b 40       		.byte	0x40
+ 253 014c B8000000 		.4byte	0xb8
+ 254 0150 24       		.byte	0x24
+ 255 0151 06       		.uleb128 0x6
+ 256 0152 60040000 		.4byte	.LASF29
+ 257 0156 04       		.byte	0x4
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 8
+
+
+ 258 0157 43       		.byte	0x43
+ 259 0158 97000000 		.4byte	0x97
+ 260 015c 28       		.byte	0x28
+ 261 015d 06       		.uleb128 0x6
+ 262 015e 4D000000 		.4byte	.LASF30
+ 263 0162 04       		.byte	0x4
+ 264 0163 44       		.byte	0x44
+ 265 0164 97000000 		.4byte	0x97
+ 266 0168 29       		.byte	0x29
+ 267 0169 06       		.uleb128 0x6
+ 268 016a A5080000 		.4byte	.LASF31
+ 269 016e 04       		.byte	0x4
+ 270 016f 45       		.byte	0x45
+ 271 0170 97000000 		.4byte	0x97
+ 272 0174 2A       		.byte	0x2a
+ 273 0175 06       		.uleb128 0x6
+ 274 0176 0D050000 		.4byte	.LASF32
+ 275 017a 04       		.byte	0x4
+ 276 017b 46       		.byte	0x46
+ 277 017c 97000000 		.4byte	0x97
+ 278 0180 2B       		.byte	0x2b
+ 279 0181 06       		.uleb128 0x6
+ 280 0182 A9030000 		.4byte	.LASF33
+ 281 0186 04       		.byte	0x4
+ 282 0187 47       		.byte	0x47
+ 283 0188 97000000 		.4byte	0x97
+ 284 018c 2C       		.byte	0x2c
+ 285 018d 06       		.uleb128 0x6
+ 286 018e 60070000 		.4byte	.LASF34
+ 287 0192 04       		.byte	0x4
+ 288 0193 48       		.byte	0x48
+ 289 0194 97000000 		.4byte	0x97
+ 290 0198 2D       		.byte	0x2d
+ 291 0199 06       		.uleb128 0x6
+ 292 019a 90010000 		.4byte	.LASF35
+ 293 019e 04       		.byte	0x4
+ 294 019f 49       		.byte	0x49
+ 295 01a0 97000000 		.4byte	0x97
+ 296 01a4 2E       		.byte	0x2e
+ 297 01a5 06       		.uleb128 0x6
+ 298 01a6 6D040000 		.4byte	.LASF36
+ 299 01aa 04       		.byte	0x4
+ 300 01ab 4A       		.byte	0x4a
+ 301 01ac 97000000 		.4byte	0x97
+ 302 01b0 2F       		.byte	0x2f
+ 303 01b1 06       		.uleb128 0x6
+ 304 01b2 0C070000 		.4byte	.LASF37
+ 305 01b6 04       		.byte	0x4
+ 306 01b7 4B       		.byte	0x4b
+ 307 01b8 97000000 		.4byte	0x97
+ 308 01bc 30       		.byte	0x30
+ 309 01bd 06       		.uleb128 0x6
+ 310 01be 52030000 		.4byte	.LASF38
+ 311 01c2 04       		.byte	0x4
+ 312 01c3 4E       		.byte	0x4e
+ 313 01c4 97000000 		.4byte	0x97
+ 314 01c8 31       		.byte	0x31
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 9
+
+
+ 315 01c9 06       		.uleb128 0x6
+ 316 01ca 70000000 		.4byte	.LASF39
+ 317 01ce 04       		.byte	0x4
+ 318 01cf 4F       		.byte	0x4f
+ 319 01d0 97000000 		.4byte	0x97
+ 320 01d4 32       		.byte	0x32
+ 321 01d5 06       		.uleb128 0x6
+ 322 01d6 EB020000 		.4byte	.LASF40
+ 323 01da 04       		.byte	0x4
+ 324 01db 50       		.byte	0x50
+ 325 01dc 97000000 		.4byte	0x97
+ 326 01e0 33       		.byte	0x33
+ 327 01e1 06       		.uleb128 0x6
+ 328 01e2 A2040000 		.4byte	.LASF41
+ 329 01e6 04       		.byte	0x4
+ 330 01e7 51       		.byte	0x51
+ 331 01e8 97000000 		.4byte	0x97
+ 332 01ec 34       		.byte	0x34
+ 333 01ed 06       		.uleb128 0x6
+ 334 01ee BA070000 		.4byte	.LASF42
+ 335 01f2 04       		.byte	0x4
+ 336 01f3 52       		.byte	0x52
+ 337 01f4 A2000000 		.4byte	0xa2
+ 338 01f8 36       		.byte	0x36
+ 339 01f9 06       		.uleb128 0x6
+ 340 01fa 3A020000 		.4byte	.LASF43
+ 341 01fe 04       		.byte	0x4
+ 342 01ff 53       		.byte	0x53
+ 343 0200 A2000000 		.4byte	0xa2
+ 344 0204 38       		.byte	0x38
+ 345 0205 06       		.uleb128 0x6
+ 346 0206 F0070000 		.4byte	.LASF44
+ 347 020a 04       		.byte	0x4
+ 348 020b 54       		.byte	0x54
+ 349 020c A2000000 		.4byte	0xa2
+ 350 0210 3A       		.byte	0x3a
+ 351 0211 06       		.uleb128 0x6
+ 352 0212 B0010000 		.4byte	.LASF45
+ 353 0216 04       		.byte	0x4
+ 354 0217 55       		.byte	0x55
+ 355 0218 97000000 		.4byte	0x97
+ 356 021c 3C       		.byte	0x3c
+ 357 021d 06       		.uleb128 0x6
+ 358 021e 61020000 		.4byte	.LASF46
+ 359 0222 04       		.byte	0x4
+ 360 0223 56       		.byte	0x56
+ 361 0224 97000000 		.4byte	0x97
+ 362 0228 3D       		.byte	0x3d
+ 363 0229 06       		.uleb128 0x6
+ 364 022a 2D060000 		.4byte	.LASF47
+ 365 022e 04       		.byte	0x4
+ 366 022f 57       		.byte	0x57
+ 367 0230 97000000 		.4byte	0x97
+ 368 0234 3E       		.byte	0x3e
+ 369 0235 06       		.uleb128 0x6
+ 370 0236 5B000000 		.4byte	.LASF48
+ 371 023a 04       		.byte	0x4
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 10
+
+
+ 372 023b 58       		.byte	0x58
+ 373 023c 97000000 		.4byte	0x97
+ 374 0240 3F       		.byte	0x3f
+ 375 0241 06       		.uleb128 0x6
+ 376 0242 26050000 		.4byte	.LASF49
+ 377 0246 04       		.byte	0x4
+ 378 0247 59       		.byte	0x59
+ 379 0248 97000000 		.4byte	0x97
+ 380 024c 40       		.byte	0x40
+ 381 024d 06       		.uleb128 0x6
+ 382 024e A8020000 		.4byte	.LASF50
+ 383 0252 04       		.byte	0x4
+ 384 0253 5A       		.byte	0x5a
+ 385 0254 97000000 		.4byte	0x97
+ 386 0258 41       		.byte	0x41
+ 387 0259 06       		.uleb128 0x6
+ 388 025a 06040000 		.4byte	.LASF51
+ 389 025e 04       		.byte	0x4
+ 390 025f 5B       		.byte	0x5b
+ 391 0260 97000000 		.4byte	0x97
+ 392 0264 42       		.byte	0x42
+ 393 0265 06       		.uleb128 0x6
+ 394 0266 F5040000 		.4byte	.LASF52
+ 395 026a 04       		.byte	0x4
+ 396 026b 5C       		.byte	0x5c
+ 397 026c 97000000 		.4byte	0x97
+ 398 0270 43       		.byte	0x43
+ 399 0271 06       		.uleb128 0x6
+ 400 0272 29020000 		.4byte	.LASF53
+ 401 0276 04       		.byte	0x4
+ 402 0277 5D       		.byte	0x5d
+ 403 0278 97000000 		.4byte	0x97
+ 404 027c 44       		.byte	0x44
+ 405 027d 06       		.uleb128 0x6
+ 406 027e 00000000 		.4byte	.LASF54
+ 407 0282 04       		.byte	0x4
+ 408 0283 5E       		.byte	0x5e
+ 409 0284 B8000000 		.4byte	0xb8
+ 410 0288 48       		.byte	0x48
+ 411 0289 06       		.uleb128 0x6
+ 412 028a 04020000 		.4byte	.LASF55
+ 413 028e 04       		.byte	0x4
+ 414 028f 5F       		.byte	0x5f
+ 415 0290 B8000000 		.4byte	0xb8
+ 416 0294 4C       		.byte	0x4c
+ 417 0295 06       		.uleb128 0x6
+ 418 0296 EF080000 		.4byte	.LASF56
+ 419 029a 04       		.byte	0x4
+ 420 029b 60       		.byte	0x60
+ 421 029c 97000000 		.4byte	0x97
+ 422 02a0 50       		.byte	0x50
+ 423 02a1 06       		.uleb128 0x6
+ 424 02a2 16010000 		.4byte	.LASF57
+ 425 02a6 04       		.byte	0x4
+ 426 02a7 61       		.byte	0x61
+ 427 02a8 97000000 		.4byte	0x97
+ 428 02ac 51       		.byte	0x51
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 11
+
+
+ 429 02ad 06       		.uleb128 0x6
+ 430 02ae 05080000 		.4byte	.LASF58
+ 431 02b2 04       		.byte	0x4
+ 432 02b3 62       		.byte	0x62
+ 433 02b4 97000000 		.4byte	0x97
+ 434 02b8 52       		.byte	0x52
+ 435 02b9 06       		.uleb128 0x6
+ 436 02ba CD080000 		.4byte	.LASF59
+ 437 02be 04       		.byte	0x4
+ 438 02bf 63       		.byte	0x63
+ 439 02c0 97000000 		.4byte	0x97
+ 440 02c4 53       		.byte	0x53
+ 441 02c5 06       		.uleb128 0x6
+ 442 02c6 3B060000 		.4byte	.LASF60
+ 443 02ca 04       		.byte	0x4
+ 444 02cb 64       		.byte	0x64
+ 445 02cc 97000000 		.4byte	0x97
+ 446 02d0 54       		.byte	0x54
+ 447 02d1 06       		.uleb128 0x6
+ 448 02d2 28010000 		.4byte	.LASF61
+ 449 02d6 04       		.byte	0x4
+ 450 02d7 65       		.byte	0x65
+ 451 02d8 97000000 		.4byte	0x97
+ 452 02dc 55       		.byte	0x55
+ 453 02dd 06       		.uleb128 0x6
+ 454 02de 77070000 		.4byte	.LASF62
+ 455 02e2 04       		.byte	0x4
+ 456 02e3 66       		.byte	0x66
+ 457 02e4 97000000 		.4byte	0x97
+ 458 02e8 56       		.byte	0x56
+ 459 02e9 06       		.uleb128 0x6
+ 460 02ea 66030000 		.4byte	.LASF63
+ 461 02ee 04       		.byte	0x4
+ 462 02ef 67       		.byte	0x67
+ 463 02f0 97000000 		.4byte	0x97
+ 464 02f4 57       		.byte	0x57
+ 465 02f5 06       		.uleb128 0x6
+ 466 02f6 12000000 		.4byte	.LASF64
+ 467 02fa 04       		.byte	0x4
+ 468 02fb 68       		.byte	0x68
+ 469 02fc 97000000 		.4byte	0x97
+ 470 0300 58       		.byte	0x58
+ 471 0301 06       		.uleb128 0x6
+ 472 0302 EB050000 		.4byte	.LASF65
+ 473 0306 04       		.byte	0x4
+ 474 0307 69       		.byte	0x69
+ 475 0308 97000000 		.4byte	0x97
+ 476 030c 59       		.byte	0x59
+ 477 030d 06       		.uleb128 0x6
+ 478 030e 97040000 		.4byte	.LASF66
+ 479 0312 04       		.byte	0x4
+ 480 0313 6E       		.byte	0x6e
+ 481 0314 AD000000 		.4byte	0xad
+ 482 0318 5A       		.byte	0x5a
+ 483 0319 06       		.uleb128 0x6
+ 484 031a 9E070000 		.4byte	.LASF67
+ 485 031e 04       		.byte	0x4
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 12
+
+
+ 486 031f 6F       		.byte	0x6f
+ 487 0320 AD000000 		.4byte	0xad
+ 488 0324 5C       		.byte	0x5c
+ 489 0325 06       		.uleb128 0x6
+ 490 0326 BE000000 		.4byte	.LASF68
+ 491 032a 04       		.byte	0x4
+ 492 032b 70       		.byte	0x70
+ 493 032c 97000000 		.4byte	0x97
+ 494 0330 5E       		.byte	0x5e
+ 495 0331 06       		.uleb128 0x6
+ 496 0332 A8050000 		.4byte	.LASF69
+ 497 0336 04       		.byte	0x4
+ 498 0337 71       		.byte	0x71
+ 499 0338 97000000 		.4byte	0x97
+ 500 033c 5F       		.byte	0x5f
+ 501 033d 06       		.uleb128 0x6
+ 502 033e E4040000 		.4byte	.LASF70
+ 503 0342 04       		.byte	0x4
+ 504 0343 72       		.byte	0x72
+ 505 0344 97000000 		.4byte	0x97
+ 506 0348 60       		.byte	0x60
+ 507 0349 06       		.uleb128 0x6
+ 508 034a 5F050000 		.4byte	.LASF71
+ 509 034e 04       		.byte	0x4
+ 510 034f 73       		.byte	0x73
+ 511 0350 B8000000 		.4byte	0xb8
+ 512 0354 64       		.byte	0x64
+ 513 0355 06       		.uleb128 0x6
+ 514 0356 E4000000 		.4byte	.LASF72
+ 515 035a 04       		.byte	0x4
+ 516 035b 76       		.byte	0x76
+ 517 035c AD000000 		.4byte	0xad
+ 518 0360 68       		.byte	0x68
+ 519 0361 06       		.uleb128 0x6
+ 520 0362 1A030000 		.4byte	.LASF73
+ 521 0366 04       		.byte	0x4
+ 522 0367 77       		.byte	0x77
+ 523 0368 AD000000 		.4byte	0xad
+ 524 036c 6A       		.byte	0x6a
+ 525 036d 06       		.uleb128 0x6
+ 526 036e 7A030000 		.4byte	.LASF74
+ 527 0372 04       		.byte	0x4
+ 528 0373 78       		.byte	0x78
+ 529 0374 AD000000 		.4byte	0xad
+ 530 0378 6C       		.byte	0x6c
+ 531 0379 06       		.uleb128 0x6
+ 532 037a 9C030000 		.4byte	.LASF75
+ 533 037e 04       		.byte	0x4
+ 534 037f 79       		.byte	0x79
+ 535 0380 AD000000 		.4byte	0xad
+ 536 0384 6E       		.byte	0x6e
+ 537 0385 06       		.uleb128 0x6
+ 538 0386 09060000 		.4byte	.LASF76
+ 539 038a 04       		.byte	0x4
+ 540 038b 7B       		.byte	0x7b
+ 541 038c 97000000 		.4byte	0x97
+ 542 0390 70       		.byte	0x70
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 13
+
+
+ 543 0391 06       		.uleb128 0x6
+ 544 0392 72010000 		.4byte	.LASF77
+ 545 0396 04       		.byte	0x4
+ 546 0397 7C       		.byte	0x7c
+ 547 0398 97000000 		.4byte	0x97
+ 548 039c 71       		.byte	0x71
+ 549 039d 06       		.uleb128 0x6
+ 550 039e B7080000 		.4byte	.LASF78
+ 551 03a2 04       		.byte	0x4
+ 552 03a3 7D       		.byte	0x7d
+ 553 03a4 97000000 		.4byte	0x97
+ 554 03a8 72       		.byte	0x72
+ 555 03a9 06       		.uleb128 0x6
+ 556 03aa B3040000 		.4byte	.LASF79
+ 557 03ae 04       		.byte	0x4
+ 558 03af 7E       		.byte	0x7e
+ 559 03b0 97000000 		.4byte	0x97
+ 560 03b4 73       		.byte	0x73
+ 561 03b5 06       		.uleb128 0x6
+ 562 03b6 6C020000 		.4byte	.LASF80
+ 563 03ba 04       		.byte	0x4
+ 564 03bb 80       		.byte	0x80
+ 565 03bc AD000000 		.4byte	0xad
+ 566 03c0 74       		.byte	0x74
+ 567 03c1 06       		.uleb128 0x6
+ 568 03c2 4D070000 		.4byte	.LASF81
+ 569 03c6 04       		.byte	0x4
+ 570 03c7 81       		.byte	0x81
+ 571 03c8 AD000000 		.4byte	0xad
+ 572 03cc 76       		.byte	0x76
+ 573 03cd 06       		.uleb128 0x6
+ 574 03ce 4C020000 		.4byte	.LASF82
+ 575 03d2 04       		.byte	0x4
+ 576 03d3 82       		.byte	0x82
+ 577 03d4 AD000000 		.4byte	0xad
+ 578 03d8 78       		.byte	0x78
+ 579 03d9 06       		.uleb128 0x6
+ 580 03da 88000000 		.4byte	.LASF83
+ 581 03de 04       		.byte	0x4
+ 582 03df 83       		.byte	0x83
+ 583 03e0 AD000000 		.4byte	0xad
+ 584 03e4 7A       		.byte	0x7a
+ 585 03e5 06       		.uleb128 0x6
+ 586 03e6 72080000 		.4byte	.LASF84
+ 587 03ea 04       		.byte	0x4
+ 588 03eb 86       		.byte	0x86
+ 589 03ec 97000000 		.4byte	0x97
+ 590 03f0 7C       		.byte	0x7c
+ 591 03f1 06       		.uleb128 0x6
+ 592 03f2 DF070000 		.4byte	.LASF85
+ 593 03f6 04       		.byte	0x4
+ 594 03f7 87       		.byte	0x87
+ 595 03f8 97000000 		.4byte	0x97
+ 596 03fc 7D       		.byte	0x7d
+ 597 03fd 06       		.uleb128 0x6
+ 598 03fe 26000000 		.4byte	.LASF86
+ 599 0402 04       		.byte	0x4
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 14
+
+
+ 600 0403 88       		.byte	0x88
+ 601 0404 97000000 		.4byte	0x97
+ 602 0408 7E       		.byte	0x7e
+ 603 0409 06       		.uleb128 0x6
+ 604 040a 7E020000 		.4byte	.LASF87
+ 605 040e 04       		.byte	0x4
+ 606 040f 89       		.byte	0x89
+ 607 0410 97000000 		.4byte	0x97
+ 608 0414 7F       		.byte	0x7f
+ 609 0415 06       		.uleb128 0x6
+ 610 0416 D7020000 		.4byte	.LASF88
+ 611 041a 04       		.byte	0x4
+ 612 041b 8A       		.byte	0x8a
+ 613 041c 97000000 		.4byte	0x97
+ 614 0420 80       		.byte	0x80
+ 615 0421 06       		.uleb128 0x6
+ 616 0422 49040000 		.4byte	.LASF89
+ 617 0426 04       		.byte	0x4
+ 618 0427 8D       		.byte	0x8d
+ 619 0428 B8000000 		.4byte	0xb8
+ 620 042c 84       		.byte	0x84
+ 621 042d 06       		.uleb128 0x6
+ 622 042e 9D000000 		.4byte	.LASF90
+ 623 0432 04       		.byte	0x4
+ 624 0433 8E       		.byte	0x8e
+ 625 0434 B8000000 		.4byte	0xb8
+ 626 0438 88       		.byte	0x88
+ 627 0439 06       		.uleb128 0x6
+ 628 043a 5D080000 		.4byte	.LASF91
+ 629 043e 04       		.byte	0x4
+ 630 043f 8F       		.byte	0x8f
+ 631 0440 B8000000 		.4byte	0xb8
+ 632 0444 8C       		.byte	0x8c
+ 633 0445 06       		.uleb128 0x6
+ 634 0446 79040000 		.4byte	.LASF92
+ 635 044a 04       		.byte	0x4
+ 636 044b 90       		.byte	0x90
+ 637 044c B8000000 		.4byte	0xb8
+ 638 0450 90       		.byte	0x90
+ 639 0451 06       		.uleb128 0x6
+ 640 0452 C2020000 		.4byte	.LASF93
+ 641 0456 04       		.byte	0x4
+ 642 0457 91       		.byte	0x91
+ 643 0458 B8000000 		.4byte	0xb8
+ 644 045c 94       		.byte	0x94
+ 645 045d 06       		.uleb128 0x6
+ 646 045e 29040000 		.4byte	.LASF94
+ 647 0462 04       		.byte	0x4
+ 648 0463 92       		.byte	0x92
+ 649 0464 B8000000 		.4byte	0xb8
+ 650 0468 98       		.byte	0x98
+ 651 0469 06       		.uleb128 0x6
+ 652 046a 87080000 		.4byte	.LASF95
+ 653 046e 04       		.byte	0x4
+ 654 046f 93       		.byte	0x93
+ 655 0470 B8000000 		.4byte	0xb8
+ 656 0474 9C       		.byte	0x9c
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 15
+
+
+ 657 0475 06       		.uleb128 0x6
+ 658 0476 F4000000 		.4byte	.LASF96
+ 659 047a 04       		.byte	0x4
+ 660 047b 94       		.byte	0x94
+ 661 047c B8000000 		.4byte	0xb8
+ 662 0480 A0       		.byte	0xa0
+ 663 0481 06       		.uleb128 0x6
+ 664 0482 9B010000 		.4byte	.LASF97
+ 665 0486 04       		.byte	0x4
+ 666 0487 95       		.byte	0x95
+ 667 0488 AD000000 		.4byte	0xad
+ 668 048c A4       		.byte	0xa4
+ 669 048d 06       		.uleb128 0x6
+ 670 048e 54060000 		.4byte	.LASF98
+ 671 0492 04       		.byte	0x4
+ 672 0493 96       		.byte	0x96
+ 673 0494 AD000000 		.4byte	0xad
+ 674 0498 A6       		.byte	0xa6
+ 675 0499 06       		.uleb128 0x6
+ 676 049a 9C050000 		.4byte	.LASF99
+ 677 049e 04       		.byte	0x4
+ 678 049f 97       		.byte	0x97
+ 679 04a0 AD000000 		.4byte	0xad
+ 680 04a4 A8       		.byte	0xa8
+ 681 04a5 06       		.uleb128 0x6
+ 682 04a6 18070000 		.4byte	.LASF100
+ 683 04aa 04       		.byte	0x4
+ 684 04ab 98       		.byte	0x98
+ 685 04ac AD000000 		.4byte	0xad
+ 686 04b0 AA       		.byte	0xaa
+ 687 04b1 06       		.uleb128 0x6
+ 688 04b2 8E030000 		.4byte	.LASF101
+ 689 04b6 04       		.byte	0x4
+ 690 04b7 99       		.byte	0x99
+ 691 04b8 AD000000 		.4byte	0xad
+ 692 04bc AC       		.byte	0xac
+ 693 04bd 06       		.uleb128 0x6
+ 694 04be D6040000 		.4byte	.LASF102
+ 695 04c2 04       		.byte	0x4
+ 696 04c3 9A       		.byte	0x9a
+ 697 04c4 AD000000 		.4byte	0xad
+ 698 04c8 AE       		.byte	0xae
+ 699 04c9 06       		.uleb128 0x6
+ 700 04ca AC070000 		.4byte	.LASF103
+ 701 04ce 04       		.byte	0x4
+ 702 04cf 9D       		.byte	0x9d
+ 703 04d0 AD000000 		.4byte	0xad
+ 704 04d4 B0       		.byte	0xb0
+ 705 04d5 06       		.uleb128 0x6
+ 706 04d6 39000000 		.4byte	.LASF104
+ 707 04da 04       		.byte	0x4
+ 708 04db 9E       		.byte	0x9e
+ 709 04dc B8000000 		.4byte	0xb8
+ 710 04e0 B4       		.byte	0xb4
+ 711 04e1 00       		.byte	0
+ 712 04e2 03       		.uleb128 0x3
+ 713 04e3 D7030000 		.4byte	.LASF105
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 16
+
+
+ 714 04e7 04       		.byte	0x4
+ 715 04e8 9F       		.byte	0x9f
+ 716 04e9 D1000000 		.4byte	0xd1
+ 717 04ed 02       		.uleb128 0x2
+ 718 04ee 01       		.byte	0x1
+ 719 04ef 08       		.byte	0x8
+ 720 04f0 07070000 		.4byte	.LASF106
+ 721 04f4 02       		.uleb128 0x2
+ 722 04f5 04       		.byte	0x4
+ 723 04f6 04       		.byte	0x4
+ 724 04f7 38050000 		.4byte	.LASF107
+ 725 04fb 02       		.uleb128 0x2
+ 726 04fc 08       		.byte	0x8
+ 727 04fd 04       		.byte	0x4
+ 728 04fe 45020000 		.4byte	.LASF108
+ 729 0502 07       		.uleb128 0x7
+ 730 0503 01       		.byte	0x1
+ 731 0504 2C000000 		.4byte	0x2c
+ 732 0508 05       		.byte	0x5
+ 733 0509 6301     		.2byte	0x163
+ 734 050b 1C050000 		.4byte	0x51c
+ 735 050f 08       		.uleb128 0x8
+ 736 0510 0A030000 		.4byte	.LASF109
+ 737 0514 00       		.byte	0
+ 738 0515 08       		.uleb128 0x8
+ 739 0516 70050000 		.4byte	.LASF110
+ 740 051a 01       		.byte	0x1
+ 741 051b 00       		.byte	0
+ 742 051c 09       		.uleb128 0x9
+ 743 051d BE030000 		.4byte	.LASF111
+ 744 0521 05       		.byte	0x5
+ 745 0522 6601     		.2byte	0x166
+ 746 0524 02050000 		.4byte	0x502
+ 747 0528 07       		.uleb128 0x7
+ 748 0529 01       		.byte	0x1
+ 749 052a 2C000000 		.4byte	0x2c
+ 750 052e 05       		.byte	0x5
+ 751 052f 7101     		.2byte	0x171
+ 752 0531 42050000 		.4byte	0x542
+ 753 0535 08       		.uleb128 0x8
+ 754 0536 44010000 		.4byte	.LASF112
+ 755 053a 00       		.byte	0
+ 756 053b 08       		.uleb128 0x8
+ 757 053c D7010000 		.4byte	.LASF113
+ 758 0540 01       		.byte	0x1
+ 759 0541 00       		.byte	0
+ 760 0542 09       		.uleb128 0x9
+ 761 0543 12040000 		.4byte	.LASF114
+ 762 0547 05       		.byte	0x5
+ 763 0548 7401     		.2byte	0x174
+ 764 054a 28050000 		.4byte	0x528
+ 765 054e 07       		.uleb128 0x7
+ 766 054f 01       		.byte	0x1
+ 767 0550 2C000000 		.4byte	0x2c
+ 768 0554 05       		.byte	0x5
+ 769 0555 7801     		.2byte	0x178
+ 770 0557 68050000 		.4byte	0x568
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 17
+
+
+ 771 055b 08       		.uleb128 0x8
+ 772 055c 6D070000 		.4byte	.LASF115
+ 773 0560 00       		.byte	0
+ 774 0561 08       		.uleb128 0x8
+ 775 0562 43070000 		.4byte	.LASF116
+ 776 0566 01       		.byte	0x1
+ 777 0567 00       		.byte	0
+ 778 0568 09       		.uleb128 0x9
+ 779 0569 80050000 		.4byte	.LASF117
+ 780 056d 05       		.byte	0x5
+ 781 056e 7B01     		.2byte	0x17b
+ 782 0570 4E050000 		.4byte	0x54e
+ 783 0574 0A       		.uleb128 0xa
+ 784 0575 31070000 		.4byte	.LASF143
+ 785 0579 20       		.byte	0x20
+ 786 057a 05       		.byte	0x5
+ 787 057b 9301     		.2byte	0x193
+ 788 057d F7050000 		.4byte	0x5f7
+ 789 0581 0B       		.uleb128 0xb
+ 790 0582 73656300 		.ascii	"sec\000"
+ 791 0586 05       		.byte	0x5
+ 792 0587 9601     		.2byte	0x196
+ 793 0589 B8000000 		.4byte	0xb8
+ 794 058d 00       		.byte	0
+ 795 058e 0B       		.uleb128 0xb
+ 796 058f 6D696E00 		.ascii	"min\000"
+ 797 0593 05       		.byte	0x5
+ 798 0594 9701     		.2byte	0x197
+ 799 0596 B8000000 		.4byte	0xb8
+ 800 059a 04       		.byte	0x4
+ 801 059b 0C       		.uleb128 0xc
+ 802 059c 33050000 		.4byte	.LASF118
+ 803 05a0 05       		.byte	0x5
+ 804 05a1 9801     		.2byte	0x198
+ 805 05a3 B8000000 		.4byte	0xb8
+ 806 05a7 08       		.byte	0x8
+ 807 05a8 0C       		.uleb128 0xc
+ 808 05a9 A7070000 		.4byte	.LASF119
+ 809 05ad 05       		.byte	0x5
+ 810 05ae 9B01     		.2byte	0x19b
+ 811 05b0 68050000 		.4byte	0x568
+ 812 05b4 0C       		.byte	0xc
+ 813 05b5 0C       		.uleb128 0xc
+ 814 05b6 24060000 		.4byte	.LASF120
+ 815 05ba 05       		.byte	0x5
+ 816 05bb 9E01     		.2byte	0x19e
+ 817 05bd 1C050000 		.4byte	0x51c
+ 818 05c1 0D       		.byte	0xd
+ 819 05c2 0C       		.uleb128 0xc
+ 820 05c3 3F040000 		.4byte	.LASF121
+ 821 05c7 05       		.byte	0x5
+ 822 05c8 9F01     		.2byte	0x19f
+ 823 05ca B8000000 		.4byte	0xb8
+ 824 05ce 10       		.byte	0x10
+ 825 05cf 0C       		.uleb128 0xc
+ 826 05d0 89030000 		.4byte	.LASF122
+ 827 05d4 05       		.byte	0x5
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 18
+
+
+ 828 05d5 A201     		.2byte	0x1a2
+ 829 05d7 B8000000 		.4byte	0xb8
+ 830 05db 14       		.byte	0x14
+ 831 05dc 0C       		.uleb128 0xc
+ 832 05dd F7020000 		.4byte	.LASF123
+ 833 05e1 05       		.byte	0x5
+ 834 05e2 A301     		.2byte	0x1a3
+ 835 05e4 B8000000 		.4byte	0xb8
+ 836 05e8 18       		.byte	0x18
+ 837 05e9 0C       		.uleb128 0xc
+ 838 05ea D2010000 		.4byte	.LASF124
+ 839 05ee 05       		.byte	0x5
+ 840 05ef A401     		.2byte	0x1a4
+ 841 05f1 B8000000 		.4byte	0xb8
+ 842 05f5 1C       		.byte	0x1c
+ 843 05f6 00       		.byte	0
+ 844 05f7 09       		.uleb128 0x9
+ 845 05f8 2C030000 		.4byte	.LASF125
+ 846 05fc 05       		.byte	0x5
+ 847 05fd A501     		.2byte	0x1a5
+ 848 05ff 74050000 		.4byte	0x574
+ 849 0603 0D       		.uleb128 0xd
+ 850 0604 18       		.byte	0x18
+ 851 0605 05       		.byte	0x5
+ 852 0606 D501     		.2byte	0x1d5
+ 853 0608 5B060000 		.4byte	0x65b
+ 854 060c 0C       		.uleb128 0xc
+ 855 060d 1D060000 		.4byte	.LASF126
+ 856 0611 05       		.byte	0x5
+ 857 0612 D701     		.2byte	0x1d7
+ 858 0614 42050000 		.4byte	0x542
+ 859 0618 00       		.byte	0
+ 860 0619 0C       		.uleb128 0xc
+ 861 061a 33050000 		.4byte	.LASF118
+ 862 061e 05       		.byte	0x5
+ 863 061f DA01     		.2byte	0x1da
+ 864 0621 B8000000 		.4byte	0xb8
+ 865 0625 04       		.byte	0x4
+ 866 0626 0C       		.uleb128 0xc
+ 867 0627 3E050000 		.4byte	.LASF127
+ 868 062b 05       		.byte	0x5
+ 869 062c DC01     		.2byte	0x1dc
+ 870 062e B8000000 		.4byte	0xb8
+ 871 0632 08       		.byte	0x8
+ 872 0633 0C       		.uleb128 0xc
+ 873 0634 0A010000 		.4byte	.LASF128
+ 874 0638 05       		.byte	0x5
+ 875 0639 DF01     		.2byte	0x1df
+ 876 063b B8000000 		.4byte	0xb8
+ 877 063f 0C       		.byte	0xc
+ 878 0640 0C       		.uleb128 0xc
+ 879 0641 3F040000 		.4byte	.LASF121
+ 880 0645 05       		.byte	0x5
+ 881 0646 E301     		.2byte	0x1e3
+ 882 0648 B8000000 		.4byte	0xb8
+ 883 064c 10       		.byte	0x10
+ 884 064d 0C       		.uleb128 0xc
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 19
+
+
+ 885 064e F7020000 		.4byte	.LASF123
+ 886 0652 05       		.byte	0x5
+ 887 0653 E701     		.2byte	0x1e7
+ 888 0655 B8000000 		.4byte	0xb8
+ 889 0659 14       		.byte	0x14
+ 890 065a 00       		.byte	0
+ 891 065b 09       		.uleb128 0x9
+ 892 065c C7070000 		.4byte	.LASF129
+ 893 0660 05       		.byte	0x5
+ 894 0661 E901     		.2byte	0x1e9
+ 895 0663 03060000 		.4byte	0x603
+ 896 0667 0D       		.uleb128 0xd
+ 897 0668 30       		.byte	0x30
+ 898 0669 05       		.byte	0x5
+ 899 066a EC01     		.2byte	0x1ec
+ 900 066c 8B060000 		.4byte	0x68b
+ 901 0670 0C       		.uleb128 0xc
+ 902 0671 C9010000 		.4byte	.LASF130
+ 903 0675 05       		.byte	0x5
+ 904 0676 EE01     		.2byte	0x1ee
+ 905 0678 5B060000 		.4byte	0x65b
+ 906 067c 00       		.byte	0
+ 907 067d 0C       		.uleb128 0xc
+ 908 067e 9D080000 		.4byte	.LASF131
+ 909 0682 05       		.byte	0x5
+ 910 0683 EF01     		.2byte	0x1ef
+ 911 0685 5B060000 		.4byte	0x65b
+ 912 0689 18       		.byte	0x18
+ 913 068a 00       		.byte	0
+ 914 068b 09       		.uleb128 0x9
+ 915 068c BE050000 		.4byte	.LASF132
+ 916 0690 05       		.byte	0x5
+ 917 0691 F001     		.2byte	0x1f0
+ 918 0693 67060000 		.4byte	0x667
+ 919 0697 0E       		.uleb128 0xe
+ 920 0698 CA040000 		.4byte	.LASF144
+ 921 069c 01       		.byte	0x1
+ 922 069d 59       		.byte	0x59
+ 923 069e 00000000 		.4byte	.LFB111
+ 924 06a2 14000000 		.4byte	.LFE111-.LFB111
+ 925 06a6 01       		.uleb128 0x1
+ 926 06a7 9C       		.byte	0x9c
+ 927 06a8 0F       		.uleb128 0xf
+ 928 06a9 92050000 		.4byte	.LASF133
+ 929 06ad 04       		.byte	0x4
+ 930 06ae A7       		.byte	0xa7
+ 931 06af B3060000 		.4byte	0x6b3
+ 932 06b3 10       		.uleb128 0x10
+ 933 06b4 04       		.byte	0x4
+ 934 06b5 B9060000 		.4byte	0x6b9
+ 935 06b9 11       		.uleb128 0x11
+ 936 06ba E2040000 		.4byte	0x4e2
+ 937 06be 12       		.uleb128 0x12
+ 938 06bf CE060000 		.4byte	0x6ce
+ 939 06c3 CE060000 		.4byte	0x6ce
+ 940 06c7 13       		.uleb128 0x13
+ 941 06c8 C3000000 		.4byte	0xc3
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 20
+
+
+ 942 06cc 0B       		.byte	0xb
+ 943 06cd 00       		.byte	0
+ 944 06ce 11       		.uleb128 0x11
+ 945 06cf 97000000 		.4byte	0x97
+ 946 06d3 14       		.uleb128 0x14
+ 947 06d4 49050000 		.4byte	.LASF134
+ 948 06d8 05       		.byte	0x5
+ 949 06d9 0303     		.2byte	0x303
+ 950 06db DF060000 		.4byte	0x6df
+ 951 06df 11       		.uleb128 0x11
+ 952 06e0 BE060000 		.4byte	0x6be
+ 953 06e4 15       		.uleb128 0x15
+ 954 06e5 1B020000 		.4byte	.LASF135
+ 955 06e9 01       		.byte	0x1
+ 956 06ea 16       		.byte	0x16
+ 957 06eb 97000000 		.4byte	0x97
+ 958 06ef 05       		.uleb128 0x5
+ 959 06f0 03       		.byte	0x3
+ 960 06f1 00000000 		.4byte	RTC_1_initVar
+ 961 06f5 15       		.uleb128 0x15
+ 962 06f6 F1010000 		.4byte	.LASF136
+ 963 06fa 01       		.byte	0x1
+ 964 06fb 2C       		.byte	0x2c
+ 965 06fc 06070000 		.4byte	0x706
+ 966 0700 05       		.uleb128 0x5
+ 967 0701 03       		.byte	0x3
+ 968 0702 00000000 		.4byte	RTC_1_rtcDstStatus
+ 969 0706 02       		.uleb128 0x2
+ 970 0707 01       		.byte	0x1
+ 971 0708 02       		.byte	0x2
+ 972 0709 D7050000 		.4byte	.LASF137
+ 973 070d 15       		.uleb128 0x15
+ 974 070e DF080000 		.4byte	.LASF138
+ 975 0712 01       		.byte	0x1
+ 976 0713 48       		.byte	0x48
+ 977 0714 1E070000 		.4byte	0x71e
+ 978 0718 05       		.uleb128 0x5
+ 979 0719 03       		.byte	0x3
+ 980 071a 00000000 		.4byte	RTC_1_dstConfig
+ 981 071e 11       		.uleb128 0x11
+ 982 071f 8B060000 		.4byte	0x68b
+ 983 0723 15       		.uleb128 0x15
+ 984 0724 00050000 		.4byte	.LASF139
+ 985 0728 01       		.byte	0x1
+ 986 0729 1B       		.byte	0x1b
+ 987 072a 34070000 		.4byte	0x734
+ 988 072e 05       		.uleb128 0x5
+ 989 072f 03       		.byte	0x3
+ 990 0730 00000000 		.4byte	RTC_1_config
+ 991 0734 11       		.uleb128 0x11
+ 992 0735 F7050000 		.4byte	0x5f7
+ 993 0739 00       		.byte	0
+ 994              		.section	.debug_abbrev,"",%progbits
+ 995              	.Ldebug_abbrev0:
+ 996 0000 01       		.uleb128 0x1
+ 997 0001 11       		.uleb128 0x11
+ 998 0002 01       		.byte	0x1
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 21
+
+
+ 999 0003 25       		.uleb128 0x25
+ 1000 0004 0E       		.uleb128 0xe
+ 1001 0005 13       		.uleb128 0x13
+ 1002 0006 0B       		.uleb128 0xb
+ 1003 0007 03       		.uleb128 0x3
+ 1004 0008 0E       		.uleb128 0xe
+ 1005 0009 1B       		.uleb128 0x1b
+ 1006 000a 0E       		.uleb128 0xe
+ 1007 000b 55       		.uleb128 0x55
+ 1008 000c 17       		.uleb128 0x17
+ 1009 000d 11       		.uleb128 0x11
+ 1010 000e 01       		.uleb128 0x1
+ 1011 000f 10       		.uleb128 0x10
+ 1012 0010 17       		.uleb128 0x17
+ 1013 0011 00       		.byte	0
+ 1014 0012 00       		.byte	0
+ 1015 0013 02       		.uleb128 0x2
+ 1016 0014 24       		.uleb128 0x24
+ 1017 0015 00       		.byte	0
+ 1018 0016 0B       		.uleb128 0xb
+ 1019 0017 0B       		.uleb128 0xb
+ 1020 0018 3E       		.uleb128 0x3e
+ 1021 0019 0B       		.uleb128 0xb
+ 1022 001a 03       		.uleb128 0x3
+ 1023 001b 0E       		.uleb128 0xe
+ 1024 001c 00       		.byte	0
+ 1025 001d 00       		.byte	0
+ 1026 001e 03       		.uleb128 0x3
+ 1027 001f 16       		.uleb128 0x16
+ 1028 0020 00       		.byte	0
+ 1029 0021 03       		.uleb128 0x3
+ 1030 0022 0E       		.uleb128 0xe
+ 1031 0023 3A       		.uleb128 0x3a
+ 1032 0024 0B       		.uleb128 0xb
+ 1033 0025 3B       		.uleb128 0x3b
+ 1034 0026 0B       		.uleb128 0xb
+ 1035 0027 49       		.uleb128 0x49
+ 1036 0028 13       		.uleb128 0x13
+ 1037 0029 00       		.byte	0
+ 1038 002a 00       		.byte	0
+ 1039 002b 04       		.uleb128 0x4
+ 1040 002c 24       		.uleb128 0x24
+ 1041 002d 00       		.byte	0
+ 1042 002e 0B       		.uleb128 0xb
+ 1043 002f 0B       		.uleb128 0xb
+ 1044 0030 3E       		.uleb128 0x3e
+ 1045 0031 0B       		.uleb128 0xb
+ 1046 0032 03       		.uleb128 0x3
+ 1047 0033 08       		.uleb128 0x8
+ 1048 0034 00       		.byte	0
+ 1049 0035 00       		.byte	0
+ 1050 0036 05       		.uleb128 0x5
+ 1051 0037 13       		.uleb128 0x13
+ 1052 0038 01       		.byte	0x1
+ 1053 0039 0B       		.uleb128 0xb
+ 1054 003a 0B       		.uleb128 0xb
+ 1055 003b 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 22
+
+
+ 1056 003c 0B       		.uleb128 0xb
+ 1057 003d 3B       		.uleb128 0x3b
+ 1058 003e 0B       		.uleb128 0xb
+ 1059 003f 01       		.uleb128 0x1
+ 1060 0040 13       		.uleb128 0x13
+ 1061 0041 00       		.byte	0
+ 1062 0042 00       		.byte	0
+ 1063 0043 06       		.uleb128 0x6
+ 1064 0044 0D       		.uleb128 0xd
+ 1065 0045 00       		.byte	0
+ 1066 0046 03       		.uleb128 0x3
+ 1067 0047 0E       		.uleb128 0xe
+ 1068 0048 3A       		.uleb128 0x3a
+ 1069 0049 0B       		.uleb128 0xb
+ 1070 004a 3B       		.uleb128 0x3b
+ 1071 004b 0B       		.uleb128 0xb
+ 1072 004c 49       		.uleb128 0x49
+ 1073 004d 13       		.uleb128 0x13
+ 1074 004e 38       		.uleb128 0x38
+ 1075 004f 0B       		.uleb128 0xb
+ 1076 0050 00       		.byte	0
+ 1077 0051 00       		.byte	0
+ 1078 0052 07       		.uleb128 0x7
+ 1079 0053 04       		.uleb128 0x4
+ 1080 0054 01       		.byte	0x1
+ 1081 0055 0B       		.uleb128 0xb
+ 1082 0056 0B       		.uleb128 0xb
+ 1083 0057 49       		.uleb128 0x49
+ 1084 0058 13       		.uleb128 0x13
+ 1085 0059 3A       		.uleb128 0x3a
+ 1086 005a 0B       		.uleb128 0xb
+ 1087 005b 3B       		.uleb128 0x3b
+ 1088 005c 05       		.uleb128 0x5
+ 1089 005d 01       		.uleb128 0x1
+ 1090 005e 13       		.uleb128 0x13
+ 1091 005f 00       		.byte	0
+ 1092 0060 00       		.byte	0
+ 1093 0061 08       		.uleb128 0x8
+ 1094 0062 28       		.uleb128 0x28
+ 1095 0063 00       		.byte	0
+ 1096 0064 03       		.uleb128 0x3
+ 1097 0065 0E       		.uleb128 0xe
+ 1098 0066 1C       		.uleb128 0x1c
+ 1099 0067 0B       		.uleb128 0xb
+ 1100 0068 00       		.byte	0
+ 1101 0069 00       		.byte	0
+ 1102 006a 09       		.uleb128 0x9
+ 1103 006b 16       		.uleb128 0x16
+ 1104 006c 00       		.byte	0
+ 1105 006d 03       		.uleb128 0x3
+ 1106 006e 0E       		.uleb128 0xe
+ 1107 006f 3A       		.uleb128 0x3a
+ 1108 0070 0B       		.uleb128 0xb
+ 1109 0071 3B       		.uleb128 0x3b
+ 1110 0072 05       		.uleb128 0x5
+ 1111 0073 49       		.uleb128 0x49
+ 1112 0074 13       		.uleb128 0x13
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 23
+
+
+ 1113 0075 00       		.byte	0
+ 1114 0076 00       		.byte	0
+ 1115 0077 0A       		.uleb128 0xa
+ 1116 0078 13       		.uleb128 0x13
+ 1117 0079 01       		.byte	0x1
+ 1118 007a 03       		.uleb128 0x3
+ 1119 007b 0E       		.uleb128 0xe
+ 1120 007c 0B       		.uleb128 0xb
+ 1121 007d 0B       		.uleb128 0xb
+ 1122 007e 3A       		.uleb128 0x3a
+ 1123 007f 0B       		.uleb128 0xb
+ 1124 0080 3B       		.uleb128 0x3b
+ 1125 0081 05       		.uleb128 0x5
+ 1126 0082 01       		.uleb128 0x1
+ 1127 0083 13       		.uleb128 0x13
+ 1128 0084 00       		.byte	0
+ 1129 0085 00       		.byte	0
+ 1130 0086 0B       		.uleb128 0xb
+ 1131 0087 0D       		.uleb128 0xd
+ 1132 0088 00       		.byte	0
+ 1133 0089 03       		.uleb128 0x3
+ 1134 008a 08       		.uleb128 0x8
+ 1135 008b 3A       		.uleb128 0x3a
+ 1136 008c 0B       		.uleb128 0xb
+ 1137 008d 3B       		.uleb128 0x3b
+ 1138 008e 05       		.uleb128 0x5
+ 1139 008f 49       		.uleb128 0x49
+ 1140 0090 13       		.uleb128 0x13
+ 1141 0091 38       		.uleb128 0x38
+ 1142 0092 0B       		.uleb128 0xb
+ 1143 0093 00       		.byte	0
+ 1144 0094 00       		.byte	0
+ 1145 0095 0C       		.uleb128 0xc
+ 1146 0096 0D       		.uleb128 0xd
+ 1147 0097 00       		.byte	0
+ 1148 0098 03       		.uleb128 0x3
+ 1149 0099 0E       		.uleb128 0xe
+ 1150 009a 3A       		.uleb128 0x3a
+ 1151 009b 0B       		.uleb128 0xb
+ 1152 009c 3B       		.uleb128 0x3b
+ 1153 009d 05       		.uleb128 0x5
+ 1154 009e 49       		.uleb128 0x49
+ 1155 009f 13       		.uleb128 0x13
+ 1156 00a0 38       		.uleb128 0x38
+ 1157 00a1 0B       		.uleb128 0xb
+ 1158 00a2 00       		.byte	0
+ 1159 00a3 00       		.byte	0
+ 1160 00a4 0D       		.uleb128 0xd
+ 1161 00a5 13       		.uleb128 0x13
+ 1162 00a6 01       		.byte	0x1
+ 1163 00a7 0B       		.uleb128 0xb
+ 1164 00a8 0B       		.uleb128 0xb
+ 1165 00a9 3A       		.uleb128 0x3a
+ 1166 00aa 0B       		.uleb128 0xb
+ 1167 00ab 3B       		.uleb128 0x3b
+ 1168 00ac 05       		.uleb128 0x5
+ 1169 00ad 01       		.uleb128 0x1
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 24
+
+
+ 1170 00ae 13       		.uleb128 0x13
+ 1171 00af 00       		.byte	0
+ 1172 00b0 00       		.byte	0
+ 1173 00b1 0E       		.uleb128 0xe
+ 1174 00b2 2E       		.uleb128 0x2e
+ 1175 00b3 00       		.byte	0
+ 1176 00b4 3F       		.uleb128 0x3f
+ 1177 00b5 19       		.uleb128 0x19
+ 1178 00b6 03       		.uleb128 0x3
+ 1179 00b7 0E       		.uleb128 0xe
+ 1180 00b8 3A       		.uleb128 0x3a
+ 1181 00b9 0B       		.uleb128 0xb
+ 1182 00ba 3B       		.uleb128 0x3b
+ 1183 00bb 0B       		.uleb128 0xb
+ 1184 00bc 27       		.uleb128 0x27
+ 1185 00bd 19       		.uleb128 0x19
+ 1186 00be 11       		.uleb128 0x11
+ 1187 00bf 01       		.uleb128 0x1
+ 1188 00c0 12       		.uleb128 0x12
+ 1189 00c1 06       		.uleb128 0x6
+ 1190 00c2 40       		.uleb128 0x40
+ 1191 00c3 18       		.uleb128 0x18
+ 1192 00c4 9742     		.uleb128 0x2117
+ 1193 00c6 19       		.uleb128 0x19
+ 1194 00c7 00       		.byte	0
+ 1195 00c8 00       		.byte	0
+ 1196 00c9 0F       		.uleb128 0xf
+ 1197 00ca 34       		.uleb128 0x34
+ 1198 00cb 00       		.byte	0
+ 1199 00cc 03       		.uleb128 0x3
+ 1200 00cd 0E       		.uleb128 0xe
+ 1201 00ce 3A       		.uleb128 0x3a
+ 1202 00cf 0B       		.uleb128 0xb
+ 1203 00d0 3B       		.uleb128 0x3b
+ 1204 00d1 0B       		.uleb128 0xb
+ 1205 00d2 49       		.uleb128 0x49
+ 1206 00d3 13       		.uleb128 0x13
+ 1207 00d4 3F       		.uleb128 0x3f
+ 1208 00d5 19       		.uleb128 0x19
+ 1209 00d6 3C       		.uleb128 0x3c
+ 1210 00d7 19       		.uleb128 0x19
+ 1211 00d8 00       		.byte	0
+ 1212 00d9 00       		.byte	0
+ 1213 00da 10       		.uleb128 0x10
+ 1214 00db 0F       		.uleb128 0xf
+ 1215 00dc 00       		.byte	0
+ 1216 00dd 0B       		.uleb128 0xb
+ 1217 00de 0B       		.uleb128 0xb
+ 1218 00df 49       		.uleb128 0x49
+ 1219 00e0 13       		.uleb128 0x13
+ 1220 00e1 00       		.byte	0
+ 1221 00e2 00       		.byte	0
+ 1222 00e3 11       		.uleb128 0x11
+ 1223 00e4 26       		.uleb128 0x26
+ 1224 00e5 00       		.byte	0
+ 1225 00e6 49       		.uleb128 0x49
+ 1226 00e7 13       		.uleb128 0x13
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 25
+
+
+ 1227 00e8 00       		.byte	0
+ 1228 00e9 00       		.byte	0
+ 1229 00ea 12       		.uleb128 0x12
+ 1230 00eb 01       		.uleb128 0x1
+ 1231 00ec 01       		.byte	0x1
+ 1232 00ed 49       		.uleb128 0x49
+ 1233 00ee 13       		.uleb128 0x13
+ 1234 00ef 01       		.uleb128 0x1
+ 1235 00f0 13       		.uleb128 0x13
+ 1236 00f1 00       		.byte	0
+ 1237 00f2 00       		.byte	0
+ 1238 00f3 13       		.uleb128 0x13
+ 1239 00f4 21       		.uleb128 0x21
+ 1240 00f5 00       		.byte	0
+ 1241 00f6 49       		.uleb128 0x49
+ 1242 00f7 13       		.uleb128 0x13
+ 1243 00f8 2F       		.uleb128 0x2f
+ 1244 00f9 0B       		.uleb128 0xb
+ 1245 00fa 00       		.byte	0
+ 1246 00fb 00       		.byte	0
+ 1247 00fc 14       		.uleb128 0x14
+ 1248 00fd 34       		.uleb128 0x34
+ 1249 00fe 00       		.byte	0
+ 1250 00ff 03       		.uleb128 0x3
+ 1251 0100 0E       		.uleb128 0xe
+ 1252 0101 3A       		.uleb128 0x3a
+ 1253 0102 0B       		.uleb128 0xb
+ 1254 0103 3B       		.uleb128 0x3b
+ 1255 0104 05       		.uleb128 0x5
+ 1256 0105 49       		.uleb128 0x49
+ 1257 0106 13       		.uleb128 0x13
+ 1258 0107 3F       		.uleb128 0x3f
+ 1259 0108 19       		.uleb128 0x19
+ 1260 0109 3C       		.uleb128 0x3c
+ 1261 010a 19       		.uleb128 0x19
+ 1262 010b 00       		.byte	0
+ 1263 010c 00       		.byte	0
+ 1264 010d 15       		.uleb128 0x15
+ 1265 010e 34       		.uleb128 0x34
+ 1266 010f 00       		.byte	0
+ 1267 0110 03       		.uleb128 0x3
+ 1268 0111 0E       		.uleb128 0xe
+ 1269 0112 3A       		.uleb128 0x3a
+ 1270 0113 0B       		.uleb128 0xb
+ 1271 0114 3B       		.uleb128 0x3b
+ 1272 0115 0B       		.uleb128 0xb
+ 1273 0116 49       		.uleb128 0x49
+ 1274 0117 13       		.uleb128 0x13
+ 1275 0118 3F       		.uleb128 0x3f
+ 1276 0119 19       		.uleb128 0x19
+ 1277 011a 02       		.uleb128 0x2
+ 1278 011b 18       		.uleb128 0x18
+ 1279 011c 00       		.byte	0
+ 1280 011d 00       		.byte	0
+ 1281 011e 00       		.byte	0
+ 1282              		.section	.debug_aranges,"",%progbits
+ 1283 0000 1C000000 		.4byte	0x1c
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 26
+
+
+ 1284 0004 0200     		.2byte	0x2
+ 1285 0006 00000000 		.4byte	.Ldebug_info0
+ 1286 000a 04       		.byte	0x4
+ 1287 000b 00       		.byte	0
+ 1288 000c 0000     		.2byte	0
+ 1289 000e 0000     		.2byte	0
+ 1290 0010 00000000 		.4byte	.LFB111
+ 1291 0014 14000000 		.4byte	.LFE111-.LFB111
+ 1292 0018 00000000 		.4byte	0
+ 1293 001c 00000000 		.4byte	0
+ 1294              		.section	.debug_ranges,"",%progbits
+ 1295              	.Ldebug_ranges0:
+ 1296 0000 00000000 		.4byte	.LFB111
+ 1297 0004 14000000 		.4byte	.LFE111
+ 1298 0008 00000000 		.4byte	0
+ 1299 000c 00000000 		.4byte	0
+ 1300              		.section	.debug_line,"",%progbits
+ 1301              	.Ldebug_line0:
+ 1302 0000 D1010000 		.section	.debug_str,"MS",%progbits,1
+ 1302      0200B401 
+ 1302      00000201 
+ 1302      FB0E0D00 
+ 1302      01010101 
+ 1303              	.LASF54:
+ 1304 0000 70726F74 		.ascii	"protBusMasterMask\000"
+ 1304      4275734D 
+ 1304      61737465 
+ 1304      724D6173 
+ 1304      6B00
+ 1305              	.LASF64:
+ 1306 0012 666C6173 		.ascii	"flashCtlMainWs3Freq\000"
+ 1306      6843746C 
+ 1306      4D61696E 
+ 1306      57733346 
+ 1306      72657100 
+ 1307              	.LASF86:
+ 1308 0026 6770696F 		.ascii	"gpioPrtCfgInOffset\000"
+ 1308      50727443 
+ 1308      6667496E 
+ 1308      4F666673 
+ 1308      657400
+ 1309              	.LASF104:
+ 1310 0039 6970634C 		.ascii	"ipcLockStatusOffset\000"
+ 1310      6F636B53 
+ 1310      74617475 
+ 1310      734F6666 
+ 1310      73657400 
+ 1311              	.LASF30:
+ 1312 004d 63727970 		.ascii	"cryptoVersion\000"
+ 1312      746F5665 
+ 1312      7273696F 
+ 1312      6E00
+ 1313              	.LASF48:
+ 1314 005b 70657269 		.ascii	"periClockNr\000"
+ 1314      436C6F63 
+ 1314      6B4E7200 
+ 1315              	.LASF26:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 27
+
+
+ 1316 0067 70617373 		.ascii	"passBase\000"
+ 1316      42617365 
+ 1316      00
+ 1317              	.LASF39:
+ 1318 0070 63707573 		.ascii	"cpussIpcIrqNr\000"
+ 1318      73497063 
+ 1318      4972714E 
+ 1318      7200
+ 1319              	.LASF3:
+ 1320 007e 5F5F7569 		.ascii	"__uint8_t\000"
+ 1320      6E74385F 
+ 1320      7400
+ 1321              	.LASF83:
+ 1322 0088 70657269 		.ascii	"periDiv24_5CtlOffset\000"
+ 1322      44697632 
+ 1322      345F3543 
+ 1322      746C4F66 
+ 1322      66736574 
+ 1323              	.LASF90:
+ 1324 009d 63707573 		.ascii	"cpussCm4ClockCtlOffset\000"
+ 1324      73436D34 
+ 1324      436C6F63 
+ 1324      6B43746C 
+ 1324      4F666673 
+ 1325              	.LASF19:
+ 1326 00b4 63707573 		.ascii	"cpussBase\000"
+ 1326      73426173 
+ 1326      6500
+ 1327              	.LASF68:
+ 1328 00be 64774368 		.ascii	"dwChCtlPrioPos\000"
+ 1328      43746C50 
+ 1328      72696F50 
+ 1328      6F7300
+ 1329              	.LASF11:
+ 1330 00cd 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1330      206C6F6E 
+ 1330      6720756E 
+ 1330      7369676E 
+ 1330      65642069 
+ 1331              	.LASF72:
+ 1332 00e4 70657269 		.ascii	"periTrCmdOffset\000"
+ 1332      5472436D 
+ 1332      644F6666 
+ 1332      73657400 
+ 1333              	.LASF96:
+ 1334 00f4 63707573 		.ascii	"cpussSysTickCtlOffset\000"
+ 1334      73537973 
+ 1334      5469636B 
+ 1334      43746C4F 
+ 1334      66667365 
+ 1335              	.LASF128:
+ 1336 010a 7765656B 		.ascii	"weekOfMonth\000"
+ 1336      4F664D6F 
+ 1336      6E746800 
+ 1337              	.LASF57:
+ 1338 0116 666C6173 		.ascii	"flashPipeRequired\000"
+ 1338      68506970 
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 28
+
+
+ 1338      65526571 
+ 1338      75697265 
+ 1338      6400
+ 1339              	.LASF61:
+ 1340 0128 666C6173 		.ascii	"flashCtlMainWs0Freq\000"
+ 1340      6843746C 
+ 1340      4D61696E 
+ 1340      57733046 
+ 1340      72657100 
+ 1341              	.LASF14:
+ 1342 013c 696E7431 		.ascii	"int16_t\000"
+ 1342      365F7400 
+ 1343              	.LASF112:
+ 1344 0144 43595F52 		.ascii	"CY_RTC_DST_RELATIVE\000"
+ 1344      54435F44 
+ 1344      53545F52 
+ 1344      454C4154 
+ 1344      49564500 
+ 1345              	.LASF10:
+ 1346 0158 6C6F6E67 		.ascii	"long long int\000"
+ 1346      206C6F6E 
+ 1346      6720696E 
+ 1346      7400
+ 1347              	.LASF2:
+ 1348 0166 7369676E 		.ascii	"signed char\000"
+ 1348      65642063 
+ 1348      68617200 
+ 1349              	.LASF77:
+ 1350 0172 70657269 		.ascii	"periDivCmdTypeSelPos\000"
+ 1350      44697643 
+ 1350      6D645479 
+ 1350      70655365 
+ 1350      6C506F73 
+ 1351              	.LASF23:
+ 1352 0187 70726F74 		.ascii	"protBase\000"
+ 1352      42617365 
+ 1352      00
+ 1353              	.LASF35:
+ 1354 0190 69706356 		.ascii	"ipcVersion\000"
+ 1354      65727369 
+ 1354      6F6E00
+ 1355              	.LASF97:
+ 1356 019b 63707573 		.ascii	"cpussCm0NmiCtlOffset\000"
+ 1356      73436D30 
+ 1356      4E6D6943 
+ 1356      746C4F66 
+ 1356      66736574 
+ 1357              	.LASF45:
+ 1358 01b0 73727373 		.ascii	"srssNumClkpath\000"
+ 1358      4E756D43 
+ 1358      6C6B7061 
+ 1358      746800
+ 1359              	.LASF24:
+ 1360 01bf 6873696F 		.ascii	"hsiomBase\000"
+ 1360      6D426173 
+ 1360      6500
+ 1361              	.LASF130:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 29
+
+
+ 1362 01c9 73746172 		.ascii	"startDst\000"
+ 1362      74447374 
+ 1362      00
+ 1363              	.LASF124:
+ 1364 01d2 79656172 		.ascii	"year\000"
+ 1364      00
+ 1365              	.LASF113:
+ 1366 01d7 43595F52 		.ascii	"CY_RTC_DST_FIXED\000"
+ 1366      54435F44 
+ 1366      53545F46 
+ 1366      49584544 
+ 1366      00
+ 1367              	.LASF7:
+ 1368 01e8 6C6F6E67 		.ascii	"long int\000"
+ 1368      20696E74 
+ 1368      00
+ 1369              	.LASF136:
+ 1370 01f1 5254435F 		.ascii	"RTC_1_rtcDstStatus\000"
+ 1370      315F7274 
+ 1370      63447374 
+ 1370      53746174 
+ 1370      757300
+ 1371              	.LASF55:
+ 1372 0204 63727970 		.ascii	"cryptoMemSize\000"
+ 1372      746F4D65 
+ 1372      6D53697A 
+ 1372      6500
+ 1373              	.LASF21:
+ 1374 0212 70657269 		.ascii	"periBase\000"
+ 1374      42617365 
+ 1374      00
+ 1375              	.LASF135:
+ 1376 021b 5254435F 		.ascii	"RTC_1_initVar\000"
+ 1376      315F696E 
+ 1376      69745661 
+ 1376      7200
+ 1377              	.LASF53:
+ 1378 0229 73797350 		.ascii	"sysPmSimoPresent\000"
+ 1378      6D53696D 
+ 1378      6F507265 
+ 1378      73656E74 
+ 1378      00
+ 1379              	.LASF43:
+ 1380 023a 63707573 		.ascii	"cpussFmIrq\000"
+ 1380      73466D49 
+ 1380      727100
+ 1381              	.LASF108:
+ 1382 0245 646F7562 		.ascii	"double\000"
+ 1382      6C6500
+ 1383              	.LASF82:
+ 1384 024c 70657269 		.ascii	"periDiv16_5CtlOffset\000"
+ 1384      44697631 
+ 1384      365F3543 
+ 1384      746C4F66 
+ 1384      66736574 
+ 1385              	.LASF46:
+ 1386 0261 73727373 		.ascii	"srssNumPll\000"
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 30
+
+
+ 1386      4E756D50 
+ 1386      6C6C00
+ 1387              	.LASF80:
+ 1388 026c 70657269 		.ascii	"periDiv8CtlOffset\000"
+ 1388      44697638 
+ 1388      43746C4F 
+ 1388      66667365 
+ 1388      7400
+ 1389              	.LASF87:
+ 1390 027e 6770696F 		.ascii	"gpioPrtCfgOutOffset\000"
+ 1390      50727443 
+ 1390      66674F75 
+ 1390      744F6666 
+ 1390      73657400 
+ 1391              	.LASF20:
+ 1392 0292 666C6173 		.ascii	"flashcBase\000"
+ 1392      68634261 
+ 1392      736500
+ 1393              	.LASF8:
+ 1394 029d 5F5F7569 		.ascii	"__uint32_t\000"
+ 1394      6E743332 
+ 1394      5F7400
+ 1395              	.LASF50:
+ 1396 02a8 70617373 		.ascii	"passSarChannels\000"
+ 1396      53617243 
+ 1396      68616E6E 
+ 1396      656C7300 
+ 1397              	.LASF4:
+ 1398 02b8 5F5F696E 		.ascii	"__int16_t\000"
+ 1398      7431365F 
+ 1398      7400
+ 1399              	.LASF93:
+ 1400 02c2 63707573 		.ascii	"cpussCm4PwrCtlOffset\000"
+ 1400      73436D34 
+ 1400      50777243 
+ 1400      746C4F66 
+ 1400      66736574 
+ 1401              	.LASF88:
+ 1402 02d7 6770696F 		.ascii	"gpioPrtCfgSioOffset\000"
+ 1402      50727443 
+ 1402      66675369 
+ 1402      6F4F6666 
+ 1402      73657400 
+ 1403              	.LASF40:
+ 1404 02eb 63707573 		.ascii	"cpussDwChNr\000"
+ 1404      73447743 
+ 1404      684E7200 
+ 1405              	.LASF123:
+ 1406 02f7 6D6F6E74 		.ascii	"month\000"
+ 1406      6800
+ 1407              	.LASF12:
+ 1408 02fd 756E7369 		.ascii	"unsigned int\000"
+ 1408      676E6564 
+ 1408      20696E74 
+ 1408      00
+ 1409              	.LASF109:
+ 1410 030a 43595F52 		.ascii	"CY_RTC_24_HOURS\000"
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 31
+
+
+ 1410      54435F32 
+ 1410      345F484F 
+ 1410      55525300 
+ 1411              	.LASF73:
+ 1412 031a 70657269 		.ascii	"periTrCmdGrSelMsk\000"
+ 1412      5472436D 
+ 1412      64477253 
+ 1412      656C4D73 
+ 1412      6B00
+ 1413              	.LASF125:
+ 1414 032c 63795F73 		.ascii	"cy_stc_rtc_config_t\000"
+ 1414      74635F72 
+ 1414      74635F63 
+ 1414      6F6E6669 
+ 1414      675F7400 
+ 1415              	.LASF9:
+ 1416 0340 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1416      20756E73 
+ 1416      69676E65 
+ 1416      6420696E 
+ 1416      7400
+ 1417              	.LASF38:
+ 1418 0352 63707573 		.ascii	"cpussIpcNr\000"
+ 1418      73497063 
+ 1418      4E7200
+ 1419              	.LASF25:
+ 1420 035d 6770696F 		.ascii	"gpioBase\000"
+ 1420      42617365 
+ 1420      00
+ 1421              	.LASF63:
+ 1422 0366 666C6173 		.ascii	"flashCtlMainWs2Freq\000"
+ 1422      6843746C 
+ 1422      4D61696E 
+ 1422      57733246 
+ 1422      72657100 
+ 1423              	.LASF74:
+ 1424 037a 70657269 		.ascii	"periTrGrOffset\000"
+ 1424      54724772 
+ 1424      4F666673 
+ 1424      657400
+ 1425              	.LASF122:
+ 1426 0389 64617465 		.ascii	"date\000"
+ 1426      00
+ 1427              	.LASF101:
+ 1428 038e 63707573 		.ascii	"cpussRam1Ctl0\000"
+ 1428      7352616D 
+ 1428      3143746C 
+ 1428      3000
+ 1429              	.LASF75:
+ 1430 039c 70657269 		.ascii	"periTrGrSize\000"
+ 1430      54724772 
+ 1430      53697A65 
+ 1430      00
+ 1431              	.LASF33:
+ 1432 03a9 6770696F 		.ascii	"gpioVersion\000"
+ 1432      56657273 
+ 1432      696F6E00 
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 32
+
+
+ 1433              	.LASF15:
+ 1434 03b5 75696E74 		.ascii	"uint16_t\000"
+ 1434      31365F74 
+ 1434      00
+ 1435              	.LASF111:
+ 1436 03be 63795F65 		.ascii	"cy_en_rtc_hours_format_t\000"
+ 1436      6E5F7274 
+ 1436      635F686F 
+ 1436      7572735F 
+ 1436      666F726D 
+ 1437              	.LASF105:
+ 1438 03d7 63795F73 		.ascii	"cy_stc_device_t\000"
+ 1438      74635F64 
+ 1438      65766963 
+ 1438      655F7400 
+ 1439              	.LASF141:
+ 1440 03e7 47656E65 		.ascii	"Generated_Source\\PSoC6\\RTC_1.c\000"
+ 1440      72617465 
+ 1440      645F536F 
+ 1440      75726365 
+ 1440      5C50536F 
+ 1441              	.LASF51:
+ 1442 0406 65704D6F 		.ascii	"epMonitorNr\000"
+ 1442      6E69746F 
+ 1442      724E7200 
+ 1443              	.LASF114:
+ 1444 0412 63795F65 		.ascii	"cy_en_rtc_dst_format_t\000"
+ 1444      6E5F7274 
+ 1444      635F6473 
+ 1444      745F666F 
+ 1444      726D6174 
+ 1445              	.LASF94:
+ 1446 0429 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
+ 1446      73547269 
+ 1446      6D52616D 
+ 1446      43746C4F 
+ 1446      66667365 
+ 1447              	.LASF121:
+ 1448 043f 6461794F 		.ascii	"dayOfWeek\000"
+ 1448      66576565 
+ 1448      6B00
+ 1449              	.LASF89:
+ 1450 0449 63707573 		.ascii	"cpussCm0ClockCtlOffset\000"
+ 1450      73436D30 
+ 1450      436C6F63 
+ 1450      6B43746C 
+ 1450      4F666673 
+ 1451              	.LASF29:
+ 1452 0460 63707573 		.ascii	"cpussVersion\000"
+ 1452      73566572 
+ 1452      73696F6E 
+ 1452      00
+ 1453              	.LASF36:
+ 1454 046d 70657269 		.ascii	"periVersion\000"
+ 1454      56657273 
+ 1454      696F6E00 
+ 1455              	.LASF92:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 33
+
+
+ 1456 0479 63707573 		.ascii	"cpussCm0StatusOffset\000"
+ 1456      73436D30 
+ 1456      53746174 
+ 1456      75734F66 
+ 1456      66736574 
+ 1457              	.LASF17:
+ 1458 048e 73697A65 		.ascii	"sizetype\000"
+ 1458      74797065 
+ 1458      00
+ 1459              	.LASF66:
+ 1460 0497 64774368 		.ascii	"dwChOffset\000"
+ 1460      4F666673 
+ 1460      657400
+ 1461              	.LASF41:
+ 1462 04a2 63707573 		.ascii	"cpussFlashPaSize\000"
+ 1462      73466C61 
+ 1462      73685061 
+ 1462      53697A65 
+ 1462      00
+ 1463              	.LASF79:
+ 1464 04b3 70657269 		.ascii	"periDivCmdPaTypeSelPos\000"
+ 1464      44697643 
+ 1464      6D645061 
+ 1464      54797065 
+ 1464      53656C50 
+ 1465              	.LASF144:
+ 1466 04ca 5254435F 		.ascii	"RTC_1_Start\000"
+ 1466      315F5374 
+ 1466      61727400 
+ 1467              	.LASF102:
+ 1468 04d6 63707573 		.ascii	"cpussRam2Ctl0\000"
+ 1468      7352616D 
+ 1468      3243746C 
+ 1468      3000
+ 1469              	.LASF70:
+ 1470 04e4 64775374 		.ascii	"dwStatusChIdxPos\000"
+ 1470      61747573 
+ 1470      43684964 
+ 1470      78506F73 
+ 1470      00
+ 1471              	.LASF52:
+ 1472 04f5 75646250 		.ascii	"udbPresent\000"
+ 1472      72657365 
+ 1472      6E7400
+ 1473              	.LASF139:
+ 1474 0500 5254435F 		.ascii	"RTC_1_config\000"
+ 1474      315F636F 
+ 1474      6E666967 
+ 1474      00
+ 1475              	.LASF32:
+ 1476 050d 666C6173 		.ascii	"flashcVersion\000"
+ 1476      68635665 
+ 1476      7273696F 
+ 1476      6E00
+ 1477              	.LASF28:
+ 1478 051b 63727970 		.ascii	"cryptoBase\000"
+ 1478      746F4261 
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 34
+
+
+ 1478      736500
+ 1479              	.LASF49:
+ 1480 0526 736D6966 		.ascii	"smifDeviceNr\000"
+ 1480      44657669 
+ 1480      63654E72 
+ 1480      00
+ 1481              	.LASF118:
+ 1482 0533 686F7572 		.ascii	"hour\000"
+ 1482      00
+ 1483              	.LASF107:
+ 1484 0538 666C6F61 		.ascii	"float\000"
+ 1484      7400
+ 1485              	.LASF127:
+ 1486 053e 6461794F 		.ascii	"dayOfMonth\000"
+ 1486      664D6F6E 
+ 1486      746800
+ 1487              	.LASF134:
+ 1488 0549 63795F52 		.ascii	"cy_RTC_daysInMonthTbl\000"
+ 1488      54435F64 
+ 1488      61797349 
+ 1488      6E4D6F6E 
+ 1488      74685462 
+ 1489              	.LASF71:
+ 1490 055f 64775374 		.ascii	"dwStatusChIdxMsk\000"
+ 1490      61747573 
+ 1490      43684964 
+ 1490      784D736B 
+ 1490      00
+ 1491              	.LASF110:
+ 1492 0570 43595F52 		.ascii	"CY_RTC_12_HOURS\000"
+ 1492      54435F31 
+ 1492      325F484F 
+ 1492      55525300 
+ 1493              	.LASF117:
+ 1494 0580 63795F65 		.ascii	"cy_en_rtc_am_pm_t\000"
+ 1494      6E5F7274 
+ 1494      635F616D 
+ 1494      5F706D5F 
+ 1494      7400
+ 1495              	.LASF133:
+ 1496 0592 63795F64 		.ascii	"cy_device\000"
+ 1496      65766963 
+ 1496      6500
+ 1497              	.LASF99:
+ 1498 059c 63707573 		.ascii	"cpussRomCtl\000"
+ 1498      73526F6D 
+ 1498      43746C00 
+ 1499              	.LASF69:
+ 1500 05a8 64774368 		.ascii	"dwChCtlPreemptablePos\000"
+ 1500      43746C50 
+ 1500      7265656D 
+ 1500      70746162 
+ 1500      6C65506F 
+ 1501              	.LASF132:
+ 1502 05be 63795F73 		.ascii	"cy_stc_rtc_dst_t\000"
+ 1502      74635F72 
+ 1502      74635F64 
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 35
+
+
+ 1502      73745F74 
+ 1502      00
+ 1503              	.LASF22:
+ 1504 05cf 75646242 		.ascii	"udbBase\000"
+ 1504      61736500 
+ 1505              	.LASF137:
+ 1506 05d7 5F426F6F 		.ascii	"_Bool\000"
+ 1506      6C00
+ 1507              	.LASF1:
+ 1508 05dd 756E7369 		.ascii	"unsigned char\000"
+ 1508      676E6564 
+ 1508      20636861 
+ 1508      7200
+ 1509              	.LASF65:
+ 1510 05eb 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
+ 1510      6843746C 
+ 1510      4D61696E 
+ 1510      57733446 
+ 1510      72657100 
+ 1511              	.LASF0:
+ 1512 05ff 73686F72 		.ascii	"short int\000"
+ 1512      7420696E 
+ 1512      7400
+ 1513              	.LASF76:
+ 1514 0609 70657269 		.ascii	"periDivCmdDivSelMsk\000"
+ 1514      44697643 
+ 1514      6D644469 
+ 1514      7653656C 
+ 1514      4D736B00 
+ 1515              	.LASF126:
+ 1516 061d 666F726D 		.ascii	"format\000"
+ 1516      617400
+ 1517              	.LASF120:
+ 1518 0624 6872466F 		.ascii	"hrFormat\000"
+ 1518      726D6174 
+ 1518      00
+ 1519              	.LASF47:
+ 1520 062d 73727373 		.ascii	"srssNumHfroot\000"
+ 1520      4E756D48 
+ 1520      66726F6F 
+ 1520      7400
+ 1521              	.LASF60:
+ 1522 063b 666C6173 		.ascii	"flashEraseDelay\000"
+ 1522      68457261 
+ 1522      73654465 
+ 1522      6C617900 
+ 1523              	.LASF16:
+ 1524 064b 75696E74 		.ascii	"uint32_t\000"
+ 1524      33325F74 
+ 1524      00
+ 1525              	.LASF98:
+ 1526 0654 63707573 		.ascii	"cpussCm4NmiCtlOffset\000"
+ 1526      73436D34 
+ 1526      4E6D6943 
+ 1526      746C4F66 
+ 1526      66736574 
+ 1527              	.LASF140:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 36
+
+
+ 1528 0669 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1528      43313120 
+ 1528      352E342E 
+ 1528      31203230 
+ 1528      31363036 
+ 1529 069c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
+ 1529      20726576 
+ 1529      6973696F 
+ 1529      6E203233 
+ 1529      37373135 
+ 1530 06cf 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
+ 1530      67202D66 
+ 1530      66756E63 
+ 1530      74696F6E 
+ 1530      2D736563 
+ 1531              	.LASF18:
+ 1532 06fb 6C6F6E67 		.ascii	"long double\000"
+ 1532      20646F75 
+ 1532      626C6500 
+ 1533              	.LASF106:
+ 1534 0707 63686172 		.ascii	"char\000"
+ 1534      00
+ 1535              	.LASF37:
+ 1536 070c 70726F74 		.ascii	"protVersion\000"
+ 1536      56657273 
+ 1536      696F6E00 
+ 1537              	.LASF100:
+ 1538 0718 63707573 		.ascii	"cpussRam0Ctl0\000"
+ 1538      7352616D 
+ 1538      3043746C 
+ 1538      3000
+ 1539              	.LASF5:
+ 1540 0726 5F5F7569 		.ascii	"__uint16_t\000"
+ 1540      6E743136 
+ 1540      5F7400
+ 1541              	.LASF143:
+ 1542 0731 63795F73 		.ascii	"cy_stc_rtc_config\000"
+ 1542      74635F72 
+ 1542      74635F63 
+ 1542      6F6E6669 
+ 1542      6700
+ 1543              	.LASF116:
+ 1544 0743 43595F52 		.ascii	"CY_RTC_PM\000"
+ 1544      54435F50 
+ 1544      4D00
+ 1545              	.LASF81:
+ 1546 074d 70657269 		.ascii	"periDiv16CtlOffset\000"
+ 1546      44697631 
+ 1546      3643746C 
+ 1546      4F666673 
+ 1546      657400
+ 1547              	.LASF34:
+ 1548 0760 6873696F 		.ascii	"hsiomVersion\000"
+ 1548      6D566572 
+ 1548      73696F6E 
+ 1548      00
+ 1549              	.LASF115:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 37
+
+
+ 1550 076d 43595F52 		.ascii	"CY_RTC_AM\000"
+ 1550      54435F41 
+ 1550      4D00
+ 1551              	.LASF62:
+ 1552 0777 666C6173 		.ascii	"flashCtlMainWs1Freq\000"
+ 1552      6843746C 
+ 1552      4D61696E 
+ 1552      57733146 
+ 1552      72657100 
+ 1553              	.LASF6:
+ 1554 078b 73686F72 		.ascii	"short unsigned int\000"
+ 1554      7420756E 
+ 1554      7369676E 
+ 1554      65642069 
+ 1554      6E7400
+ 1555              	.LASF67:
+ 1556 079e 64774368 		.ascii	"dwChSize\000"
+ 1556      53697A65 
+ 1556      00
+ 1557              	.LASF119:
+ 1558 07a7 616D506D 		.ascii	"amPm\000"
+ 1558      00
+ 1559              	.LASF103:
+ 1560 07ac 69706353 		.ascii	"ipcStructSize\000"
+ 1560      74727563 
+ 1560      7453697A 
+ 1560      6500
+ 1561              	.LASF42:
+ 1562 07ba 63707573 		.ascii	"cpussIpc0Irq\000"
+ 1562      73497063 
+ 1562      30497271 
+ 1562      00
+ 1563              	.LASF129:
+ 1564 07c7 63795F73 		.ascii	"cy_stc_rtc_dst_format_t\000"
+ 1564      74635F72 
+ 1564      74635F64 
+ 1564      73745F66 
+ 1564      6F726D61 
+ 1565              	.LASF85:
+ 1566 07df 6770696F 		.ascii	"gpioPrtCfgOffset\000"
+ 1566      50727443 
+ 1566      66674F66 
+ 1566      66736574 
+ 1566      00
+ 1567              	.LASF44:
+ 1568 07f0 63707573 		.ascii	"cpussNotConnectedIrq\000"
+ 1568      734E6F74 
+ 1568      436F6E6E 
+ 1568      65637465 
+ 1568      64497271 
+ 1569              	.LASF58:
+ 1570 0805 666C6173 		.ascii	"flashWriteDelay\000"
+ 1570      68577269 
+ 1570      74654465 
+ 1570      6C617900 
+ 1571              	.LASF13:
+ 1572 0815 75696E74 		.ascii	"uint8_t\000"
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 38
+
+
+ 1572      385F7400 
+ 1573              	.LASF142:
+ 1574 081d 443A5C63 		.ascii	"D:\\cypress\\client\\shanghai kinetic\\software\\03"
+ 1574      79707265 
+ 1574      73735C63 
+ 1574      6C69656E 
+ 1574      745C7368 
+ 1575 084b 32305C44 		.ascii	"20\\Design01.cydsn\000"
+ 1575      65736967 
+ 1575      6E30312E 
+ 1575      63796473 
+ 1575      6E00
+ 1576              	.LASF91:
+ 1577 085d 63707573 		.ascii	"cpussCm4StatusOffset\000"
+ 1577      73436D34 
+ 1577      53746174 
+ 1577      75734F66 
+ 1577      66736574 
+ 1578              	.LASF84:
+ 1579 0872 6770696F 		.ascii	"gpioPrtIntrCfgOffset\000"
+ 1579      50727449 
+ 1579      6E747243 
+ 1579      66674F66 
+ 1579      66736574 
+ 1580              	.LASF95:
+ 1581 0887 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
+ 1581      73547269 
+ 1581      6D526F6D 
+ 1581      43746C4F 
+ 1581      66667365 
+ 1582              	.LASF131:
+ 1583 089d 73746F70 		.ascii	"stopDst\000"
+ 1583      44737400 
+ 1584              	.LASF31:
+ 1585 08a5 64775665 		.ascii	"dwVersion\000"
+ 1585      7273696F 
+ 1585      6E00
+ 1586              	.LASF27:
+ 1587 08af 69706342 		.ascii	"ipcBase\000"
+ 1587      61736500 
+ 1588              	.LASF78:
+ 1589 08b7 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
+ 1589      44697643 
+ 1589      6D645061 
+ 1589      44697653 
+ 1589      656C506F 
+ 1590              	.LASF59:
+ 1591 08cd 666C6173 		.ascii	"flashProgramDelay\000"
+ 1591      6850726F 
+ 1591      6772616D 
+ 1591      44656C61 
+ 1591      7900
+ 1592              	.LASF138:
+ 1593 08df 5254435F 		.ascii	"RTC_1_dstConfig\000"
+ 1593      315F6473 
+ 1593      74436F6E 
+ 1593      66696700 
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccdc8a5v.s 			page 39
+
+
+ 1594              	.LASF56:
+ 1595 08ef 666C6173 		.ascii	"flashRwwRequired\000"
+ 1595      68527777 
+ 1595      52657175 
+ 1595      69726564 
+ 1595      00
+ 1596              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

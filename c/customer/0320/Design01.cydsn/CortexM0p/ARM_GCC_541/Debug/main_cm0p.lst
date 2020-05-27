@@ -1,0 +1,4043 @@
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0plus
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main_cm0p.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB549:
+  27              		.file 1 "main_cm0p.c"
+   1:main_cm0p.c   **** /* ========================================
+   2:main_cm0p.c   ****  *
+   3:main_cm0p.c   ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main_cm0p.c   ****  * All Rights Reserved
+   5:main_cm0p.c   ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main_cm0p.c   ****  *
+   7:main_cm0p.c   ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main_cm0p.c   ****  * WHICH IS THE PROPERTY OF your company.
+   9:main_cm0p.c   ****  *
+  10:main_cm0p.c   ****  * ========================================
+  11:main_cm0p.c   **** */
+  12:main_cm0p.c   **** #include "project.h"
+  13:main_cm0p.c   **** #include "custom_ipc.h"
+  14:main_cm0p.c   **** int main(void)
+  15:main_cm0p.c   **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36              	.LBB8:
+  37              	.LBB9:
+  38              		.file 2 "Generated_Source\\PSoC6\\pdl\\cmsis/include/cmsis_gcc.h"
+   1:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /**************************************************************************//**
+   2:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
+   3:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
+   4:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * @version  V5.0.3
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 2
+
+
+   5:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * @date     16. January 2018
+   6:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  ******************************************************************************/
+   7:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /*
+   8:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * Copyright (c) 2009-2017 ARM Limited. All rights reserved.
+   9:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  *
+  10:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * SPDX-License-Identifier: Apache-2.0
+  11:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  *
+  12:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * Licensed under the Apache License, Version 2.0 (the License); you may
+  13:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * not use this file except in compliance with the License.
+  14:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * You may obtain a copy of the License at
+  15:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  *
+  16:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * www.apache.org/licenses/LICENSE-2.0
+  17:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  *
+  18:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * Unless required by applicable law or agreed to in writing, software
+  19:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+  20:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  21:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * See the License for the specific language governing permissions and
+  22:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  * limitations under the License.
+  23:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  */
+  24:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+  25:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef __CMSIS_GCC_H
+  26:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #define __CMSIS_GCC_H
+  27:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+  28:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /* ignore some GCC warnings */
+  29:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #pragma GCC diagnostic push
+  30:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wsign-conversion"
+  31:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wconversion"
+  32:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #pragma GCC diagnostic ignored "-Wunused-parameter"
+  33:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+  34:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /* Fallback for __has_builtin */
+  35:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef __has_builtin
+  36:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __has_builtin(x) (0)
+  37:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  38:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+  39:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /* CMSIS compiler specific defines */
+  40:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __ASM
+  41:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __ASM                                  __asm
+  42:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  43:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __INLINE
+  44:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __INLINE                               inline
+  45:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  46:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __STATIC_INLINE
+  47:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __STATIC_INLINE                        static inline
+  48:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  49:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __STATIC_FORCEINLINE                 
+  50:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
+  51:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif                                           
+  52:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __NO_RETURN
+  53:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
+  54:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  55:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __USED
+  56:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
+  57:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  58:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __WEAK
+  59:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
+  60:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  61:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __PACKED
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 3
+
+
+  62:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __PACKED                               __attribute__((packed, aligned(1)))
+  63:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  64:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __PACKED_STRUCT
+  65:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __PACKED_STRUCT                        struct __attribute__((packed, aligned(1)))
+  66:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  67:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __PACKED_UNION
+  68:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __PACKED_UNION                         union __attribute__((packed, aligned(1)))
+  69:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  70:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32        /* deprecated */
+  71:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  72:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  73:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  74:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   struct __attribute__((packed)) T_UINT32 { uint32_t v; };
+  75:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  76:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32(x)                  (((struct T_UINT32 *)(x))->v)
+  77:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  78:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
+  79:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  80:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  81:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  82:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_WRITE { uint16_t v; };
+  83:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  84:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_WRITE(addr, val)    (void)((((struct T_UINT16_WRITE *)(void *)(addr))-
+  85:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  86:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_READ
+  87:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  88:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  89:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  90:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT16_READ { uint16_t v; };
+  91:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+  92:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
+  93:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+  94:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
+  95:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+  96:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+  97:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+  98:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_WRITE { uint32_t v; };
+  99:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 100:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_WRITE(addr, val)    (void)((((struct T_UINT32_WRITE *)(void *)(addr))-
+ 101:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+ 102:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_READ
+ 103:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic push
+ 104:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
+ 105:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wattributes"
+ 106:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __PACKED_STRUCT T_UINT32_READ { uint32_t v; };
+ 107:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
+ 108:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_READ(addr)          (((const struct T_UINT32_READ *)(const void *)(add
+ 109:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+ 110:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __ALIGNED
+ 111:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __ALIGNED(x)                           __attribute__((aligned(x)))
+ 112:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+ 113:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #ifndef   __RESTRICT
+ 114:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
+ 115:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** #endif
+ 116:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+ 117:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+ 118:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 4
+
+
+ 119:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+ 120:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+ 121:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   @{
+ 122:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  */
+ 123:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** 
+ 124:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** /**
+ 125:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
+ 126:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
+ 127:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
+ 128:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****  */
+ 129:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __enable_irq(void)
+ 130:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h **** {
+ 131:Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+  39              		.loc 2 131 0
+  40              		.syntax divided
+  41              	@ 131 "Generated_Source\PSoC6\pdl\cmsis/include/cmsis_gcc.h" 1
+  42 0002 62B6     		cpsie i
+  43              	@ 0 "" 2
+  44              		.thumb
+  45              		.syntax unified
+  46              	.LBE9:
+  47              	.LBE8:
+  16:main_cm0p.c   ****     __enable_irq(); /* Enable global interrupts. */
+  17:main_cm0p.c   ****     uint32_t data;    
+  18:main_cm0p.c   ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  19:main_cm0p.c   **** //    Cy_BLE_Start(NULL);
+  20:main_cm0p.c   ****     /* Enable CM4.  CY_CORTEX_M4_APPL_ADDR must be updated if CM4 memory layout is changed. */
+  21:main_cm0p.c   ****     Cy_SysEnableCM4(CY_CORTEX_M4_APPL_ADDR); 
+  48              		.loc 1 21 0
+  49 0004 1148     		ldr	r0, .L4
+  50 0006 FFF7FEFF 		bl	Cy_SysEnableCM4
+  51              	.LVL0:
+  52              	.LBB10:
+  53              	.LBB11:
+  54              		.file 3 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/ipc/cy_ipc_drv.h"
+   1:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /***************************************************************************//**
+   2:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \file cy_ipc_drv.h
+   3:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \version 1.30
+   4:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+   5:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Provides an API declaration of the IPC driver.
+   6:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+   7:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** ********************************************************************************
+   8:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \copyright
+   9:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Copyright 2016-2018, Cypress Semiconductor Corporation. All rights reserved.
+  10:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * You may use this file only in accordance with the license, terms, conditions,
+  11:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * disclaimers, and limitations in the end user license agreement accompanying
+  12:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * the software package with which this file was provided.
+  13:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *******************************************************************************/
+  14:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+  15:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #ifndef CY_IPC_DRV_H
+  16:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #define CY_IPC_DRV_H
+  17:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+  18:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+  19:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /**
+  20:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \addtogroup group_ipc
+  21:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \{
+  22:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * The inter-processor communication (IPC) driver provides a safe and reliable
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 5
+
+
+  23:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * method to transfer data between CPUs. Hardware locking ensures that only one
+  24:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * device can acquire and transfer data at a time so no data is lost or
+  25:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * overwritten by asynchronous processes or CPUs.
+  26:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  27:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Include either cy_ipc_pipe.h or cy_ipc_sema.h. Alternatively include cy_pdl.h 
+  28:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * (ModusToolbox only) to get access to all functions and declarations in the PDL.
+  29:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  30:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * There are three parts to the API:
+  31:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     - Driver-level (DRV) API - used internally by Semaphore and Pipe levels
+  32:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     - Pipe-level (PIPE) API - establishes a communication channel between
+  33:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *       processors
+  34:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     - Semaphore-level (SEMA) API - enables users to set and clear flags to
+  35:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *       synchronize operations.
+  36:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  37:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Firmware does not need to use the DRV API. It can implement IPC functionality
+  38:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * entirely with the PIPE and SEMA APIs.
+  39:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  40:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \section group_ipc_background Background
+  41:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  42:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * IPC is implemented in hardware as a collection of individual communication
+  43:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * channels, each with a set of 32-bit registers. The IPC design implements a set
+  44:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * of interrupts that enable each processor to notify the other that data is
+  45:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * available, or has been processed. There is also a locking mechanism that
+  46:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * allows only one CPU to gain access at a time.
+  47:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  48:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * The Driver-level API manages each channel's registers to implement IPC
+  49:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * functionality. For information on the IPC registers, see the IPC chapter of
+  50:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * the Technical Reference Manual (TRM).
+  51:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  52:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * At the hardware level, communication is a five-step process.
+  53:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     -#  The sending processor acquires a channel
+  54:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     -#  It puts data into the channel
+  55:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     -#  The sender generates a notify event (interrupt)
+  56:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     -#  The receiving processor identifies the sender and retrieves the data
+  57:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     -#  The receiving processor generates a release event (interrupt)
+  58:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  59:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \image html ipc_driver.png
+  60:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  61:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * These transactions are handled transparently by the DRV-level API. Use the
+  62:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * PIPE and SEMA layers of the API to implement communication in your application.
+  63:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * The data transferred is limited to a single 32-bit value. As implemented by
+  64:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * the PIPE API, that value is a pointer to a data structure of arbitrary size
+  65:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * and complexity.
+  66:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  67:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \section group_ipc_overview Overview
+  68:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  69:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * The Pipe is the key element in the PDL design. A pipe is typically a
+  70:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * full-duplex communication channel between CPU cores. A pipe allows a single
+  71:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * conduit to transfer messages or data to and from multiple processes or CPUs.
+  72:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  73:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * A pipe has two endpoints, one on each core. Each endpoint contains a dedicated
+  74:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * IPC channel and an interrupt. IPC channels 0-7 and IPC interrupts 0-7 are
+  75:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * reserved for system use.
+  76:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  77:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * The pipe also contains the number of clients it supports, and for each client
+  78:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * a callback function. So the pipe can service a number of clients, each with a
+  79:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * separate callback function, on either endpoint. The number of clients a pipe
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 6
+
+
+  80:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * supports is the sum of each endpoint's clients.
+  81:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  82:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * This design enables any number of processes on the sending core to put
+  83:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * arbitrary data into a single pipe. The first element of that data is the
+  84:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * client ID of the client that should handle the data.
+  85:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  86:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * An interrupt notifies the receiving core that data is available. The receiving
+  87:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * core parses the data to identify the client, and then dispatches the event to
+  88:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * the appropriate client via the client callback function. An interrupt notifies
+  89:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * the sending core that the receiver is finished. In this way a single pipe can
+  90:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * manage arbitrary data transfers between cores with data flowing in either
+  91:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * direction.
+  92:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  93:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \image html ipc_ints.png
+  94:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  95:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * The application can use semaphores to control access to shared resources, as
+  96:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * required by the application's logic.
+  97:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+  98:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * The PDL provides specific files that set up default IPC functionality.
+  99:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * They are system_psoc6.h, system_psoc6_cm0plus.c and system_psoc6_cm4.c. You 
+ 100:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * can modify these files based on the requirements of your design. 
+ 101:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * If you use PSoC Creator as a development environment, it will not overwrite 
+ 102:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * your changes when you generate the application or build your code.
+ 103:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 104:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \section group_ipc_pipe_layer PIPE layer
+ 105:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 106:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * A pipe is a communication channel between two endpoints. PSoC 6 devices support
+ 107:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * 16 IPC channels, and 16 IPC interrupts, each numbered 0-15. IPC Channels 0-7
+ 108:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * and IPC interrupts 0-7 are reserved for system use. Channels 8-15 and
+ 109:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * interrupts 8-15 are available for application use.
+ 110:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 111:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * A full duplex pipe uses two IPC channels, one per endpoint. Each endpoint
+ 112:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * specifies all the information required to process a message (either sent or
+ 113:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * received). Each endpoint is configured to use an IPC channel, and an IPC
+ 114:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * interrupt. Common practice is to use the interrupt with the same number as
+ 115:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * the IPC channel. However, IPC Interrupts are not directly associated with the
+ 116:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * IPC channels, so any channel can use any interrupt.  Any IPC channel can
+ 117:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * trigger 0, 1 or all the IPC interrupts at once, depending on the Notify or
+ 118:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Release masks used.
+ 119:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 120:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * It is also possible to set up a one-directional pipe, using a single IPC
+ 121:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * channel. In this design one processor is always the sender, and the other is
+ 122:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * always the receiver. However, there are still two endpoints.
+ 123:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 124:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * A pipe supports an arbitrary number of clients with an array of callback
+ 125:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * functions, one per client. The client ID is the index number into the array
+ 126:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * for the client. After a pipe is configured and initialized, the application
+ 127:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * calls Cy_IPC_Pipe_RegisterCallback() once per client to register each client's
+ 128:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * callback function. Multiple clients can use the same callback function. The
+ 129:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * endpoints in a pipe share the callback array.
+ 130:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 131:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Use Cy_IPC_Pipe_SendMessage() to send data. You specify both the "to" and
+ 132:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * "from" endpoints, and a callback function to be used when the data transfer is
+ 133:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * complete. The data is a 32-bit void pointer. The data pointed to is arbitrary,
+ 134:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * and can be an array, a structure, or a location in memory. The only limitation
+ 135:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * is that the first element of the data must be a 32-bit unsigned word containing
+ 136:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * a client ID number. The ID number is the index into the callback array.
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 7
+
+
+ 137:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 138:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * When a message is sent, the receiving endpoint's interrupt handler is called.
+ 139:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * The ISR can perform any task required by the design. However, as part of its
+ 140:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * function it calls \ref Cy_IPC_Pipe_ExecCallback. This function retrieves the
+ 141:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * client ID from the data and calls the associated callback function.
+ 142:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * The user-supplied callback function handles the data in whatever way is
+ 143:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * appropriate based on the application logic.
+ 144:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 145:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * After the callback function is returned by the receiver, it invokes the release
+ 146:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * callback function defined by the sender of the message.
+ 147:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 148:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \section group_ipc_sema_layer SEMA Layer
+ 149:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 150:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * A semaphore is a flag the application uses to control access to a shared
+ 151:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * resource. The SEMA-level API uses an IPC channel to implement
+ 152:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * semaphores. Startup code sets up a default semaphore system. The
+ 153:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * default system creates an array of 128 semaphores (four 32-bit values).
+ 154:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Semaphores 0-15 are reserved for system use. See
+ 155:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Configuration Considerations - SEMA.
+ 156:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 157:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Functions are available to initialize the semaphore system, to set or
+ 158:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * clear a semaphore, or to get the semaphore's current status. Application
+ 159:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * logic uses SEMA functions to relate a particular semaphore to a particular
+ 160:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * shared resource, and set, clear, or check the flag when accessing the
+ 161:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * shared resource.
+ 162:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 163:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \section group_ipc_configuration_cypipe Configuration Considerations - CYPIPE
+ 164:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 165:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * There are none. The startup files set up the required CYPIPE for system
+ 166:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * use. Do not modify the CYPIPE. It uses IPC channels 5 and 6 to implement full
+ 167:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * duplex communication between cores. See System Interrupt (SysInt) for background.
+ 168:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 169:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * To create your own pipe (<b>USRPIPE</b>) you should edit startup files
+ 170:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * and take 4 steps:
+ 171:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   -# Define a pipe callbacks processing interrupt handler
+ 172:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *      (similar to <b>Cy_SysIpcPipeIsrCm0</b> or <b>Cy_SysIpcPipeIsrCm4</b>)
+ 173:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   -# Define a callbacks array (similar to <b>systemIpcPipeSysCbArray</b>)
+ 174:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   -# Define your pipe configuration with a cy_stc_ipc_pipe_config_t type structure
+ 175:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *      (similar to <b>systemIpcPipeConfigCm0</b> and <b>systemIpcPipeConfigCm4</b>)
+ 176:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   -# Call Cy_IPC_Pipe_Init() from each core to initialize your pipe (similar
+ 177:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *      to call in the <b>SystemInit</b>)
+ 178:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 179:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \section group_ipc_configuration_sema Configuration Considerations - SEMA
+ 180:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 181:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Startup code calls Cy_IPC_Sema_Init() with default values to set up semaphore 
+ 182:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * functionality. By default the semaphore system uses IPC channel 4, and 
+ 183:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * creates 128 semaphores. Do <b>not</b> change the IPC channel. 
+ 184:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * You can change the number of semaphores.
+ 185:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 186:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * To change the number of semaphores, modify this line of code in system_psoc6.h.
+ 187:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 188:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \code
+ 189:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * #define CY_IPC_SEMA_COUNT               (uint32_t)(128u)
+ 190:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \endcode
+ 191:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 192:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Startup also declares array ipcSemaArray to hold the semaphore
+ 193:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * flags based on the size defined for this symbol. Use increments of 32. You
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 8
+
+
+ 194:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * must have at least 32 semaphores. Semaphores 0-15 are reserved for
+ 195:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * system use. Your application can use semaphores greater than 15.
+ 196:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 197:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \section group_ipc_more_information More Information
+ 198:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 199:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * If the default startup file is not used, or SystemInit() is not called in your 
+ 200:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * project, call the following three functions prior to executing any flash or 
+ 201:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * EmEEPROM write or erase operation:
+ 202:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *  -# Cy_IPC_Sema_Init()
+ 203:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *  -# Cy_IPC_Pipe_Config()
+ 204:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *  -# Cy_IPC_Pipe_Init()
+ 205:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *  -# Cy_Flash_Init()
+ 206:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 207:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * See the technical reference manual(TRM) for more information on the IPC.
+ 208:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 209:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \section group_ipc_MISRA MISRA-C Compliance
+ 210:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 211:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * <table class="doxtable">
+ 212:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   <tr>
+ 213:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <th>MISRA Rule</th>
+ 214:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <th>Rule Class (Required/Advisory)</th>
+ 215:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <th>Rule Description</th>
+ 216:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <th style="width: 50%;">Description of Deviation(s)</th>
+ 217:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   </tr>
+ 218:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   <tr>
+ 219:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>10.3</td>
+ 220:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>R</td>
+ 221:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>The value of a complex expression of integer type shall be cast
+ 222:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *         only to a type of the same signedness that is no wider than the underlying
+ 223:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *         type of the expression.</td>
+ 224:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>The cast from integer to enumeration value is used to calculate
+ 225:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *         the interrupt vector source from the integer number of the IPC interrupt
+ 226:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *         structure, so there is no way to avoid this cast.</td>
+ 227:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   </tr>
+ 228:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   <tr>
+ 229:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>11.4</td>
+ 230:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>A</td>
+ 231:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>A cast should not be performed between a pointer to the void to a
+ 232:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *         pointer to the object type.</td>
+ 233:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>The cast from the void to pointer and vice versa is used to transmit
+ 234:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *         data via the \ref group_ipc channel by exchanging the pointer. We
+ 235:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *         exchange only one pointer, so there is no way to avoid this cast.</td>
+ 236:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   </tr>
+ 237:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * </table>
+ 238:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 239:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \section group_ipc_changelog Changelog
+ 240:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 241:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * <table class="doxtable">
+ 242:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   <tr><th>Version</th><th>Changes</th><th>Reason for Change</th></tr>
+ 243:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   <tr>
+ 244:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td rowspan="3">1.30</td>
+ 245:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>Flattened the organization of the driver source code into the single source directory and
+ 246:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>Driver library directory-structure simplification.</td>
+ 247:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   </tr>
+ 248:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   <tr>
+ 249:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>Moved the Cy_IPC_SystemSemaInit(), Cy_IPC_SystemPipeInit() functions implementation from 
+ 250:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>Changed IPC driver configuration method from compile time to run time.</td>
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 9
+
+
+ 251:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   </tr>
+ 252:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   <tr>
+ 253:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>Added register access layer. Use register access macros instead
+ 254:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *         of direct register access using dereferenced pointers.</td>
+ 255:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>Makes register access device-independent, so that the PDL does 
+ 256:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *         not need to be recompiled for each supported part number.</td>
+ 257:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   </tr>
+ 258:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   <tr>
+ 259:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>1.20</td>
+ 260:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>Added \ref Cy_IPC_Pipe_ExecuteCallback function.
+ 261:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *         Updated documentation about user pipe initialization.
+ 262:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     </td>
+ 263:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>Interface improvement, documentation update</td>
+ 264:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   </tr>
+ 265:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   <tr>
+ 266:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>1.10.1</td>
+ 267:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>Updated description of the \ref Cy_IPC_Pipe_Init,
+ 268:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *         \ref Cy_IPC_Pipe_EndpointInit, \ref Cy_IPC_Sema_Set functions.
+ 269:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *         Added / updated code snippets.
+ 270:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     </td>
+ 271:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>Documentation update and clarification</td>
+ 272:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   </tr>
+ 273:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   <tr>
+ 274:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>1.10</td>
+ 275:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>Added support for more IPC structures</td>
+ 276:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>New device support</td>
+ 277:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   </tr>
+ 278:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   <tr>
+ 279:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>1.0</td>
+ 280:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td>Initial version</td>
+ 281:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *     <td></td>
+ 282:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   </tr>
+ 283:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * </table>
+ 284:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 285:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \defgroup group_ipc_drv IPC driver layer (IPC_DRV)
+ 286:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \{
+ 287:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   The functions of this layer are used in the higher IPC levels
+ 288:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   (Semaphores and Pipes).
+ 289:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   Users are not expected to call any of these IPC functions directly (cy_ipc_drv.h). 
+ 290:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   Instead include either of cy_ipc_sema.h or cy_ipc_pipe.h. 
+ 291:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   Alternatively include cy_pdl.h to get access to all functions and declarations in the PDL.
+ 292:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 293:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   \defgroup group_ipc_macros Macros
+ 294:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *       Macro definitions are used in the driver
+ 295:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 296:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   \defgroup group_ipc_functions Functions
+ 297:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *       Functions are used in the driver
+ 298:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 299:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   \defgroup group_ipc_data_structures Data Structures
+ 300:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *       Data structures are used in the driver
+ 301:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 302:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *   \defgroup group_ipc_enums Enumerated Types
+ 303:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *       Enumerations are used in the driver
+ 304:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \}
+ 305:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 306:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \defgroup group_ipc_sema IPC semaphores layer (IPC_SEMA)
+ 307:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \defgroup group_ipc_pipe IPC pipes layer (IPC_PIPE)
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 10
+
+
+ 308:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 309:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** */
+ 310:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 311:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 312:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /******************************************************************************/
+ 313:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /* Include files                                                              */
+ 314:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /******************************************************************************/
+ 315:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 316:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #include "cy_device.h"
+ 317:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #include "cy_device_headers.h"
+ 318:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #include "cy_syslib.h"
+ 319:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #include <stddef.h>
+ 320:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 321:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 322:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /**
+ 323:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \addtogroup group_ipc_macros
+ 324:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \{
+ 325:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** */
+ 326:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 327:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** Driver major version */
+ 328:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #define CY_IPC_DRV_VERSION_MAJOR       1
+ 329:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 330:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** Driver minor version */
+ 331:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #define CY_IPC_DRV_VERSION_MINOR       30
+ 332:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 333:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** Defines a value to indicate that no notification events are needed */
+ 334:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #define CY_IPC_NO_NOTIFICATION         (uint32_t)(0x00000000ul)
+ 335:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 336:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /* Error Code constants */
+ 337:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #define CY_IPC_ID CY_PDL_DRV_ID(0x22u)  /**< Software PDL driver ID for IPC */
+ 338:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 339:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** Return prefix for IPC driver function status codes */
+ 340:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #define CY_IPC_ID_INFO    (uint32_t)( CY_IPC_ID | CY_PDL_STATUS_INFO )
+ 341:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** Return prefix for IPC driver function warning return values */
+ 342:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #define CY_IPC_ID_WARNING (uint32_t)( CY_IPC_ID | CY_PDL_STATUS_WARNING)
+ 343:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** Return prefix for IPC driver function error return values */
+ 344:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #define CY_IPC_ID_ERROR   (uint32_t)( CY_IPC_ID | CY_PDL_STATUS_ERROR)
+ 345:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 346:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** Converts the IPC interrupt channel number to interrupt vector */
+ 347:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #define CY_IPC_INTR_NUM_TO_VECT(x)         ((int32_t) cy_device->cpussIpc0Irq + (x))
+ 348:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 349:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** \} group_ipc_macros */
+ 350:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 351:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /* end of definition in device.h */
+ 352:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 353:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** \cond INTERNAL */
+ 354:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #if (CY_CPU_CORTEX_M0P)
+ 355:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****     #define CY_IPC_CHAN_SYSCALL         CY_IPC_CHAN_SYSCALL_CM0
+ 356:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #else
+ 357:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****     #define CY_IPC_CHAN_SYSCALL         CY_IPC_CHAN_SYSCALL_CM4
+ 358:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #endif  /* (CY_CPU_CORTEX_M0P) */
+ 359:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** \endcond */
+ 360:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 361:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /**
+ 362:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \addtogroup group_ipc_enums
+ 363:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \{
+ 364:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** */
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 11
+
+
+ 365:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 366:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /**
+ 367:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * This is a list of ENUMs used for function return status.
+ 368:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** */
+ 369:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** typedef enum
+ 370:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** {
+ 371:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****     /** Function was successfully executed */
+ 372:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****     CY_IPC_DRV_SUCCESS      = (0x00u),
+ 373:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****     /** Function was not executed due to an error.
+ 374:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****         Typical conditions for the error explained
+ 375:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****         in the function description */
+ 376:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****     CY_IPC_DRV_ERROR        = ( CY_IPC_ID_ERROR + 1ul),
+ 377:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** } cy_en_ipcdrv_status_t;
+ 378:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 379:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** \} group_ipc_enums */
+ 380:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 381:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 382:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #ifdef __cplusplus
+ 383:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** extern "C" {
+ 384:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** #endif
+ 385:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 386:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** \cond INTERNAL */
+ 387:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 388:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE void     Cy_IPC_Drv_WriteDataValue (IPC_STRUCT_Type* base, uint32_t dataValue);
+ 389:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE uint32_t Cy_IPC_Drv_ReadDataValue (IPC_STRUCT_Type const * base);
+ 390:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 391:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE uint32_t Cy_IPC_Drv_ExtractAcquireMask (uint32_t intMask);
+ 392:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE uint32_t Cy_IPC_Drv_ExtractReleaseMask (uint32_t intMask);
+ 393:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 394:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /** \endcond */
+ 395:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 396:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /**
+ 397:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \addtogroup group_ipc_functions
+ 398:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \{
+ 399:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** */
+ 400:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 401:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE IPC_STRUCT_Type*       Cy_IPC_Drv_GetIpcBaseAddress (uint32_t ipcIndex);
+ 402:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE IPC_INTR_STRUCT_Type*  Cy_IPC_Drv_GetIntrBaseAddr (uint32_t ipcIntrIndex);
+ 403:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 404:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE void     Cy_IPC_Drv_AcquireNotify (IPC_STRUCT_Type * base, uint32_t notifyEventIntr
+ 405:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE void     Cy_IPC_Drv_ReleaseNotify (IPC_STRUCT_Type * base, uint32_t notifyEventIntr
+ 406:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 407:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE  cy_en_ipcdrv_status_t Cy_IPC_Drv_LockAcquire (IPC_STRUCT_Type const * base);
+ 408:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** cy_en_ipcdrv_status_t    Cy_IPC_Drv_LockRelease (IPC_STRUCT_Type * base, uint32_t releaseEventIntr)
+ 409:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE bool     Cy_IPC_Drv_IsLockAcquired (IPC_STRUCT_Type const * base);
+ 410:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE uint32_t Cy_IPC_Drv_GetLockStatus (IPC_STRUCT_Type const * base);
+ 411:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 412:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** cy_en_ipcdrv_status_t    Cy_IPC_Drv_SendMsgWord (IPC_STRUCT_Type * base, uint32_t notifyEventIntr, 
+ 413:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** cy_en_ipcdrv_status_t    Cy_IPC_Drv_ReadMsgWord (IPC_STRUCT_Type const * base, uint32_t * message);
+ 414:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE cy_en_ipcdrv_status_t Cy_IPC_Drv_SendMsgPtr (IPC_STRUCT_Type* base, uint32_t notify
+ 415:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE cy_en_ipcdrv_status_t Cy_IPC_Drv_ReadMsgPtr (IPC_STRUCT_Type const * base, void ** 
+ 416:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 417:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE void     Cy_IPC_Drv_SetInterruptMask (IPC_INTR_STRUCT_Type * base,
+ 418:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****                                                       uint32_t ipcReleaseMask, uint32_t ipcAcquireM
+ 419:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE uint32_t Cy_IPC_Drv_GetInterruptMask (IPC_INTR_STRUCT_Type const * base);
+ 420:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE uint32_t Cy_IPC_Drv_GetInterruptStatusMasked (IPC_INTR_STRUCT_Type const * base);
+ 421:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE uint32_t Cy_IPC_Drv_GetInterruptStatus (IPC_INTR_STRUCT_Type const * base);
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 12
+
+
+ 422:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE void     Cy_IPC_Drv_SetInterrupt (IPC_INTR_STRUCT_Type * base,
+ 423:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****                                                       uint32_t ipcReleaseMask, uint32_t ipcAcquireM
+ 424:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE void     Cy_IPC_Drv_ClearInterrupt (IPC_INTR_STRUCT_Type * base,
+ 425:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****                                                       uint32_t ipcReleaseMask, uint32_t ipcAcquireM
+ 426:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 427:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** 
+ 428:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** /*******************************************************************************
+ 429:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Function Name: Cy_IPC_Drv_GetIpcBaseAddress
+ 430:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** ****************************************************************************//**
+ 431:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 432:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * This function takes an IPC channel index as a parameter and returns the base
+ 433:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * address the IPC registers corresponding to the IPC channel.
+ 434:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 435:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \note The user is responsible for ensuring that ipcIndex does not exceed the
+ 436:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * limits.
+ 437:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 438:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \param ipcIndex
+ 439:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Represents the number of IPC structure. This is converted to the base address of
+ 440:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * the IPC channel registers.
+ 441:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 442:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \return
+ 443:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * Returns a pointer to the base of the IPC registers.
+ 444:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 445:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \funcusage
+ 446:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** * \snippet IPC_sut_01.cydsn/main_cm4.c snippet_Cy_IPC_Drv_SendMsgWord
+ 447:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *
+ 448:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** *******************************************************************************/
+ 449:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** __STATIC_INLINE IPC_STRUCT_Type* Cy_IPC_Drv_GetIpcBaseAddress (uint32_t ipcIndex)
+ 450:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h **** {
+ 451:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****     CY_ASSERT_L1(CY_IPC_CHANNELS > ipcIndex);
+  55              		.loc 3 451 0
+  56 000a 114B     		ldr	r3, .L4+4
+  57 000c 1A68     		ldr	r2, [r3]
+  58 000e 3123     		movs	r3, #49
+  59 0010 D35C     		ldrb	r3, [r2, r3]
+  60 0012 0E2B     		cmp	r3, #14
+  61 0014 04D8     		bhi	.L2
+  62 0016 C421     		movs	r1, #196
+  63 0018 FF31     		adds	r1, r1, #255
+  64 001a 0E48     		ldr	r0, .L4+8
+  65 001c FFF7FEFF 		bl	Cy_SysLib_AssertFailed
+  66              	.LVL1:
+  67              	.L2:
+ 452:Generated_Source\PSoC6\pdl\drivers/peripheral/ipc/cy_ipc_drv.h ****     return ( (IPC_STRUCT_Type*) CY_IPC_STRUCT_PTR(ipcIndex));
+  68              		.loc 3 452 0
+  69 0020 0B4B     		ldr	r3, .L4+4
+  70 0022 1B68     		ldr	r3, [r3]
+  71 0024 186A     		ldr	r0, [r3, #32]
+  72 0026 B022     		movs	r2, #176
+  73 0028 9A5A     		ldrh	r2, [r3, r2]
+  74 002a D300     		lsls	r3, r2, #3
+  75 002c 9B1A     		subs	r3, r3, r2
+  76 002e 5B00     		lsls	r3, r3, #1
+  77 0030 C018     		adds	r0, r0, r3
+  78              	.LVL2:
+  79              	.LBE11:
+  80              	.LBE10:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 13
+
+
+  22:main_cm0p.c   **** 
+  23:main_cm0p.c   ****     Cy_IPC_Drv_SendMsgWord(Cy_IPC_Drv_GetIpcBaseAddress(IPC_CM4_CHANNEL_INDEX), IPC_CM4_INTR_MASK, 
+  81              		.loc 1 23 0
+  82 0032 0022     		movs	r2, #0
+  83 0034 8021     		movs	r1, #128
+  84 0036 C901     		lsls	r1, r1, #7
+  85 0038 FFF7FEFF 		bl	Cy_IPC_Drv_SendMsgWord
+  86              	.LVL3:
+  87              	.L3:
+  24:main_cm0p.c   ****     for(;;)
+  25:main_cm0p.c   ****     {
+  26:main_cm0p.c   ****         /* Place your application code here. */
+  27:main_cm0p.c   **** //        Cy_BLE_ProcessEvents();
+  28:main_cm0p.c   ****         Cy_SysLib_Delay(5000);
+  88              		.loc 1 28 0 discriminator 1
+  89 003c 0648     		ldr	r0, .L4+12
+  90 003e FFF7FEFF 		bl	Cy_SysLib_Delay
+  91              	.LVL4:
+  29:main_cm0p.c   ****         Cy_SysPm_DeepSleep(CY_SYSPM_WAIT_FOR_INTERRUPT);
+  92              		.loc 1 29 0 discriminator 1
+  93 0042 0020     		movs	r0, #0
+  94 0044 FFF7FEFF 		bl	Cy_SysPm_CpuEnterDeepSleep
+  95              	.LVL5:
+  96 0048 F8E7     		b	.L3
+  97              	.L5:
+  98 004a C046     		.align	2
+  99              	.L4:
+ 100 004c 00000810 		.word	268959744
+ 101 0050 00000000 		.word	cy_device
+ 102 0054 00000000 		.word	.LC1
+ 103 0058 88130000 		.word	5000
+ 104              		.cfi_endproc
+ 105              	.LFE549:
+ 106              		.size	main, .-main
+ 107              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 108              		.align	2
+ 109              	.LC1:
+ 110 0000 47656E65 		.ascii	"Generated_Source\\PSoC6\\pdl\\drivers/peripheral/ip"
+ 110      72617465 
+ 110      645F536F 
+ 110      75726365 
+ 110      5C50536F 
+ 111 0030 632F6379 		.ascii	"c/cy_ipc_drv.h\000"
+ 111      5F697063 
+ 111      5F647276 
+ 111      2E6800
+ 112              		.text
+ 113              	.Letext0:
+ 114              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 115              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 116              		.file 6 "Generated_Source\\PSoC6\\pdl\\devices/psoc6/include/ip/cyip_ipc.h"
+ 117              		.file 7 "Generated_Source\\PSoC6\\pdl\\devices/psoc6/include/psoc6_01_config.h"
+ 118              		.file 8 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/device/cy_device.h"
+ 119              		.file 9 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/syslib/cy_syslib.h"
+ 120              		.file 10 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/syspm/cy_syspm.h"
+ 121              		.file 11 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/rtc/cy_rtc.h"
+ 122              		.file 12 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/sar/cy_sar.h"
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 14
+
+
+ 123              		.file 13 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_i2c.h"
+ 124              		.file 14 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_uart.h"
+ 125              		.file 15 "Generated_Source\\PSoC6/ADC.h"
+ 126              		.file 16 "Generated_Source\\PSoC6/UART.h"
+ 127              		.file 17 "Generated_Source\\PSoC6/I2C.h"
+ 128              		.file 18 "Generated_Source\\PSoC6/RTC_1.h"
+ 129              		.file 19 "./system_psoc6.h"
+ 130              		.section	.debug_info,"",%progbits
+ 131              	.Ldebug_info0:
+ 132 0000 270C0000 		.4byte	0xc27
+ 133 0004 0400     		.2byte	0x4
+ 134 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 135 000a 04       		.byte	0x4
+ 136 000b 01       		.uleb128 0x1
+ 137 000c ED090000 		.4byte	.LASF218
+ 138 0010 0C       		.byte	0xc
+ 139 0011 84000000 		.4byte	.LASF219
+ 140 0015 610C0000 		.4byte	.LASF220
+ 141 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 142 001d 00000000 		.4byte	0
+ 143 0021 00000000 		.4byte	.Ldebug_line0
+ 144 0025 02       		.uleb128 0x2
+ 145 0026 02       		.byte	0x2
+ 146 0027 05       		.byte	0x5
+ 147 0028 AA080000 		.4byte	.LASF0
+ 148 002c 02       		.uleb128 0x2
+ 149 002d 01       		.byte	0x1
+ 150 002e 08       		.byte	0x8
+ 151 002f 5F080000 		.4byte	.LASF1
+ 152 0033 02       		.uleb128 0x2
+ 153 0034 01       		.byte	0x1
+ 154 0035 06       		.byte	0x6
+ 155 0036 0D020000 		.4byte	.LASF2
+ 156 003a 03       		.uleb128 0x3
+ 157 003b AC000000 		.4byte	.LASF3
+ 158 003f 04       		.byte	0x4
+ 159 0040 1D       		.byte	0x1d
+ 160 0041 2C000000 		.4byte	0x2c
+ 161 0045 03       		.uleb128 0x3
+ 162 0046 21040000 		.4byte	.LASF4
+ 163 004a 04       		.byte	0x4
+ 164 004b 29       		.byte	0x29
+ 165 004c 25000000 		.4byte	0x25
+ 166 0050 03       		.uleb128 0x3
+ 167 0051 BB0A0000 		.4byte	.LASF5
+ 168 0055 04       		.byte	0x4
+ 169 0056 2B       		.byte	0x2b
+ 170 0057 5B000000 		.4byte	0x5b
+ 171 005b 02       		.uleb128 0x2
+ 172 005c 02       		.byte	0x2
+ 173 005d 07       		.byte	0x7
+ 174 005e C1030000 		.4byte	.LASF6
+ 175 0062 02       		.uleb128 0x2
+ 176 0063 04       		.byte	0x4
+ 177 0064 05       		.byte	0x5
+ 178 0065 F1020000 		.4byte	.LASF7
+ 179 0069 03       		.uleb128 0x3
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 15
+
+
+ 180 006a EE030000 		.4byte	.LASF8
+ 181 006e 04       		.byte	0x4
+ 182 006f 41       		.byte	0x41
+ 183 0070 74000000 		.4byte	0x74
+ 184 0074 02       		.uleb128 0x2
+ 185 0075 04       		.byte	0x4
+ 186 0076 07       		.byte	0x7
+ 187 0077 F5040000 		.4byte	.LASF9
+ 188 007b 02       		.uleb128 0x2
+ 189 007c 08       		.byte	0x8
+ 190 007d 05       		.byte	0x5
+ 191 007e FF010000 		.4byte	.LASF10
+ 192 0082 02       		.uleb128 0x2
+ 193 0083 08       		.byte	0x8
+ 194 0084 07       		.byte	0x7
+ 195 0085 29010000 		.4byte	.LASF11
+ 196 0089 04       		.uleb128 0x4
+ 197 008a 04       		.byte	0x4
+ 198 008b 05       		.byte	0x5
+ 199 008c 696E7400 		.ascii	"int\000"
+ 200 0090 02       		.uleb128 0x2
+ 201 0091 04       		.byte	0x4
+ 202 0092 07       		.byte	0x7
+ 203 0093 A2040000 		.4byte	.LASF12
+ 204 0097 03       		.uleb128 0x3
+ 205 0098 3D0C0000 		.4byte	.LASF13
+ 206 009c 05       		.byte	0x5
+ 207 009d 18       		.byte	0x18
+ 208 009e 3A000000 		.4byte	0x3a
+ 209 00a2 03       		.uleb128 0x3
+ 210 00a3 E3010000 		.4byte	.LASF14
+ 211 00a7 05       		.byte	0x5
+ 212 00a8 20       		.byte	0x20
+ 213 00a9 45000000 		.4byte	0x45
+ 214 00ad 03       		.uleb128 0x3
+ 215 00ae 6D030000 		.4byte	.LASF15
+ 216 00b2 05       		.byte	0x5
+ 217 00b3 24       		.byte	0x24
+ 218 00b4 50000000 		.4byte	0x50
+ 219 00b8 03       		.uleb128 0x3
+ 220 00b9 A00D0000 		.4byte	.LASF16
+ 221 00bd 05       		.byte	0x5
+ 222 00be 30       		.byte	0x30
+ 223 00bf 69000000 		.4byte	0x69
+ 224 00c3 02       		.uleb128 0x2
+ 225 00c4 04       		.byte	0x4
+ 226 00c5 07       		.byte	0x7
+ 227 00c6 90060000 		.4byte	.LASF17
+ 228 00ca 05       		.uleb128 0x5
+ 229 00cb B8000000 		.4byte	0xb8
+ 230 00cf 06       		.uleb128 0x6
+ 231 00d0 CA000000 		.4byte	0xca
+ 232 00d4 07       		.uleb128 0x7
+ 233 00d5 CF000000 		.4byte	0xcf
+ 234 00d9 E4000000 		.4byte	0xe4
+ 235 00dd 08       		.uleb128 0x8
+ 236 00de C3000000 		.4byte	0xc3
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 16
+
+
+ 237 00e2 02       		.byte	0x2
+ 238 00e3 00       		.byte	0
+ 239 00e4 09       		.uleb128 0x9
+ 240 00e5 20       		.byte	0x20
+ 241 00e6 06       		.byte	0x6
+ 242 00e7 23       		.byte	0x23
+ 243 00e8 35010000 		.4byte	0x135
+ 244 00ec 0A       		.uleb128 0xa
+ 245 00ed D4030000 		.4byte	.LASF18
+ 246 00f1 06       		.byte	0x6
+ 247 00f2 24       		.byte	0x24
+ 248 00f3 CF000000 		.4byte	0xcf
+ 249 00f7 00       		.byte	0
+ 250 00f8 0A       		.uleb128 0xa
+ 251 00f9 EA000000 		.4byte	.LASF19
+ 252 00fd 06       		.byte	0x6
+ 253 00fe 25       		.byte	0x25
+ 254 00ff CA000000 		.4byte	0xca
+ 255 0103 04       		.byte	0x4
+ 256 0104 0A       		.uleb128 0xa
+ 257 0105 00060000 		.4byte	.LASF20
+ 258 0109 06       		.byte	0x6
+ 259 010a 26       		.byte	0x26
+ 260 010b CA000000 		.4byte	0xca
+ 261 010f 08       		.byte	0x8
+ 262 0110 0A       		.uleb128 0xa
+ 263 0111 9E050000 		.4byte	.LASF21
+ 264 0115 06       		.byte	0x6
+ 265 0116 27       		.byte	0x27
+ 266 0117 CA000000 		.4byte	0xca
+ 267 011b 0C       		.byte	0xc
+ 268 011c 0A       		.uleb128 0xa
+ 269 011d 15040000 		.4byte	.LASF22
+ 270 0121 06       		.byte	0x6
+ 271 0122 28       		.byte	0x28
+ 272 0123 CF000000 		.4byte	0xcf
+ 273 0127 10       		.byte	0x10
+ 274 0128 0A       		.uleb128 0xa
+ 275 0129 F0080000 		.4byte	.LASF23
+ 276 012d 06       		.byte	0x6
+ 277 012e 29       		.byte	0x29
+ 278 012f 3A010000 		.4byte	0x13a
+ 279 0133 14       		.byte	0x14
+ 280 0134 00       		.byte	0
+ 281 0135 05       		.uleb128 0x5
+ 282 0136 D4000000 		.4byte	0xd4
+ 283 013a 06       		.uleb128 0x6
+ 284 013b 35010000 		.4byte	0x135
+ 285 013f 03       		.uleb128 0x3
+ 286 0140 BE080000 		.4byte	.LASF24
+ 287 0144 06       		.byte	0x6
+ 288 0145 2A       		.byte	0x2a
+ 289 0146 E4000000 		.4byte	0xe4
+ 290 014a 0B       		.uleb128 0xb
+ 291 014b 2C0D0000 		.4byte	.LASF25
+ 292 014f 07       		.byte	0x7
+ 293 0150 1D06     		.2byte	0x61d
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 17
+
+
+ 294 0152 3F010000 		.4byte	0x13f
+ 295 0156 02       		.uleb128 0x2
+ 296 0157 08       		.byte	0x8
+ 297 0158 04       		.byte	0x4
+ 298 0159 7F0A0000 		.4byte	.LASF26
+ 299 015d 09       		.uleb128 0x9
+ 300 015e B8       		.byte	0xb8
+ 301 015f 08       		.byte	0x8
+ 302 0160 34       		.byte	0x34
+ 303 0161 6E050000 		.4byte	0x56e
+ 304 0165 0A       		.uleb128 0xa
+ 305 0166 F2000000 		.4byte	.LASF27
+ 306 016a 08       		.byte	0x8
+ 307 016b 37       		.byte	0x37
+ 308 016c B8000000 		.4byte	0xb8
+ 309 0170 00       		.byte	0
+ 310 0171 0A       		.uleb128 0xa
+ 311 0172 E3030000 		.4byte	.LASF28
+ 312 0176 08       		.byte	0x8
+ 313 0177 38       		.byte	0x38
+ 314 0178 B8000000 		.4byte	0xb8
+ 315 017c 04       		.byte	0x4
+ 316 017d 0A       		.uleb128 0xa
+ 317 017e 3B030000 		.4byte	.LASF29
+ 318 0182 08       		.byte	0x8
+ 319 0183 39       		.byte	0x39
+ 320 0184 B8000000 		.4byte	0xb8
+ 321 0188 08       		.byte	0x8
+ 322 0189 0A       		.uleb128 0xa
+ 323 018a 38080000 		.4byte	.LASF30
+ 324 018e 08       		.byte	0x8
+ 325 018f 3A       		.byte	0x3a
+ 326 0190 B8000000 		.4byte	0xb8
+ 327 0194 0C       		.byte	0xc
+ 328 0195 0A       		.uleb128 0xa
+ 329 0196 18060000 		.4byte	.LASF31
+ 330 019a 08       		.byte	0x8
+ 331 019b 3B       		.byte	0x3b
+ 332 019c B8000000 		.4byte	0xb8
+ 333 01a0 10       		.byte	0x10
+ 334 01a1 0A       		.uleb128 0xa
+ 335 01a2 8B020000 		.4byte	.LASF32
+ 336 01a6 08       		.byte	0x8
+ 337 01a7 3C       		.byte	0x3c
+ 338 01a8 B8000000 		.4byte	0xb8
+ 339 01ac 14       		.byte	0x14
+ 340 01ad 0A       		.uleb128 0xa
+ 341 01ae 160B0000 		.4byte	.LASF33
+ 342 01b2 08       		.byte	0x8
+ 343 01b3 3D       		.byte	0x3d
+ 344 01b4 B8000000 		.4byte	0xb8
+ 345 01b8 18       		.byte	0x18
+ 346 01b9 0A       		.uleb128 0xa
+ 347 01ba 7B000000 		.4byte	.LASF34
+ 348 01be 08       		.byte	0x8
+ 349 01bf 3E       		.byte	0x3e
+ 350 01c0 B8000000 		.4byte	0xb8
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 18
+
+
+ 351 01c4 1C       		.byte	0x1c
+ 352 01c5 0A       		.uleb128 0xa
+ 353 01c6 5E0D0000 		.4byte	.LASF35
+ 354 01ca 08       		.byte	0x8
+ 355 01cb 3F       		.byte	0x3f
+ 356 01cc B8000000 		.4byte	0xb8
+ 357 01d0 20       		.byte	0x20
+ 358 01d1 0A       		.uleb128 0xa
+ 359 01d2 58060000 		.4byte	.LASF36
+ 360 01d6 08       		.byte	0x8
+ 361 01d7 40       		.byte	0x40
+ 362 01d8 B8000000 		.4byte	0xb8
+ 363 01dc 24       		.byte	0x24
+ 364 01dd 0A       		.uleb128 0xa
+ 365 01de 930D0000 		.4byte	.LASF37
+ 366 01e2 08       		.byte	0x8
+ 367 01e3 43       		.byte	0x43
+ 368 01e4 97000000 		.4byte	0x97
+ 369 01e8 28       		.byte	0x28
+ 370 01e9 0A       		.uleb128 0xa
+ 371 01ea 61000000 		.4byte	.LASF38
+ 372 01ee 08       		.byte	0x8
+ 373 01ef 44       		.byte	0x44
+ 374 01f0 97000000 		.4byte	0x97
+ 375 01f4 29       		.byte	0x29
+ 376 01f5 0A       		.uleb128 0xa
+ 377 01f6 540D0000 		.4byte	.LASF39
+ 378 01fa 08       		.byte	0x8
+ 379 01fb 45       		.byte	0x45
+ 380 01fc 97000000 		.4byte	0x97
+ 381 0200 2A       		.byte	0x2a
+ 382 0201 0A       		.uleb128 0xa
+ 383 0202 3D070000 		.4byte	.LASF40
+ 384 0206 08       		.byte	0x8
+ 385 0207 46       		.byte	0x46
+ 386 0208 97000000 		.4byte	0x97
+ 387 020c 2B       		.byte	0x2b
+ 388 020d 0A       		.uleb128 0xa
+ 389 020e CD050000 		.4byte	.LASF41
+ 390 0212 08       		.byte	0x8
+ 391 0213 47       		.byte	0x47
+ 392 0214 97000000 		.4byte	0x97
+ 393 0218 2C       		.byte	0x2c
+ 394 0219 0A       		.uleb128 0xa
+ 395 021a EE0A0000 		.4byte	.LASF42
+ 396 021e 08       		.byte	0x8
+ 397 021f 48       		.byte	0x48
+ 398 0220 97000000 		.4byte	0x97
+ 399 0224 2D       		.byte	0x2d
+ 400 0225 0A       		.uleb128 0xa
+ 401 0226 5C020000 		.4byte	.LASF43
+ 402 022a 08       		.byte	0x8
+ 403 022b 49       		.byte	0x49
+ 404 022c 97000000 		.4byte	0x97
+ 405 0230 2E       		.byte	0x2e
+ 406 0231 0A       		.uleb128 0xa
+ 407 0232 86070000 		.4byte	.LASF44
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 19
+
+
+ 408 0236 08       		.byte	0x8
+ 409 0237 4A       		.byte	0x4a
+ 410 0238 97000000 		.4byte	0x97
+ 411 023c 2F       		.byte	0x2f
+ 412 023d 0A       		.uleb128 0xa
+ 413 023e C0040000 		.4byte	.LASF45
+ 414 0242 08       		.byte	0x8
+ 415 0243 4B       		.byte	0x4b
+ 416 0244 97000000 		.4byte	0x97
+ 417 0248 30       		.byte	0x30
+ 418 0249 0A       		.uleb128 0xa
+ 419 024a 33050000 		.4byte	.LASF46
+ 420 024e 08       		.byte	0x8
+ 421 024f 4E       		.byte	0x4e
+ 422 0250 97000000 		.4byte	0x97
+ 423 0254 31       		.byte	0x31
+ 424 0255 0A       		.uleb128 0xa
+ 425 0256 9E000000 		.4byte	.LASF47
+ 426 025a 08       		.byte	0x8
+ 427 025b 4F       		.byte	0x4f
+ 428 025c 97000000 		.4byte	0x97
+ 429 0260 32       		.byte	0x32
+ 430 0261 0A       		.uleb128 0xa
+ 431 0262 90040000 		.4byte	.LASF48
+ 432 0266 08       		.byte	0x8
+ 433 0267 50       		.byte	0x50
+ 434 0268 97000000 		.4byte	0x97
+ 435 026c 33       		.byte	0x33
+ 436 026d 0A       		.uleb128 0xa
+ 437 026e C2000000 		.4byte	.LASF49
+ 438 0272 08       		.byte	0x8
+ 439 0273 51       		.byte	0x51
+ 440 0274 97000000 		.4byte	0x97
+ 441 0278 34       		.byte	0x34
+ 442 0279 0A       		.uleb128 0xa
+ 443 027a 730B0000 		.4byte	.LASF50
+ 444 027e 08       		.byte	0x8
+ 445 027f 52       		.byte	0x52
+ 446 0280 A2000000 		.4byte	0xa2
+ 447 0284 36       		.byte	0x36
+ 448 0285 0A       		.uleb128 0xa
+ 449 0286 A0090000 		.4byte	.LASF51
+ 450 028a 08       		.byte	0x8
+ 451 028b 53       		.byte	0x53
+ 452 028c A2000000 		.4byte	0xa2
+ 453 0290 38       		.byte	0x38
+ 454 0291 0A       		.uleb128 0xa
+ 455 0292 F80B0000 		.4byte	.LASF52
+ 456 0296 08       		.byte	0x8
+ 457 0297 54       		.byte	0x54
+ 458 0298 A2000000 		.4byte	0xa2
+ 459 029c 3A       		.byte	0x3a
+ 460 029d 0A       		.uleb128 0xa
+ 461 029e 7C020000 		.4byte	.LASF53
+ 462 02a2 08       		.byte	0x8
+ 463 02a3 55       		.byte	0x55
+ 464 02a4 97000000 		.4byte	0x97
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 20
+
+
+ 465 02a8 3C       		.byte	0x3c
+ 466 02a9 0A       		.uleb128 0xa
+ 467 02aa 92030000 		.4byte	.LASF54
+ 468 02ae 08       		.byte	0x8
+ 469 02af 56       		.byte	0x56
+ 470 02b0 97000000 		.4byte	0x97
+ 471 02b4 3D       		.byte	0x3d
+ 472 02b5 0A       		.uleb128 0xa
+ 473 02b6 E00B0000 		.4byte	.LASF55
+ 474 02ba 08       		.byte	0x8
+ 475 02bb 57       		.byte	0x57
+ 476 02bc 97000000 		.4byte	0x97
+ 477 02c0 3E       		.byte	0x3e
+ 478 02c1 0A       		.uleb128 0xa
+ 479 02c2 6F000000 		.4byte	.LASF56
+ 480 02c6 08       		.byte	0x8
+ 481 02c7 58       		.byte	0x58
+ 482 02c8 97000000 		.4byte	0x97
+ 483 02cc 3F       		.byte	0x3f
+ 484 02cd 0A       		.uleb128 0xa
+ 485 02ce 4B070000 		.4byte	.LASF57
+ 486 02d2 08       		.byte	0x8
+ 487 02d3 59       		.byte	0x59
+ 488 02d4 97000000 		.4byte	0x97
+ 489 02d8 40       		.byte	0x40
+ 490 02d9 0A       		.uleb128 0xa
+ 491 02da F9030000 		.4byte	.LASF58
+ 492 02de 08       		.byte	0x8
+ 493 02df 5A       		.byte	0x5a
+ 494 02e0 97000000 		.4byte	0x97
+ 495 02e4 41       		.byte	0x41
+ 496 02e5 0A       		.uleb128 0xa
+ 497 02e6 EF060000 		.4byte	.LASF59
+ 498 02ea 08       		.byte	0x8
+ 499 02eb 5B       		.byte	0x5b
+ 500 02ec 97000000 		.4byte	0x97
+ 501 02f0 42       		.byte	0x42
+ 502 02f1 0A       		.uleb128 0xa
+ 503 02f2 29070000 		.4byte	.LASF60
+ 504 02f6 08       		.byte	0x8
+ 505 02f7 5C       		.byte	0x5c
+ 506 02f8 97000000 		.4byte	0x97
+ 507 02fc 43       		.byte	0x43
+ 508 02fd 0A       		.uleb128 0xa
+ 509 02fe 44030000 		.4byte	.LASF61
+ 510 0302 08       		.byte	0x8
+ 511 0303 5D       		.byte	0x5d
+ 512 0304 97000000 		.4byte	0x97
+ 513 0308 44       		.byte	0x44
+ 514 0309 0A       		.uleb128 0xa
+ 515 030a 00000000 		.4byte	.LASF62
+ 516 030e 08       		.byte	0x8
+ 517 030f 5E       		.byte	0x5e
+ 518 0310 B8000000 		.4byte	0xb8
+ 519 0314 48       		.byte	0x48
+ 520 0315 0A       		.uleb128 0xa
+ 521 0316 2D030000 		.4byte	.LASF63
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 21
+
+
+ 522 031a 08       		.byte	0x8
+ 523 031b 5F       		.byte	0x5f
+ 524 031c B8000000 		.4byte	0xb8
+ 525 0320 4C       		.byte	0x4c
+ 526 0321 0A       		.uleb128 0xa
+ 527 0322 A90D0000 		.4byte	.LASF64
+ 528 0326 08       		.byte	0x8
+ 529 0327 60       		.byte	0x60
+ 530 0328 97000000 		.4byte	0x97
+ 531 032c 50       		.byte	0x50
+ 532 032d 0A       		.uleb128 0xa
+ 533 032e 94010000 		.4byte	.LASF65
+ 534 0332 08       		.byte	0x8
+ 535 0333 61       		.byte	0x61
+ 536 0334 97000000 		.4byte	0x97
+ 537 0338 51       		.byte	0x51
+ 538 0339 0A       		.uleb128 0xa
+ 539 033a 220C0000 		.4byte	.LASF66
+ 540 033e 08       		.byte	0x8
+ 541 033f 62       		.byte	0x62
+ 542 0340 97000000 		.4byte	0x97
+ 543 0344 52       		.byte	0x52
+ 544 0345 0A       		.uleb128 0xa
+ 545 0346 040B0000 		.4byte	.LASF67
+ 546 034a 08       		.byte	0x8
+ 547 034b 63       		.byte	0x63
+ 548 034c 97000000 		.4byte	0x97
+ 549 0350 53       		.byte	0x53
+ 550 0351 0A       		.uleb128 0xa
+ 551 0352 90090000 		.4byte	.LASF68
+ 552 0356 08       		.byte	0x8
+ 553 0357 64       		.byte	0x64
+ 554 0358 97000000 		.4byte	0x97
+ 555 035c 54       		.byte	0x54
+ 556 035d 0A       		.uleb128 0xa
+ 557 035e CF010000 		.4byte	.LASF69
+ 558 0362 08       		.byte	0x8
+ 559 0363 65       		.byte	0x65
+ 560 0364 97000000 		.4byte	0x97
+ 561 0368 55       		.byte	0x55
+ 562 0369 0A       		.uleb128 0xa
+ 563 036a 900A0000 		.4byte	.LASF70
+ 564 036e 08       		.byte	0x8
+ 565 036f 66       		.byte	0x66
+ 566 0370 97000000 		.4byte	0x97
+ 567 0374 56       		.byte	0x56
+ 568 0375 0A       		.uleb128 0xa
+ 569 0376 34090000 		.4byte	.LASF71
+ 570 037a 08       		.byte	0x8
+ 571 037b 67       		.byte	0x67
+ 572 037c 97000000 		.4byte	0x97
+ 573 0380 57       		.byte	0x57
+ 574 0381 0A       		.uleb128 0xa
+ 575 0382 1C000000 		.4byte	.LASF72
+ 576 0386 08       		.byte	0x8
+ 577 0387 68       		.byte	0x68
+ 578 0388 97000000 		.4byte	0x97
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 22
+
+
+ 579 038c 58       		.byte	0x58
+ 580 038d 0A       		.uleb128 0xa
+ 581 038e 6D080000 		.4byte	.LASF73
+ 582 0392 08       		.byte	0x8
+ 583 0393 69       		.byte	0x69
+ 584 0394 97000000 		.4byte	0x97
+ 585 0398 59       		.byte	0x59
+ 586 0399 0A       		.uleb128 0xa
+ 587 039a 99060000 		.4byte	.LASF74
+ 588 039e 08       		.byte	0x8
+ 589 039f 6E       		.byte	0x6e
+ 590 03a0 AD000000 		.4byte	0xad
+ 591 03a4 5A       		.byte	0x5a
+ 592 03a5 0A       		.uleb128 0xa
+ 593 03a6 520B0000 		.4byte	.LASF75
+ 594 03aa 08       		.byte	0x8
+ 595 03ab 6F       		.byte	0x6f
+ 596 03ac AD000000 		.4byte	0xad
+ 597 03b0 5C       		.byte	0x5c
+ 598 03b1 0A       		.uleb128 0xa
+ 599 03b2 FC000000 		.4byte	.LASF76
+ 600 03b6 08       		.byte	0x8
+ 601 03b7 70       		.byte	0x70
+ 602 03b8 97000000 		.4byte	0x97
+ 603 03bc 5E       		.byte	0x5e
+ 604 03bd 0A       		.uleb128 0xa
+ 605 03be 0A080000 		.4byte	.LASF77
+ 606 03c2 08       		.byte	0x8
+ 607 03c3 71       		.byte	0x71
+ 608 03c4 97000000 		.4byte	0x97
+ 609 03c8 5F       		.byte	0x5f
+ 610 03c9 0A       		.uleb128 0xa
+ 611 03ca 18070000 		.4byte	.LASF78
+ 612 03ce 08       		.byte	0x8
+ 613 03cf 72       		.byte	0x72
+ 614 03d0 97000000 		.4byte	0x97
+ 615 03d4 60       		.byte	0x60
+ 616 03d5 0A       		.uleb128 0xa
+ 617 03d6 B9070000 		.4byte	.LASF79
+ 618 03da 08       		.byte	0x8
+ 619 03db 73       		.byte	0x73
+ 620 03dc B8000000 		.4byte	0xb8
+ 621 03e0 64       		.byte	0x64
+ 622 03e1 0A       		.uleb128 0xa
+ 623 03e2 45010000 		.4byte	.LASF80
+ 624 03e6 08       		.byte	0x8
+ 625 03e7 76       		.byte	0x76
+ 626 03e8 AD000000 		.4byte	0xad
+ 627 03ec 68       		.byte	0x68
+ 628 03ed 0A       		.uleb128 0xa
+ 629 03ee E3040000 		.4byte	.LASF81
+ 630 03f2 08       		.byte	0x8
+ 631 03f3 77       		.byte	0x77
+ 632 03f4 AD000000 		.4byte	0xad
+ 633 03f8 6A       		.byte	0x6a
+ 634 03f9 0A       		.uleb128 0xa
+ 635 03fa 76050000 		.4byte	.LASF82
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 23
+
+
+ 636 03fe 08       		.byte	0x8
+ 637 03ff 78       		.byte	0x78
+ 638 0400 AD000000 		.4byte	0xad
+ 639 0404 6C       		.byte	0x6c
+ 640 0405 0A       		.uleb128 0xa
+ 641 0406 AB090000 		.4byte	.LASF83
+ 642 040a 08       		.byte	0x8
+ 643 040b 79       		.byte	0x79
+ 644 040c AD000000 		.4byte	0xad
+ 645 0410 6E       		.byte	0x6e
+ 646 0411 0A       		.uleb128 0xa
+ 647 0412 0A090000 		.4byte	.LASF84
+ 648 0416 08       		.byte	0x8
+ 649 0417 7B       		.byte	0x7b
+ 650 0418 97000000 		.4byte	0x97
+ 651 041c 70       		.byte	0x70
+ 652 041d 0A       		.uleb128 0xa
+ 653 041e 19020000 		.4byte	.LASF85
+ 654 0422 08       		.byte	0x8
+ 655 0423 7C       		.byte	0x7c
+ 656 0424 97000000 		.4byte	0x97
+ 657 0428 71       		.byte	0x71
+ 658 0429 0A       		.uleb128 0xa
+ 659 042a 39040000 		.4byte	.LASF86
+ 660 042e 08       		.byte	0x8
+ 661 042f 7D       		.byte	0x7d
+ 662 0430 97000000 		.4byte	0x97
+ 663 0434 72       		.byte	0x72
+ 664 0435 0A       		.uleb128 0xa
+ 665 0436 D8060000 		.4byte	.LASF87
+ 666 043a 08       		.byte	0x8
+ 667 043b 7E       		.byte	0x7e
+ 668 043c 97000000 		.4byte	0x97
+ 669 0440 73       		.byte	0x73
+ 670 0441 0A       		.uleb128 0xa
+ 671 0442 AF030000 		.4byte	.LASF88
+ 672 0446 08       		.byte	0x8
+ 673 0447 80       		.byte	0x80
+ 674 0448 AD000000 		.4byte	0xad
+ 675 044c 74       		.byte	0x74
+ 676 044d 0A       		.uleb128 0xa
+ 677 044e C60A0000 		.4byte	.LASF89
+ 678 0452 08       		.byte	0x8
+ 679 0453 81       		.byte	0x81
+ 680 0454 AD000000 		.4byte	0xad
+ 681 0458 76       		.byte	0x76
+ 682 0459 0A       		.uleb128 0xa
+ 683 045a 7D030000 		.4byte	.LASF90
+ 684 045e 08       		.byte	0x8
+ 685 045f 82       		.byte	0x82
+ 686 0460 AD000000 		.4byte	0xad
+ 687 0464 78       		.byte	0x78
+ 688 0465 0A       		.uleb128 0xa
+ 689 0466 95080000 		.4byte	.LASF91
+ 690 046a 08       		.byte	0x8
+ 691 046b 83       		.byte	0x83
+ 692 046c AD000000 		.4byte	0xad
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 24
+
+
+ 693 0470 7A       		.byte	0x7a
+ 694 0471 0A       		.uleb128 0xa
+ 695 0472 B20C0000 		.4byte	.LASF92
+ 696 0476 08       		.byte	0x8
+ 697 0477 86       		.byte	0x86
+ 698 0478 97000000 		.4byte	0x97
+ 699 047c 7C       		.byte	0x7c
+ 700 047d 0A       		.uleb128 0xa
+ 701 047e AC050000 		.4byte	.LASF93
+ 702 0482 08       		.byte	0x8
+ 703 0483 87       		.byte	0x87
+ 704 0484 97000000 		.4byte	0x97
+ 705 0488 7D       		.byte	0x7d
+ 706 0489 0A       		.uleb128 0xa
+ 707 048a 30000000 		.4byte	.LASF94
+ 708 048e 08       		.byte	0x8
+ 709 048f 88       		.byte	0x88
+ 710 0490 97000000 		.4byte	0x97
+ 711 0494 7E       		.byte	0x7e
+ 712 0495 0A       		.uleb128 0xa
+ 713 0496 FA020000 		.4byte	.LASF95
+ 714 049a 08       		.byte	0x8
+ 715 049b 89       		.byte	0x89
+ 716 049c 97000000 		.4byte	0x97
+ 717 04a0 7F       		.byte	0x7f
+ 718 04a1 0A       		.uleb128 0xa
+ 719 04a2 7C040000 		.4byte	.LASF96
+ 720 04a6 08       		.byte	0x8
+ 721 04a7 8A       		.byte	0x8a
+ 722 04a8 97000000 		.4byte	0x97
+ 723 04ac 80       		.byte	0x80
+ 724 04ad 0A       		.uleb128 0xa
+ 725 04ae 41060000 		.4byte	.LASF97
+ 726 04b2 08       		.byte	0x8
+ 727 04b3 8D       		.byte	0x8d
+ 728 04b4 B8000000 		.4byte	0xb8
+ 729 04b8 84       		.byte	0x84
+ 730 04b9 0A       		.uleb128 0xa
+ 731 04ba D3000000 		.4byte	.LASF98
+ 732 04be 08       		.byte	0x8
+ 733 04bf 8E       		.byte	0x8e
+ 734 04c0 B8000000 		.4byte	0xb8
+ 735 04c4 88       		.byte	0x88
+ 736 04c5 0A       		.uleb128 0xa
+ 737 04c6 D90A0000 		.4byte	.LASF99
+ 738 04ca 08       		.byte	0x8
+ 739 04cb 8F       		.byte	0x8f
+ 740 04cc B8000000 		.4byte	0xb8
+ 741 04d0 8C       		.byte	0x8c
+ 742 04d1 0A       		.uleb128 0xa
+ 743 04d2 7B060000 		.4byte	.LASF100
+ 744 04d6 08       		.byte	0x8
+ 745 04d7 90       		.byte	0x90
+ 746 04d8 B8000000 		.4byte	0xb8
+ 747 04dc 90       		.byte	0x90
+ 748 04dd 0A       		.uleb128 0xa
+ 749 04de 4F040000 		.4byte	.LASF101
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 25
+
+
+ 750 04e2 08       		.byte	0x8
+ 751 04e3 91       		.byte	0x91
+ 752 04e4 B8000000 		.4byte	0xb8
+ 753 04e8 94       		.byte	0x94
+ 754 04e9 0A       		.uleb128 0xa
+ 755 04ea 21060000 		.4byte	.LASF102
+ 756 04ee 08       		.byte	0x8
+ 757 04ef 92       		.byte	0x92
+ 758 04f0 B8000000 		.4byte	0xb8
+ 759 04f4 98       		.byte	0x98
+ 760 04f5 0A       		.uleb128 0xa
+ 761 04f6 DA080000 		.4byte	.LASF103
+ 762 04fa 08       		.byte	0x8
+ 763 04fb 93       		.byte	0x93
+ 764 04fc B8000000 		.4byte	0xb8
+ 765 0500 9C       		.byte	0x9c
+ 766 0501 0A       		.uleb128 0xa
+ 767 0502 5F010000 		.4byte	.LASF104
+ 768 0506 08       		.byte	0x8
+ 769 0507 94       		.byte	0x94
+ 770 0508 B8000000 		.4byte	0xb8
+ 771 050c A0       		.byte	0xa0
+ 772 050d 0A       		.uleb128 0xa
+ 773 050e 67020000 		.4byte	.LASF105
+ 774 0512 08       		.byte	0x8
+ 775 0513 95       		.byte	0x95
+ 776 0514 AD000000 		.4byte	0xad
+ 777 0518 A4       		.byte	0xa4
+ 778 0519 0A       		.uleb128 0xa
+ 779 051a 0D0C0000 		.4byte	.LASF106
+ 780 051e 08       		.byte	0x8
+ 781 051f 96       		.byte	0x96
+ 782 0520 AD000000 		.4byte	0xad
+ 783 0524 A6       		.byte	0xa6
+ 784 0525 0A       		.uleb128 0xa
+ 785 0526 E3070000 		.4byte	.LASF107
+ 786 052a 08       		.byte	0x8
+ 787 052b 97       		.byte	0x97
+ 788 052c AD000000 		.4byte	0xad
+ 789 0530 A8       		.byte	0xa8
+ 790 0531 0A       		.uleb128 0xa
+ 791 0532 78070000 		.4byte	.LASF108
+ 792 0536 08       		.byte	0x8
+ 793 0537 98       		.byte	0x98
+ 794 0538 AD000000 		.4byte	0xad
+ 795 053c AA       		.byte	0xaa
+ 796 053d 0A       		.uleb128 0xa
+ 797 053e 85050000 		.4byte	.LASF109
+ 798 0542 08       		.byte	0x8
+ 799 0543 99       		.byte	0x99
+ 800 0544 AD000000 		.4byte	0xad
+ 801 0548 AC       		.byte	0xac
+ 802 0549 0A       		.uleb128 0xa
+ 803 054a 90000000 		.4byte	.LASF110
+ 804 054e 08       		.byte	0x8
+ 805 054f 9A       		.byte	0x9a
+ 806 0550 AD000000 		.4byte	0xad
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 26
+
+
+ 807 0554 AE       		.byte	0xae
+ 808 0555 0A       		.uleb128 0xa
+ 809 0556 5B0B0000 		.4byte	.LASF111
+ 810 055a 08       		.byte	0x8
+ 811 055b 9D       		.byte	0x9d
+ 812 055c AD000000 		.4byte	0xad
+ 813 0560 B0       		.byte	0xb0
+ 814 0561 0A       		.uleb128 0xa
+ 815 0562 81080000 		.4byte	.LASF112
+ 816 0566 08       		.byte	0x8
+ 817 0567 9E       		.byte	0x9e
+ 818 0568 B8000000 		.4byte	0xb8
+ 819 056c B4       		.byte	0xb4
+ 820 056d 00       		.byte	0
+ 821 056e 03       		.uleb128 0x3
+ 822 056f E5050000 		.4byte	.LASF113
+ 823 0573 08       		.byte	0x8
+ 824 0574 9F       		.byte	0x9f
+ 825 0575 5D010000 		.4byte	0x15d
+ 826 0579 0B       		.uleb128 0xb
+ 827 057a DC040000 		.4byte	.LASF114
+ 828 057e 09       		.byte	0x9
+ 829 057f F601     		.2byte	0x1f6
+ 830 0581 85050000 		.4byte	0x585
+ 831 0585 02       		.uleb128 0x2
+ 832 0586 01       		.byte	0x1
+ 833 0587 08       		.byte	0x8
+ 834 0588 8B0A0000 		.4byte	.LASF115
+ 835 058c 02       		.uleb128 0x2
+ 836 058d 04       		.byte	0x4
+ 837 058e 04       		.byte	0x4
+ 838 058f 92070000 		.4byte	.LASF116
+ 839 0593 02       		.uleb128 0x2
+ 840 0594 08       		.byte	0x8
+ 841 0595 04       		.byte	0x4
+ 842 0596 76030000 		.4byte	.LASF117
+ 843 059a 0C       		.uleb128 0xc
+ 844 059b 04       		.byte	0x4
+ 845 059c 97000000 		.4byte	0x97
+ 846 05a0 02       		.uleb128 0x2
+ 847 05a1 01       		.byte	0x1
+ 848 05a2 02       		.byte	0x2
+ 849 05a3 59080000 		.4byte	.LASF118
+ 850 05a7 0D       		.uleb128 0xd
+ 851 05a8 04       		.byte	0x4
+ 852 05a9 0C       		.uleb128 0xc
+ 853 05aa 04       		.byte	0x4
+ 854 05ab 4A010000 		.4byte	0x14a
+ 855 05af 0E       		.uleb128 0xe
+ 856 05b0 01       		.byte	0x1
+ 857 05b1 2C000000 		.4byte	0x2c
+ 858 05b5 0A       		.byte	0xa
+ 859 05b6 2305     		.2byte	0x523
+ 860 05b8 C9050000 		.4byte	0x5c9
+ 861 05bc 0F       		.uleb128 0xf
+ 862 05bd 450C0000 		.4byte	.LASF119
+ 863 05c1 00       		.byte	0
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 27
+
+
+ 864 05c2 0F       		.uleb128 0xf
+ 865 05c3 3E050000 		.4byte	.LASF120
+ 866 05c7 01       		.byte	0x1
+ 867 05c8 00       		.byte	0
+ 868 05c9 0E       		.uleb128 0xe
+ 869 05ca 01       		.byte	0x1
+ 870 05cb 2C000000 		.4byte	0x2c
+ 871 05cf 0B       		.byte	0xb
+ 872 05d0 7101     		.2byte	0x171
+ 873 05d2 E3050000 		.4byte	0x5e3
+ 874 05d6 0F       		.uleb128 0xf
+ 875 05d7 EB010000 		.4byte	.LASF121
+ 876 05db 00       		.byte	0
+ 877 05dc 0F       		.uleb128 0xf
+ 878 05dd 07060000 		.4byte	.LASF122
+ 879 05e1 01       		.byte	0x1
+ 880 05e2 00       		.byte	0
+ 881 05e3 0B       		.uleb128 0xb
+ 882 05e4 B6020000 		.4byte	.LASF123
+ 883 05e8 0B       		.byte	0xb
+ 884 05e9 7401     		.2byte	0x174
+ 885 05eb C9050000 		.4byte	0x5c9
+ 886 05ef 10       		.uleb128 0x10
+ 887 05f0 18       		.byte	0x18
+ 888 05f1 0B       		.byte	0xb
+ 889 05f2 D501     		.2byte	0x1d5
+ 890 05f4 47060000 		.4byte	0x647
+ 891 05f8 11       		.uleb128 0x11
+ 892 05f9 2D090000 		.4byte	.LASF124
+ 893 05fd 0B       		.byte	0xb
+ 894 05fe D701     		.2byte	0x1d7
+ 895 0600 E3050000 		.4byte	0x5e3
+ 896 0604 00       		.byte	0
+ 897 0605 11       		.uleb128 0x11
+ 898 0606 65070000 		.4byte	.LASF125
+ 899 060a 0B       		.byte	0xb
+ 900 060b DA01     		.2byte	0x1da
+ 901 060d B8000000 		.4byte	0xb8
+ 902 0611 04       		.byte	0x4
+ 903 0612 11       		.uleb128 0x11
+ 904 0613 98070000 		.4byte	.LASF126
+ 905 0617 0B       		.byte	0xb
+ 906 0618 DC01     		.2byte	0x1dc
+ 907 061a B8000000 		.4byte	0xb8
+ 908 061e 08       		.byte	0x8
+ 909 061f 11       		.uleb128 0x11
+ 910 0620 88010000 		.4byte	.LASF127
+ 911 0624 0B       		.byte	0xb
+ 912 0625 DF01     		.2byte	0x1df
+ 913 0627 B8000000 		.4byte	0xb8
+ 914 062b 0C       		.byte	0xc
+ 915 062c 11       		.uleb128 0x11
+ 916 062d 37060000 		.4byte	.LASF128
+ 917 0631 0B       		.byte	0xb
+ 918 0632 E301     		.2byte	0x1e3
+ 919 0634 B8000000 		.4byte	0xb8
+ 920 0638 10       		.byte	0x10
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 28
+
+
+ 921 0639 11       		.uleb128 0x11
+ 922 063a 9C040000 		.4byte	.LASF129
+ 923 063e 0B       		.byte	0xb
+ 924 063f E701     		.2byte	0x1e7
+ 925 0641 B8000000 		.4byte	0xb8
+ 926 0645 14       		.byte	0x14
+ 927 0646 00       		.byte	0
+ 928 0647 0B       		.uleb128 0xb
+ 929 0648 800B0000 		.4byte	.LASF130
+ 930 064c 0B       		.byte	0xb
+ 931 064d E901     		.2byte	0x1e9
+ 932 064f EF050000 		.4byte	0x5ef
+ 933 0653 10       		.uleb128 0x10
+ 934 0654 30       		.byte	0x30
+ 935 0655 0B       		.byte	0xb
+ 936 0656 EC01     		.2byte	0x1ec
+ 937 0658 77060000 		.4byte	0x677
+ 938 065c 11       		.uleb128 0x11
+ 939 065d 95020000 		.4byte	.LASF131
+ 940 0661 0B       		.byte	0xb
+ 941 0662 EE01     		.2byte	0x1ee
+ 942 0664 47060000 		.4byte	0x647
+ 943 0668 00       		.byte	0
+ 944 0669 11       		.uleb128 0x11
+ 945 066a 3C0D0000 		.4byte	.LASF132
+ 946 066e 0B       		.byte	0xb
+ 947 066f EF01     		.2byte	0x1ef
+ 948 0671 47060000 		.4byte	0x647
+ 949 0675 18       		.byte	0x18
+ 950 0676 00       		.byte	0
+ 951 0677 0B       		.uleb128 0xb
+ 952 0678 A10C0000 		.4byte	.LASF133
+ 953 067c 0B       		.byte	0xb
+ 954 067d F001     		.2byte	0x1f0
+ 955 067f 53060000 		.4byte	0x653
+ 956 0683 0E       		.uleb128 0xe
+ 957 0684 01       		.byte	0x1
+ 958 0685 2C000000 		.4byte	0x2c
+ 959 0689 0C       		.byte	0xc
+ 960 068a 1304     		.2byte	0x413
+ 961 068c A9060000 		.4byte	0x6a9
+ 962 0690 0F       		.uleb128 0xf
+ 963 0691 9E020000 		.4byte	.LASF134
+ 964 0695 00       		.byte	0
+ 965 0696 0F       		.uleb128 0xf
+ 966 0697 40080000 		.4byte	.LASF135
+ 967 069b 01       		.byte	0x1
+ 968 069c 0F       		.uleb128 0xf
+ 969 069d 55030000 		.4byte	.LASF136
+ 970 06a1 02       		.byte	0x2
+ 971 06a2 0F       		.uleb128 0xf
+ 972 06a3 C70C0000 		.4byte	.LASF137
+ 973 06a7 03       		.byte	0x3
+ 974 06a8 00       		.byte	0
+ 975 06a9 0B       		.uleb128 0xb
+ 976 06aa 2E020000 		.4byte	.LASF138
+ 977 06ae 0C       		.byte	0xc
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 29
+
+
+ 978 06af 1804     		.2byte	0x418
+ 979 06b1 83060000 		.4byte	0x683
+ 980 06b5 10       		.uleb128 0x10
+ 981 06b6 78       		.byte	0x78
+ 982 06b7 0C       		.byte	0xc
+ 983 06b8 0205     		.2byte	0x502
+ 984 06ba 82070000 		.4byte	0x782
+ 985 06be 11       		.uleb128 0x11
+ 986 06bf 34040000 		.4byte	.LASF139
+ 987 06c3 0C       		.byte	0xc
+ 988 06c4 0405     		.2byte	0x504
+ 989 06c6 B8000000 		.4byte	0xb8
+ 990 06ca 00       		.byte	0
+ 991 06cb 11       		.uleb128 0x11
+ 992 06cc 320C0000 		.4byte	.LASF140
+ 993 06d0 0C       		.byte	0xc
+ 994 06d1 0505     		.2byte	0x505
+ 995 06d3 B8000000 		.4byte	0xb8
+ 996 06d7 04       		.byte	0x4
+ 997 06d8 11       		.uleb128 0x11
+ 998 06d9 69050000 		.4byte	.LASF141
+ 999 06dd 0C       		.byte	0xc
+ 1000 06de 0605     		.2byte	0x506
+ 1001 06e0 B8000000 		.4byte	0xb8
+ 1002 06e4 08       		.byte	0x8
+ 1003 06e5 11       		.uleb128 0x11
+ 1004 06e6 CB060000 		.4byte	.LASF142
+ 1005 06ea 0C       		.byte	0xc
+ 1006 06eb 0705     		.2byte	0x507
+ 1007 06ed B8000000 		.4byte	0xb8
+ 1008 06f1 0C       		.byte	0xc
+ 1009 06f2 11       		.uleb128 0x11
+ 1010 06f3 93050000 		.4byte	.LASF143
+ 1011 06f7 0C       		.byte	0xc
+ 1012 06f8 0805     		.2byte	0x508
+ 1013 06fa B8000000 		.4byte	0xb8
+ 1014 06fe 10       		.byte	0x10
+ 1015 06ff 11       		.uleb128 0x11
+ 1016 0700 EE0B0000 		.4byte	.LASF144
+ 1017 0704 0C       		.byte	0xc
+ 1018 0705 0905     		.2byte	0x509
+ 1019 0707 A9060000 		.4byte	0x6a9
+ 1020 070b 14       		.byte	0x14
+ 1021 070c 11       		.uleb128 0x11
+ 1022 070d 31080000 		.4byte	.LASF145
+ 1023 0711 0C       		.byte	0xc
+ 1024 0712 0A05     		.2byte	0x50a
+ 1025 0714 B8000000 		.4byte	0xb8
+ 1026 0718 18       		.byte	0x18
+ 1027 0719 11       		.uleb128 0x11
+ 1028 071a F5050000 		.4byte	.LASF146
+ 1029 071e 0C       		.byte	0xc
+ 1030 071f 0B05     		.2byte	0x50b
+ 1031 0721 82070000 		.4byte	0x782
+ 1032 0725 1C       		.byte	0x1c
+ 1033 0726 11       		.uleb128 0x11
+ 1034 0727 D1080000 		.4byte	.LASF147
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 30
+
+
+ 1035 072b 0C       		.byte	0xc
+ 1036 072c 0C05     		.2byte	0x50c
+ 1037 072e B8000000 		.4byte	0xb8
+ 1038 0732 5C       		.byte	0x5c
+ 1039 0733 11       		.uleb128 0x11
+ 1040 0734 0B010000 		.4byte	.LASF148
+ 1041 0738 0C       		.byte	0xc
+ 1042 0739 0D05     		.2byte	0x50d
+ 1043 073b B8000000 		.4byte	0xb8
+ 1044 073f 60       		.byte	0x60
+ 1045 0740 11       		.uleb128 0x11
+ 1046 0741 6A070000 		.4byte	.LASF149
+ 1047 0745 0C       		.byte	0xc
+ 1048 0746 0E05     		.2byte	0x50e
+ 1049 0748 B8000000 		.4byte	0xb8
+ 1050 074c 64       		.byte	0x64
+ 1051 074d 11       		.uleb128 0x11
+ 1052 074e B4080000 		.4byte	.LASF150
+ 1053 0752 0C       		.byte	0xc
+ 1054 0753 0F05     		.2byte	0x50f
+ 1055 0755 B8000000 		.4byte	0xb8
+ 1056 0759 68       		.byte	0x68
+ 1057 075a 11       		.uleb128 0x11
+ 1058 075b 440D0000 		.4byte	.LASF151
+ 1059 075f 0C       		.byte	0xc
+ 1060 0760 1005     		.2byte	0x510
+ 1061 0762 B8000000 		.4byte	0xb8
+ 1062 0766 6C       		.byte	0x6c
+ 1063 0767 11       		.uleb128 0x11
+ 1064 0768 FB060000 		.4byte	.LASF152
+ 1065 076c 0C       		.byte	0xc
+ 1066 076d 1105     		.2byte	0x511
+ 1067 076f A0050000 		.4byte	0x5a0
+ 1068 0773 70       		.byte	0x70
+ 1069 0774 11       		.uleb128 0x11
+ 1070 0775 E1090000 		.4byte	.LASF153
+ 1071 0779 0C       		.byte	0xc
+ 1072 077a 1205     		.2byte	0x512
+ 1073 077c B8000000 		.4byte	0xb8
+ 1074 0780 74       		.byte	0x74
+ 1075 0781 00       		.byte	0
+ 1076 0782 07       		.uleb128 0x7
+ 1077 0783 B8000000 		.4byte	0xb8
+ 1078 0787 92070000 		.4byte	0x792
+ 1079 078b 08       		.uleb128 0x8
+ 1080 078c C3000000 		.4byte	0xc3
+ 1081 0790 0F       		.byte	0xf
+ 1082 0791 00       		.byte	0
+ 1083 0792 0B       		.uleb128 0xb
+ 1084 0793 180D0000 		.4byte	.LASF154
+ 1085 0797 0C       		.byte	0xc
+ 1086 0798 1305     		.2byte	0x513
+ 1087 079a B5060000 		.4byte	0x6b5
+ 1088 079e 0E       		.uleb128 0xe
+ 1089 079f 01       		.byte	0x1
+ 1090 07a0 2C000000 		.4byte	0x2c
+ 1091 07a4 0D       		.byte	0xd
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 31
+
+
+ 1092 07a5 2402     		.2byte	0x224
+ 1093 07a7 B8070000 		.4byte	0x7b8
+ 1094 07ab 0F       		.uleb128 0xf
+ 1095 07ac 09070000 		.4byte	.LASF155
+ 1096 07b0 00       		.byte	0
+ 1097 07b1 0F       		.uleb128 0xf
+ 1098 07b2 1E090000 		.4byte	.LASF156
+ 1099 07b6 01       		.byte	0x1
+ 1100 07b7 00       		.byte	0
+ 1101 07b8 0B       		.uleb128 0xb
+ 1102 07b9 63060000 		.4byte	.LASF157
+ 1103 07bd 0D       		.byte	0xd
+ 1104 07be 2702     		.2byte	0x227
+ 1105 07c0 9E070000 		.4byte	0x79e
+ 1106 07c4 0B       		.uleb128 0xb
+ 1107 07c5 D3020000 		.4byte	.LASF158
+ 1108 07c9 0D       		.byte	0xd
+ 1109 07ca 3902     		.2byte	0x239
+ 1110 07cc D0070000 		.4byte	0x7d0
+ 1111 07d0 0C       		.uleb128 0xc
+ 1112 07d1 04       		.byte	0x4
+ 1113 07d2 D6070000 		.4byte	0x7d6
+ 1114 07d6 12       		.uleb128 0x12
+ 1115 07d7 E1070000 		.4byte	0x7e1
+ 1116 07db 13       		.uleb128 0x13
+ 1117 07dc B8000000 		.4byte	0xb8
+ 1118 07e0 00       		.byte	0
+ 1119 07e1 0B       		.uleb128 0xb
+ 1120 07e2 54090000 		.4byte	.LASF159
+ 1121 07e6 0D       		.byte	0xd
+ 1122 07e7 4402     		.2byte	0x244
+ 1123 07e9 ED070000 		.4byte	0x7ed
+ 1124 07ed 0C       		.uleb128 0xc
+ 1125 07ee 04       		.byte	0x4
+ 1126 07ef F3070000 		.4byte	0x7f3
+ 1127 07f3 14       		.uleb128 0x14
+ 1128 07f4 B8070000 		.4byte	0x7b8
+ 1129 07f8 02080000 		.4byte	0x802
+ 1130 07fc 13       		.uleb128 0x13
+ 1131 07fd B8000000 		.4byte	0xb8
+ 1132 0801 00       		.byte	0
+ 1133 0802 15       		.uleb128 0x15
+ 1134 0803 B8010000 		.4byte	.LASF183
+ 1135 0807 4C       		.byte	0x4c
+ 1136 0808 0D       		.byte	0xd
+ 1137 0809 C302     		.2byte	0x2c3
+ 1138 080b 21090000 		.4byte	0x921
+ 1139 080f 11       		.uleb128 0x11
+ 1140 0810 690B0000 		.4byte	.LASF160
+ 1141 0814 0D       		.byte	0xd
+ 1142 0815 C602     		.2byte	0x2c6
+ 1143 0817 A0050000 		.4byte	0x5a0
+ 1144 081b 00       		.byte	0
+ 1145 081c 11       		.uleb128 0x11
+ 1146 081d 5F050000 		.4byte	.LASF161
+ 1147 0821 0D       		.byte	0xd
+ 1148 0822 C702     		.2byte	0x2c7
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 32
+
+
+ 1149 0824 A0050000 		.4byte	0x5a0
+ 1150 0828 01       		.byte	0x1
+ 1151 0829 11       		.uleb128 0x11
+ 1152 082a CD020000 		.4byte	.LASF162
+ 1153 082e 0D       		.byte	0xd
+ 1154 082f C902     		.2byte	0x2c9
+ 1155 0831 CA000000 		.4byte	0xca
+ 1156 0835 04       		.byte	0x4
+ 1157 0836 11       		.uleb128 0x11
+ 1158 0837 75010000 		.4byte	.LASF163
+ 1159 083b 0D       		.byte	0xd
+ 1160 083c CB02     		.2byte	0x2cb
+ 1161 083e CA000000 		.4byte	0xca
+ 1162 0842 08       		.byte	0x8
+ 1163 0843 11       		.uleb128 0x11
+ 1164 0844 48090000 		.4byte	.LASF164
+ 1165 0848 0D       		.byte	0xd
+ 1166 0849 CC02     		.2byte	0x2cc
+ 1167 084b A0050000 		.4byte	0x5a0
+ 1168 084f 0C       		.byte	0xc
+ 1169 0850 11       		.uleb128 0x11
+ 1170 0851 0E030000 		.4byte	.LASF165
+ 1171 0855 0D       		.byte	0xd
+ 1172 0856 CD02     		.2byte	0x2cd
+ 1173 0858 A0050000 		.4byte	0x5a0
+ 1174 085c 0D       		.byte	0xd
+ 1175 085d 11       		.uleb128 0x11
+ 1176 085e 54000000 		.4byte	.LASF166
+ 1177 0862 0D       		.byte	0xd
+ 1178 0863 CF02     		.2byte	0x2cf
+ 1179 0865 9A050000 		.4byte	0x59a
+ 1180 0869 10       		.byte	0x10
+ 1181 086a 11       		.uleb128 0x11
+ 1182 086b F9080000 		.4byte	.LASF167
+ 1183 086f 0D       		.byte	0xd
+ 1184 0870 D002     		.2byte	0x2d0
+ 1185 0872 B8000000 		.4byte	0xb8
+ 1186 0876 14       		.byte	0x14
+ 1187 0877 11       		.uleb128 0x11
+ 1188 0878 BB060000 		.4byte	.LASF168
+ 1189 087c 0D       		.byte	0xd
+ 1190 087d D102     		.2byte	0x2d1
+ 1191 087f CA000000 		.4byte	0xca
+ 1192 0883 18       		.byte	0x18
+ 1193 0884 11       		.uleb128 0x11
+ 1194 0885 70090000 		.4byte	.LASF169
+ 1195 0889 0D       		.byte	0xd
+ 1196 088a D202     		.2byte	0x2d2
+ 1197 088c CA000000 		.4byte	0xca
+ 1198 0890 1C       		.byte	0x1c
+ 1199 0891 11       		.uleb128 0x11
+ 1200 0892 B6000000 		.4byte	.LASF170
+ 1201 0896 0D       		.byte	0xd
+ 1202 0897 D402     		.2byte	0x2d4
+ 1203 0899 CA000000 		.4byte	0xca
+ 1204 089d 20       		.byte	0x20
+ 1205 089e 11       		.uleb128 0x11
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 33
+
+
+ 1206 089f CC040000 		.4byte	.LASF171
+ 1207 08a3 0D       		.byte	0xd
+ 1208 08a4 D502     		.2byte	0x2d5
+ 1209 08a6 21090000 		.4byte	0x921
+ 1210 08aa 24       		.byte	0x24
+ 1211 08ab 11       		.uleb128 0x11
+ 1212 08ac A60B0000 		.4byte	.LASF172
+ 1213 08b0 0D       		.byte	0xd
+ 1214 08b1 D702     		.2byte	0x2d7
+ 1215 08b3 9A050000 		.4byte	0x59a
+ 1216 08b7 28       		.byte	0x28
+ 1217 08b8 11       		.uleb128 0x11
+ 1218 08b9 B40B0000 		.4byte	.LASF173
+ 1219 08bd 0D       		.byte	0xd
+ 1220 08be D802     		.2byte	0x2d8
+ 1221 08c0 B8000000 		.4byte	0xb8
+ 1222 08c4 2C       		.byte	0x2c
+ 1223 08c5 11       		.uleb128 0x11
+ 1224 08c6 AF040000 		.4byte	.LASF174
+ 1225 08ca 0D       		.byte	0xd
+ 1226 08cb D902     		.2byte	0x2d9
+ 1227 08cd CA000000 		.4byte	0xca
+ 1228 08d1 30       		.byte	0x30
+ 1229 08d2 11       		.uleb128 0x11
+ 1230 08d3 7F090000 		.4byte	.LASF175
+ 1231 08d7 0D       		.byte	0xd
+ 1232 08d8 DA02     		.2byte	0x2da
+ 1233 08da CA000000 		.4byte	0xca
+ 1234 08de 34       		.byte	0x34
+ 1235 08df 11       		.uleb128 0x11
+ 1236 08e0 6E040000 		.4byte	.LASF176
+ 1237 08e4 0D       		.byte	0xd
+ 1238 08e5 DC02     		.2byte	0x2dc
+ 1239 08e7 9A050000 		.4byte	0x59a
+ 1240 08eb 38       		.byte	0x38
+ 1241 08ec 11       		.uleb128 0x11
+ 1242 08ed A6010000 		.4byte	.LASF177
+ 1243 08f1 0D       		.byte	0xd
+ 1244 08f2 DD02     		.2byte	0x2dd
+ 1245 08f4 B8000000 		.4byte	0xb8
+ 1246 08f8 3C       		.byte	0x3c
+ 1247 08f9 11       		.uleb128 0x11
+ 1248 08fa 43000000 		.4byte	.LASF178
+ 1249 08fe 0D       		.byte	0xd
+ 1250 08ff DE02     		.2byte	0x2de
+ 1251 0901 CA000000 		.4byte	0xca
+ 1252 0905 40       		.byte	0x40
+ 1253 0906 11       		.uleb128 0x11
+ 1254 0907 A3050000 		.4byte	.LASF179
+ 1255 090b 0D       		.byte	0xd
+ 1256 090c E402     		.2byte	0x2e4
+ 1257 090e C4070000 		.4byte	0x7c4
+ 1258 0912 44       		.byte	0x44
+ 1259 0913 11       		.uleb128 0x11
+ 1260 0914 DC030000 		.4byte	.LASF180
+ 1261 0918 0D       		.byte	0xd
+ 1262 0919 EB02     		.2byte	0x2eb
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 34
+
+
+ 1263 091b E1070000 		.4byte	0x7e1
+ 1264 091f 48       		.byte	0x48
+ 1265 0920 00       		.byte	0
+ 1266 0921 05       		.uleb128 0x5
+ 1267 0922 A0050000 		.4byte	0x5a0
+ 1268 0926 0B       		.uleb128 0xb
+ 1269 0927 C8090000 		.4byte	.LASF181
+ 1270 092b 0D       		.byte	0xd
+ 1271 092c EE02     		.2byte	0x2ee
+ 1272 092e 02080000 		.4byte	0x802
+ 1273 0932 0B       		.uleb128 0xb
+ 1274 0933 07050000 		.4byte	.LASF182
+ 1275 0937 0E       		.byte	0xe
+ 1276 0938 D901     		.2byte	0x1d9
+ 1277 093a D0070000 		.4byte	0x7d0
+ 1278 093e 15       		.uleb128 0x15
+ 1279 093f 6B0D0000 		.4byte	.LASF184
+ 1280 0943 38       		.byte	0x38
+ 1281 0944 0E       		.byte	0xe
+ 1282 0945 7502     		.2byte	0x275
+ 1283 0947 020A0000 		.4byte	0xa02
+ 1284 094b 11       		.uleb128 0x11
+ 1285 094c 56050000 		.4byte	.LASF185
+ 1286 0950 0E       		.byte	0xe
+ 1287 0951 7802     		.2byte	0x278
+ 1288 0953 CA000000 		.4byte	0xca
+ 1289 0957 00       		.byte	0
+ 1290 0958 11       		.uleb128 0x11
+ 1291 0959 34070000 		.4byte	.LASF186
+ 1292 095d 0E       		.byte	0xe
+ 1293 095e 7902     		.2byte	0x279
+ 1294 0960 CA000000 		.4byte	0xca
+ 1295 0964 04       		.byte	0x4
+ 1296 0965 11       		.uleb128 0x11
+ 1297 0966 55010000 		.4byte	.LASF187
+ 1298 096a 0E       		.byte	0xe
+ 1299 096b 7B02     		.2byte	0x27b
+ 1300 096d A7050000 		.4byte	0x5a7
+ 1301 0971 08       		.byte	0x8
+ 1302 0972 11       		.uleb128 0x11
+ 1303 0973 2D0B0000 		.4byte	.LASF188
+ 1304 0977 0E       		.byte	0xe
+ 1305 0978 7C02     		.2byte	0x27c
+ 1306 097a B8000000 		.4byte	0xb8
+ 1307 097e 0C       		.byte	0xc
+ 1308 097f 11       		.uleb128 0x11
+ 1309 0980 1F0B0000 		.4byte	.LASF189
+ 1310 0984 0E       		.byte	0xe
+ 1311 0985 7D02     		.2byte	0x27d
+ 1312 0987 CA000000 		.4byte	0xca
+ 1313 098b 10       		.byte	0x10
+ 1314 098c 11       		.uleb128 0x11
+ 1315 098d E10C0000 		.4byte	.LASF190
+ 1316 0991 0E       		.byte	0xe
+ 1317 0992 7E02     		.2byte	0x27e
+ 1318 0994 CA000000 		.4byte	0xca
+ 1319 0998 14       		.byte	0x14
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 35
+
+
+ 1320 0999 11       		.uleb128 0x11
+ 1321 099a A00B0000 		.4byte	.LASF191
+ 1322 099e 0E       		.byte	0xe
+ 1323 099f 8002     		.2byte	0x280
+ 1324 09a1 A7050000 		.4byte	0x5a7
+ 1325 09a5 18       		.byte	0x18
+ 1326 09a6 11       		.uleb128 0x11
+ 1327 09a7 12000000 		.4byte	.LASF192
+ 1328 09ab 0E       		.byte	0xe
+ 1329 09ac 8102     		.2byte	0x281
+ 1330 09ae B8000000 		.4byte	0xb8
+ 1331 09b2 1C       		.byte	0x1c
+ 1332 09b3 11       		.uleb128 0x11
+ 1333 09b4 2B040000 		.4byte	.LASF193
+ 1334 09b8 0E       		.byte	0xe
+ 1335 09b9 8202     		.2byte	0x282
+ 1336 09bb CA000000 		.4byte	0xca
+ 1337 09bf 20       		.byte	0x20
+ 1338 09c0 11       		.uleb128 0x11
+ 1339 09c1 82010000 		.4byte	.LASF194
+ 1340 09c5 0E       		.byte	0xe
+ 1341 09c6 8402     		.2byte	0x284
+ 1342 09c8 A7050000 		.4byte	0x5a7
+ 1343 09cc 24       		.byte	0x24
+ 1344 09cd 11       		.uleb128 0x11
+ 1345 09ce 64040000 		.4byte	.LASF195
+ 1346 09d2 0E       		.byte	0xe
+ 1347 09d3 8502     		.2byte	0x285
+ 1348 09d5 B8000000 		.4byte	0xb8
+ 1349 09d9 28       		.byte	0x28
+ 1350 09da 11       		.uleb128 0x11
+ 1351 09db 20080000 		.4byte	.LASF196
+ 1352 09df 0E       		.byte	0xe
+ 1353 09e0 8602     		.2byte	0x286
+ 1354 09e2 CA000000 		.4byte	0xca
+ 1355 09e6 2C       		.byte	0x2c
+ 1356 09e7 11       		.uleb128 0x11
+ 1357 09e8 A3050000 		.4byte	.LASF179
+ 1358 09ec 0E       		.byte	0xe
+ 1359 09ed 8B02     		.2byte	0x28b
+ 1360 09ef 32090000 		.4byte	0x932
+ 1361 09f3 30       		.byte	0x30
+ 1362 09f4 11       		.uleb128 0x11
+ 1363 09f5 980B0000 		.4byte	.LASF197
+ 1364 09f9 0E       		.byte	0xe
+ 1365 09fa 8E02     		.2byte	0x28e
+ 1366 09fc B8000000 		.4byte	0xb8
+ 1367 0a00 34       		.byte	0x34
+ 1368 0a01 00       		.byte	0
+ 1369 0a02 0B       		.uleb128 0xb
+ 1370 0a03 C60B0000 		.4byte	.LASF198
+ 1371 0a07 0E       		.byte	0xe
+ 1372 0a08 9102     		.2byte	0x291
+ 1373 0a0a 3E090000 		.4byte	0x93e
+ 1374 0a0e 06       		.uleb128 0x6
+ 1375 0a0f 97000000 		.4byte	0x97
+ 1376 0a13 09       		.uleb128 0x9
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 36
+
+
+ 1377 0a14 14       		.byte	0x14
+ 1378 0a15 0F       		.byte	0xf
+ 1379 0a16 3B       		.byte	0x3b
+ 1380 0a17 580A0000 		.4byte	0xa58
+ 1381 0a1b 0A       		.uleb128 0xa
+ 1382 0a1c 0C0D0000 		.4byte	.LASF199
+ 1383 0a20 0F       		.byte	0xf
+ 1384 0a21 3D       		.byte	0x3d
+ 1385 0a22 B8000000 		.4byte	0xb8
+ 1386 0a26 00       		.byte	0
+ 1387 0a27 0A       		.uleb128 0xa
+ 1388 0a28 D9050000 		.4byte	.LASF200
+ 1389 0a2c 0F       		.byte	0xf
+ 1390 0a2d 3E       		.byte	0x3e
+ 1391 0a2e B8000000 		.4byte	0xb8
+ 1392 0a32 04       		.byte	0x4
+ 1393 0a33 0A       		.uleb128 0xa
+ 1394 0a34 09040000 		.4byte	.LASF201
+ 1395 0a38 0F       		.byte	0xf
+ 1396 0a39 3F       		.byte	0x3f
+ 1397 0a3a 580A0000 		.4byte	0xa58
+ 1398 0a3e 08       		.byte	0x8
+ 1399 0a3f 0A       		.uleb128 0xa
+ 1400 0a40 A4060000 		.4byte	.LASF202
+ 1401 0a44 0F       		.byte	0xf
+ 1402 0a45 40       		.byte	0x40
+ 1403 0a46 B8000000 		.4byte	0xb8
+ 1404 0a4a 0C       		.byte	0xc
+ 1405 0a4b 0A       		.uleb128 0xa
+ 1406 0a4c 51020000 		.4byte	.LASF203
+ 1407 0a50 0F       		.byte	0xf
+ 1408 0a51 45       		.byte	0x45
+ 1409 0a52 B8000000 		.4byte	0xb8
+ 1410 0a56 10       		.byte	0x10
+ 1411 0a57 00       		.byte	0
+ 1412 0a58 0C       		.uleb128 0xc
+ 1413 0a59 04       		.byte	0x4
+ 1414 0a5a 5E0A0000 		.4byte	0xa5e
+ 1415 0a5e 06       		.uleb128 0x6
+ 1416 0a5f 92070000 		.4byte	0x792
+ 1417 0a63 03       		.uleb128 0x3
+ 1418 0a64 9D030000 		.4byte	.LASF204
+ 1419 0a68 0F       		.byte	0xf
+ 1420 0a69 48       		.byte	0x48
+ 1421 0a6a 130A0000 		.4byte	0xa13
+ 1422 0a6e 16       		.uleb128 0x16
+ 1423 0a6f 58070000 		.4byte	.LASF221
+ 1424 0a73 02       		.byte	0x2
+ 1425 0a74 81       		.byte	0x81
+ 1426 0a75 03       		.byte	0x3
+ 1427 0a76 17       		.uleb128 0x17
+ 1428 0a77 EF0C0000 		.4byte	.LASF222
+ 1429 0a7b 03       		.byte	0x3
+ 1430 0a7c C101     		.2byte	0x1c1
+ 1431 0a7e A9050000 		.4byte	0x5a9
+ 1432 0a82 03       		.byte	0x3
+ 1433 0a83 940A0000 		.4byte	0xa94
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 37
+
+
+ 1434 0a87 18       		.uleb128 0x18
+ 1435 0a88 FB0A0000 		.4byte	.LASF223
+ 1436 0a8c 03       		.byte	0x3
+ 1437 0a8d C101     		.2byte	0x1c1
+ 1438 0a8f B8000000 		.4byte	0xb8
+ 1439 0a93 00       		.byte	0
+ 1440 0a94 19       		.uleb128 0x19
+ 1441 0a95 660D0000 		.4byte	.LASF224
+ 1442 0a99 01       		.byte	0x1
+ 1443 0a9a 0E       		.byte	0xe
+ 1444 0a9b 89000000 		.4byte	0x89
+ 1445 0a9f 00000000 		.4byte	.LFB549
+ 1446 0aa3 5C000000 		.4byte	.LFE549-.LFB549
+ 1447 0aa7 01       		.uleb128 0x1
+ 1448 0aa8 9C       		.byte	0x9c
+ 1449 0aa9 540B0000 		.4byte	0xb54
+ 1450 0aad 1A       		.uleb128 0x1a
+ 1451 0aae 40010000 		.4byte	.LASF225
+ 1452 0ab2 01       		.byte	0x1
+ 1453 0ab3 11       		.byte	0x11
+ 1454 0ab4 B8000000 		.4byte	0xb8
+ 1455 0ab8 1B       		.uleb128 0x1b
+ 1456 0ab9 6E0A0000 		.4byte	0xa6e
+ 1457 0abd 02000000 		.4byte	.LBB8
+ 1458 0ac1 02000000 		.4byte	.LBE8-.LBB8
+ 1459 0ac5 01       		.byte	0x1
+ 1460 0ac6 10       		.byte	0x10
+ 1461 0ac7 1C       		.uleb128 0x1c
+ 1462 0ac8 760A0000 		.4byte	0xa76
+ 1463 0acc 0A000000 		.4byte	.LBB10
+ 1464 0ad0 28000000 		.4byte	.LBE10-.LBB10
+ 1465 0ad4 01       		.byte	0x1
+ 1466 0ad5 17       		.byte	0x17
+ 1467 0ad6 FE0A0000 		.4byte	0xafe
+ 1468 0ada 1D       		.uleb128 0x1d
+ 1469 0adb 870A0000 		.4byte	0xa87
+ 1470 0adf 00000000 		.4byte	.LLST0
+ 1471 0ae3 1E       		.uleb128 0x1e
+ 1472 0ae4 20000000 		.4byte	.LVL1
+ 1473 0ae8 EE0B0000 		.4byte	0xbee
+ 1474 0aec 1F       		.uleb128 0x1f
+ 1475 0aed 01       		.uleb128 0x1
+ 1476 0aee 50       		.byte	0x50
+ 1477 0aef 05       		.uleb128 0x5
+ 1478 0af0 03       		.byte	0x3
+ 1479 0af1 00000000 		.4byte	.LC1
+ 1480 0af5 1F       		.uleb128 0x1f
+ 1481 0af6 01       		.uleb128 0x1
+ 1482 0af7 51       		.byte	0x51
+ 1483 0af8 03       		.uleb128 0x3
+ 1484 0af9 0A       		.byte	0xa
+ 1485 0afa C301     		.2byte	0x1c3
+ 1486 0afc 00       		.byte	0
+ 1487 0afd 00       		.byte	0
+ 1488 0afe 20       		.uleb128 0x20
+ 1489 0aff 0A000000 		.4byte	.LVL0
+ 1490 0b03 FA0B0000 		.4byte	0xbfa
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 38
+
+
+ 1491 0b07 150B0000 		.4byte	0xb15
+ 1492 0b0b 1F       		.uleb128 0x1f
+ 1493 0b0c 01       		.uleb128 0x1
+ 1494 0b0d 50       		.byte	0x50
+ 1495 0b0e 05       		.uleb128 0x5
+ 1496 0b0f 0C       		.byte	0xc
+ 1497 0b10 00000810 		.4byte	0x10080000
+ 1498 0b14 00       		.byte	0
+ 1499 0b15 20       		.uleb128 0x20
+ 1500 0b16 3C000000 		.4byte	.LVL3
+ 1501 0b1a 060C0000 		.4byte	0xc06
+ 1502 0b1e 2F0B0000 		.4byte	0xb2f
+ 1503 0b22 1F       		.uleb128 0x1f
+ 1504 0b23 01       		.uleb128 0x1
+ 1505 0b24 51       		.byte	0x51
+ 1506 0b25 03       		.uleb128 0x3
+ 1507 0b26 0A       		.byte	0xa
+ 1508 0b27 0040     		.2byte	0x4000
+ 1509 0b29 1F       		.uleb128 0x1f
+ 1510 0b2a 01       		.uleb128 0x1
+ 1511 0b2b 52       		.byte	0x52
+ 1512 0b2c 01       		.uleb128 0x1
+ 1513 0b2d 30       		.byte	0x30
+ 1514 0b2e 00       		.byte	0
+ 1515 0b2f 20       		.uleb128 0x20
+ 1516 0b30 42000000 		.4byte	.LVL4
+ 1517 0b34 120C0000 		.4byte	0xc12
+ 1518 0b38 440B0000 		.4byte	0xb44
+ 1519 0b3c 1F       		.uleb128 0x1f
+ 1520 0b3d 01       		.uleb128 0x1
+ 1521 0b3e 50       		.byte	0x50
+ 1522 0b3f 03       		.uleb128 0x3
+ 1523 0b40 0A       		.byte	0xa
+ 1524 0b41 8813     		.2byte	0x1388
+ 1525 0b43 00       		.byte	0
+ 1526 0b44 1E       		.uleb128 0x1e
+ 1527 0b45 48000000 		.4byte	.LVL5
+ 1528 0b49 1E0C0000 		.4byte	0xc1e
+ 1529 0b4d 1F       		.uleb128 0x1f
+ 1530 0b4e 01       		.uleb128 0x1
+ 1531 0b4f 50       		.byte	0x50
+ 1532 0b50 01       		.uleb128 0x1
+ 1533 0b51 30       		.byte	0x30
+ 1534 0b52 00       		.byte	0
+ 1535 0b53 00       		.byte	0
+ 1536 0b54 21       		.uleb128 0x21
+ 1537 0b55 D9070000 		.4byte	.LASF205
+ 1538 0b59 08       		.byte	0x8
+ 1539 0b5a A7       		.byte	0xa7
+ 1540 0b5b 5F0B0000 		.4byte	0xb5f
+ 1541 0b5f 0C       		.uleb128 0xc
+ 1542 0b60 04       		.byte	0x4
+ 1543 0b61 650B0000 		.4byte	0xb65
+ 1544 0b65 06       		.uleb128 0x6
+ 1545 0b66 6E050000 		.4byte	0x56e
+ 1546 0b6a 07       		.uleb128 0x7
+ 1547 0b6b 0E0A0000 		.4byte	0xa0e
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 39
+
+
+ 1548 0b6f 7A0B0000 		.4byte	0xb7a
+ 1549 0b73 08       		.uleb128 0x8
+ 1550 0b74 C3000000 		.4byte	0xc3
+ 1551 0b78 0B       		.byte	0xb
+ 1552 0b79 00       		.byte	0
+ 1553 0b7a 22       		.uleb128 0x22
+ 1554 0b7b A3070000 		.4byte	.LASF206
+ 1555 0b7f 0B       		.byte	0xb
+ 1556 0b80 0303     		.2byte	0x303
+ 1557 0b82 860B0000 		.4byte	0xb86
+ 1558 0b86 06       		.uleb128 0x6
+ 1559 0b87 6A0B0000 		.4byte	0xb6a
+ 1560 0b8b 22       		.uleb128 0x22
+ 1561 0b8c 17010000 		.4byte	.LASF207
+ 1562 0b90 0F       		.byte	0xf
+ 1563 0b91 6001     		.2byte	0x160
+ 1564 0b93 B8000000 		.4byte	0xb8
+ 1565 0b97 07       		.uleb128 0x7
+ 1566 0b98 A70B0000 		.4byte	0xba7
+ 1567 0b9c A70B0000 		.4byte	0xba7
+ 1568 0ba0 08       		.uleb128 0x8
+ 1569 0ba1 C3000000 		.4byte	0xc3
+ 1570 0ba5 00       		.byte	0
+ 1571 0ba6 00       		.byte	0
+ 1572 0ba7 06       		.uleb128 0x6
+ 1573 0ba8 630A0000 		.4byte	0xa63
+ 1574 0bac 22       		.uleb128 0x22
+ 1575 0bad CA070000 		.4byte	.LASF208
+ 1576 0bb1 0F       		.byte	0xf
+ 1577 0bb2 6401     		.2byte	0x164
+ 1578 0bb4 B80B0000 		.4byte	0xbb8
+ 1579 0bb8 06       		.uleb128 0x6
+ 1580 0bb9 970B0000 		.4byte	0xb97
+ 1581 0bbd 21       		.uleb128 0x21
+ 1582 0bbe 26050000 		.4byte	.LASF209
+ 1583 0bc2 10       		.byte	0x10
+ 1584 0bc3 87       		.byte	0x87
+ 1585 0bc4 020A0000 		.4byte	0xa02
+ 1586 0bc8 21       		.uleb128 0x21
+ 1587 0bc9 AF060000 		.4byte	.LASF210
+ 1588 0bcd 11       		.byte	0x11
+ 1589 0bce 7F       		.byte	0x7f
+ 1590 0bcf 26090000 		.4byte	0x926
+ 1591 0bd3 21       		.uleb128 0x21
+ 1592 0bd4 1A030000 		.4byte	.LASF211
+ 1593 0bd8 12       		.byte	0x12
+ 1594 0bd9 7C       		.byte	0x7c
+ 1595 0bda A0050000 		.4byte	0x5a0
+ 1596 0bde 21       		.uleb128 0x21
+ 1597 0bdf 830D0000 		.4byte	.LASF212
+ 1598 0be3 12       		.byte	0x12
+ 1599 0be4 7D       		.byte	0x7d
+ 1600 0be5 E90B0000 		.4byte	0xbe9
+ 1601 0be9 06       		.uleb128 0x6
+ 1602 0bea 77060000 		.4byte	0x677
+ 1603 0bee 23       		.uleb128 0x23
+ 1604 0bef 3B0B0000 		.4byte	.LASF213
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 40
+
+
+ 1605 0bf3 3B0B0000 		.4byte	.LASF213
+ 1606 0bf7 09       		.byte	0x9
+ 1607 0bf8 9203     		.2byte	0x392
+ 1608 0bfa 23       		.uleb128 0x23
+ 1609 0bfb BD050000 		.4byte	.LASF214
+ 1610 0bff BD050000 		.4byte	.LASF214
+ 1611 0c03 13       		.byte	0x13
+ 1612 0c04 1802     		.2byte	0x218
+ 1613 0c06 23       		.uleb128 0x23
+ 1614 0c07 A40A0000 		.4byte	.LASF215
+ 1615 0c0b A40A0000 		.4byte	.LASF215
+ 1616 0c0f 03       		.byte	0x3
+ 1617 0c10 9C01     		.2byte	0x19c
+ 1618 0c12 23       		.uleb128 0x23
+ 1619 0c13 B8090000 		.4byte	.LASF216
+ 1620 0c17 B8090000 		.4byte	.LASF216
+ 1621 0c1b 09       		.byte	0x9
+ 1622 0c1c 8903     		.2byte	0x389
+ 1623 0c1e 23       		.uleb128 0x23
+ 1624 0c1f EF070000 		.4byte	.LASF217
+ 1625 0c23 EF070000 		.4byte	.LASF217
+ 1626 0c27 0A       		.byte	0xa
+ 1627 0c28 4806     		.2byte	0x648
+ 1628 0c2a 00       		.byte	0
+ 1629              		.section	.debug_abbrev,"",%progbits
+ 1630              	.Ldebug_abbrev0:
+ 1631 0000 01       		.uleb128 0x1
+ 1632 0001 11       		.uleb128 0x11
+ 1633 0002 01       		.byte	0x1
+ 1634 0003 25       		.uleb128 0x25
+ 1635 0004 0E       		.uleb128 0xe
+ 1636 0005 13       		.uleb128 0x13
+ 1637 0006 0B       		.uleb128 0xb
+ 1638 0007 03       		.uleb128 0x3
+ 1639 0008 0E       		.uleb128 0xe
+ 1640 0009 1B       		.uleb128 0x1b
+ 1641 000a 0E       		.uleb128 0xe
+ 1642 000b 55       		.uleb128 0x55
+ 1643 000c 17       		.uleb128 0x17
+ 1644 000d 11       		.uleb128 0x11
+ 1645 000e 01       		.uleb128 0x1
+ 1646 000f 10       		.uleb128 0x10
+ 1647 0010 17       		.uleb128 0x17
+ 1648 0011 00       		.byte	0
+ 1649 0012 00       		.byte	0
+ 1650 0013 02       		.uleb128 0x2
+ 1651 0014 24       		.uleb128 0x24
+ 1652 0015 00       		.byte	0
+ 1653 0016 0B       		.uleb128 0xb
+ 1654 0017 0B       		.uleb128 0xb
+ 1655 0018 3E       		.uleb128 0x3e
+ 1656 0019 0B       		.uleb128 0xb
+ 1657 001a 03       		.uleb128 0x3
+ 1658 001b 0E       		.uleb128 0xe
+ 1659 001c 00       		.byte	0
+ 1660 001d 00       		.byte	0
+ 1661 001e 03       		.uleb128 0x3
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 41
+
+
+ 1662 001f 16       		.uleb128 0x16
+ 1663 0020 00       		.byte	0
+ 1664 0021 03       		.uleb128 0x3
+ 1665 0022 0E       		.uleb128 0xe
+ 1666 0023 3A       		.uleb128 0x3a
+ 1667 0024 0B       		.uleb128 0xb
+ 1668 0025 3B       		.uleb128 0x3b
+ 1669 0026 0B       		.uleb128 0xb
+ 1670 0027 49       		.uleb128 0x49
+ 1671 0028 13       		.uleb128 0x13
+ 1672 0029 00       		.byte	0
+ 1673 002a 00       		.byte	0
+ 1674 002b 04       		.uleb128 0x4
+ 1675 002c 24       		.uleb128 0x24
+ 1676 002d 00       		.byte	0
+ 1677 002e 0B       		.uleb128 0xb
+ 1678 002f 0B       		.uleb128 0xb
+ 1679 0030 3E       		.uleb128 0x3e
+ 1680 0031 0B       		.uleb128 0xb
+ 1681 0032 03       		.uleb128 0x3
+ 1682 0033 08       		.uleb128 0x8
+ 1683 0034 00       		.byte	0
+ 1684 0035 00       		.byte	0
+ 1685 0036 05       		.uleb128 0x5
+ 1686 0037 35       		.uleb128 0x35
+ 1687 0038 00       		.byte	0
+ 1688 0039 49       		.uleb128 0x49
+ 1689 003a 13       		.uleb128 0x13
+ 1690 003b 00       		.byte	0
+ 1691 003c 00       		.byte	0
+ 1692 003d 06       		.uleb128 0x6
+ 1693 003e 26       		.uleb128 0x26
+ 1694 003f 00       		.byte	0
+ 1695 0040 49       		.uleb128 0x49
+ 1696 0041 13       		.uleb128 0x13
+ 1697 0042 00       		.byte	0
+ 1698 0043 00       		.byte	0
+ 1699 0044 07       		.uleb128 0x7
+ 1700 0045 01       		.uleb128 0x1
+ 1701 0046 01       		.byte	0x1
+ 1702 0047 49       		.uleb128 0x49
+ 1703 0048 13       		.uleb128 0x13
+ 1704 0049 01       		.uleb128 0x1
+ 1705 004a 13       		.uleb128 0x13
+ 1706 004b 00       		.byte	0
+ 1707 004c 00       		.byte	0
+ 1708 004d 08       		.uleb128 0x8
+ 1709 004e 21       		.uleb128 0x21
+ 1710 004f 00       		.byte	0
+ 1711 0050 49       		.uleb128 0x49
+ 1712 0051 13       		.uleb128 0x13
+ 1713 0052 2F       		.uleb128 0x2f
+ 1714 0053 0B       		.uleb128 0xb
+ 1715 0054 00       		.byte	0
+ 1716 0055 00       		.byte	0
+ 1717 0056 09       		.uleb128 0x9
+ 1718 0057 13       		.uleb128 0x13
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 42
+
+
+ 1719 0058 01       		.byte	0x1
+ 1720 0059 0B       		.uleb128 0xb
+ 1721 005a 0B       		.uleb128 0xb
+ 1722 005b 3A       		.uleb128 0x3a
+ 1723 005c 0B       		.uleb128 0xb
+ 1724 005d 3B       		.uleb128 0x3b
+ 1725 005e 0B       		.uleb128 0xb
+ 1726 005f 01       		.uleb128 0x1
+ 1727 0060 13       		.uleb128 0x13
+ 1728 0061 00       		.byte	0
+ 1729 0062 00       		.byte	0
+ 1730 0063 0A       		.uleb128 0xa
+ 1731 0064 0D       		.uleb128 0xd
+ 1732 0065 00       		.byte	0
+ 1733 0066 03       		.uleb128 0x3
+ 1734 0067 0E       		.uleb128 0xe
+ 1735 0068 3A       		.uleb128 0x3a
+ 1736 0069 0B       		.uleb128 0xb
+ 1737 006a 3B       		.uleb128 0x3b
+ 1738 006b 0B       		.uleb128 0xb
+ 1739 006c 49       		.uleb128 0x49
+ 1740 006d 13       		.uleb128 0x13
+ 1741 006e 38       		.uleb128 0x38
+ 1742 006f 0B       		.uleb128 0xb
+ 1743 0070 00       		.byte	0
+ 1744 0071 00       		.byte	0
+ 1745 0072 0B       		.uleb128 0xb
+ 1746 0073 16       		.uleb128 0x16
+ 1747 0074 00       		.byte	0
+ 1748 0075 03       		.uleb128 0x3
+ 1749 0076 0E       		.uleb128 0xe
+ 1750 0077 3A       		.uleb128 0x3a
+ 1751 0078 0B       		.uleb128 0xb
+ 1752 0079 3B       		.uleb128 0x3b
+ 1753 007a 05       		.uleb128 0x5
+ 1754 007b 49       		.uleb128 0x49
+ 1755 007c 13       		.uleb128 0x13
+ 1756 007d 00       		.byte	0
+ 1757 007e 00       		.byte	0
+ 1758 007f 0C       		.uleb128 0xc
+ 1759 0080 0F       		.uleb128 0xf
+ 1760 0081 00       		.byte	0
+ 1761 0082 0B       		.uleb128 0xb
+ 1762 0083 0B       		.uleb128 0xb
+ 1763 0084 49       		.uleb128 0x49
+ 1764 0085 13       		.uleb128 0x13
+ 1765 0086 00       		.byte	0
+ 1766 0087 00       		.byte	0
+ 1767 0088 0D       		.uleb128 0xd
+ 1768 0089 0F       		.uleb128 0xf
+ 1769 008a 00       		.byte	0
+ 1770 008b 0B       		.uleb128 0xb
+ 1771 008c 0B       		.uleb128 0xb
+ 1772 008d 00       		.byte	0
+ 1773 008e 00       		.byte	0
+ 1774 008f 0E       		.uleb128 0xe
+ 1775 0090 04       		.uleb128 0x4
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 43
+
+
+ 1776 0091 01       		.byte	0x1
+ 1777 0092 0B       		.uleb128 0xb
+ 1778 0093 0B       		.uleb128 0xb
+ 1779 0094 49       		.uleb128 0x49
+ 1780 0095 13       		.uleb128 0x13
+ 1781 0096 3A       		.uleb128 0x3a
+ 1782 0097 0B       		.uleb128 0xb
+ 1783 0098 3B       		.uleb128 0x3b
+ 1784 0099 05       		.uleb128 0x5
+ 1785 009a 01       		.uleb128 0x1
+ 1786 009b 13       		.uleb128 0x13
+ 1787 009c 00       		.byte	0
+ 1788 009d 00       		.byte	0
+ 1789 009e 0F       		.uleb128 0xf
+ 1790 009f 28       		.uleb128 0x28
+ 1791 00a0 00       		.byte	0
+ 1792 00a1 03       		.uleb128 0x3
+ 1793 00a2 0E       		.uleb128 0xe
+ 1794 00a3 1C       		.uleb128 0x1c
+ 1795 00a4 0B       		.uleb128 0xb
+ 1796 00a5 00       		.byte	0
+ 1797 00a6 00       		.byte	0
+ 1798 00a7 10       		.uleb128 0x10
+ 1799 00a8 13       		.uleb128 0x13
+ 1800 00a9 01       		.byte	0x1
+ 1801 00aa 0B       		.uleb128 0xb
+ 1802 00ab 0B       		.uleb128 0xb
+ 1803 00ac 3A       		.uleb128 0x3a
+ 1804 00ad 0B       		.uleb128 0xb
+ 1805 00ae 3B       		.uleb128 0x3b
+ 1806 00af 05       		.uleb128 0x5
+ 1807 00b0 01       		.uleb128 0x1
+ 1808 00b1 13       		.uleb128 0x13
+ 1809 00b2 00       		.byte	0
+ 1810 00b3 00       		.byte	0
+ 1811 00b4 11       		.uleb128 0x11
+ 1812 00b5 0D       		.uleb128 0xd
+ 1813 00b6 00       		.byte	0
+ 1814 00b7 03       		.uleb128 0x3
+ 1815 00b8 0E       		.uleb128 0xe
+ 1816 00b9 3A       		.uleb128 0x3a
+ 1817 00ba 0B       		.uleb128 0xb
+ 1818 00bb 3B       		.uleb128 0x3b
+ 1819 00bc 05       		.uleb128 0x5
+ 1820 00bd 49       		.uleb128 0x49
+ 1821 00be 13       		.uleb128 0x13
+ 1822 00bf 38       		.uleb128 0x38
+ 1823 00c0 0B       		.uleb128 0xb
+ 1824 00c1 00       		.byte	0
+ 1825 00c2 00       		.byte	0
+ 1826 00c3 12       		.uleb128 0x12
+ 1827 00c4 15       		.uleb128 0x15
+ 1828 00c5 01       		.byte	0x1
+ 1829 00c6 27       		.uleb128 0x27
+ 1830 00c7 19       		.uleb128 0x19
+ 1831 00c8 01       		.uleb128 0x1
+ 1832 00c9 13       		.uleb128 0x13
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 44
+
+
+ 1833 00ca 00       		.byte	0
+ 1834 00cb 00       		.byte	0
+ 1835 00cc 13       		.uleb128 0x13
+ 1836 00cd 05       		.uleb128 0x5
+ 1837 00ce 00       		.byte	0
+ 1838 00cf 49       		.uleb128 0x49
+ 1839 00d0 13       		.uleb128 0x13
+ 1840 00d1 00       		.byte	0
+ 1841 00d2 00       		.byte	0
+ 1842 00d3 14       		.uleb128 0x14
+ 1843 00d4 15       		.uleb128 0x15
+ 1844 00d5 01       		.byte	0x1
+ 1845 00d6 27       		.uleb128 0x27
+ 1846 00d7 19       		.uleb128 0x19
+ 1847 00d8 49       		.uleb128 0x49
+ 1848 00d9 13       		.uleb128 0x13
+ 1849 00da 01       		.uleb128 0x1
+ 1850 00db 13       		.uleb128 0x13
+ 1851 00dc 00       		.byte	0
+ 1852 00dd 00       		.byte	0
+ 1853 00de 15       		.uleb128 0x15
+ 1854 00df 13       		.uleb128 0x13
+ 1855 00e0 01       		.byte	0x1
+ 1856 00e1 03       		.uleb128 0x3
+ 1857 00e2 0E       		.uleb128 0xe
+ 1858 00e3 0B       		.uleb128 0xb
+ 1859 00e4 0B       		.uleb128 0xb
+ 1860 00e5 3A       		.uleb128 0x3a
+ 1861 00e6 0B       		.uleb128 0xb
+ 1862 00e7 3B       		.uleb128 0x3b
+ 1863 00e8 05       		.uleb128 0x5
+ 1864 00e9 01       		.uleb128 0x1
+ 1865 00ea 13       		.uleb128 0x13
+ 1866 00eb 00       		.byte	0
+ 1867 00ec 00       		.byte	0
+ 1868 00ed 16       		.uleb128 0x16
+ 1869 00ee 2E       		.uleb128 0x2e
+ 1870 00ef 00       		.byte	0
+ 1871 00f0 03       		.uleb128 0x3
+ 1872 00f1 0E       		.uleb128 0xe
+ 1873 00f2 3A       		.uleb128 0x3a
+ 1874 00f3 0B       		.uleb128 0xb
+ 1875 00f4 3B       		.uleb128 0x3b
+ 1876 00f5 0B       		.uleb128 0xb
+ 1877 00f6 27       		.uleb128 0x27
+ 1878 00f7 19       		.uleb128 0x19
+ 1879 00f8 20       		.uleb128 0x20
+ 1880 00f9 0B       		.uleb128 0xb
+ 1881 00fa 00       		.byte	0
+ 1882 00fb 00       		.byte	0
+ 1883 00fc 17       		.uleb128 0x17
+ 1884 00fd 2E       		.uleb128 0x2e
+ 1885 00fe 01       		.byte	0x1
+ 1886 00ff 03       		.uleb128 0x3
+ 1887 0100 0E       		.uleb128 0xe
+ 1888 0101 3A       		.uleb128 0x3a
+ 1889 0102 0B       		.uleb128 0xb
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 45
+
+
+ 1890 0103 3B       		.uleb128 0x3b
+ 1891 0104 05       		.uleb128 0x5
+ 1892 0105 27       		.uleb128 0x27
+ 1893 0106 19       		.uleb128 0x19
+ 1894 0107 49       		.uleb128 0x49
+ 1895 0108 13       		.uleb128 0x13
+ 1896 0109 20       		.uleb128 0x20
+ 1897 010a 0B       		.uleb128 0xb
+ 1898 010b 01       		.uleb128 0x1
+ 1899 010c 13       		.uleb128 0x13
+ 1900 010d 00       		.byte	0
+ 1901 010e 00       		.byte	0
+ 1902 010f 18       		.uleb128 0x18
+ 1903 0110 05       		.uleb128 0x5
+ 1904 0111 00       		.byte	0
+ 1905 0112 03       		.uleb128 0x3
+ 1906 0113 0E       		.uleb128 0xe
+ 1907 0114 3A       		.uleb128 0x3a
+ 1908 0115 0B       		.uleb128 0xb
+ 1909 0116 3B       		.uleb128 0x3b
+ 1910 0117 05       		.uleb128 0x5
+ 1911 0118 49       		.uleb128 0x49
+ 1912 0119 13       		.uleb128 0x13
+ 1913 011a 00       		.byte	0
+ 1914 011b 00       		.byte	0
+ 1915 011c 19       		.uleb128 0x19
+ 1916 011d 2E       		.uleb128 0x2e
+ 1917 011e 01       		.byte	0x1
+ 1918 011f 3F       		.uleb128 0x3f
+ 1919 0120 19       		.uleb128 0x19
+ 1920 0121 03       		.uleb128 0x3
+ 1921 0122 0E       		.uleb128 0xe
+ 1922 0123 3A       		.uleb128 0x3a
+ 1923 0124 0B       		.uleb128 0xb
+ 1924 0125 3B       		.uleb128 0x3b
+ 1925 0126 0B       		.uleb128 0xb
+ 1926 0127 27       		.uleb128 0x27
+ 1927 0128 19       		.uleb128 0x19
+ 1928 0129 49       		.uleb128 0x49
+ 1929 012a 13       		.uleb128 0x13
+ 1930 012b 8701     		.uleb128 0x87
+ 1931 012d 19       		.uleb128 0x19
+ 1932 012e 11       		.uleb128 0x11
+ 1933 012f 01       		.uleb128 0x1
+ 1934 0130 12       		.uleb128 0x12
+ 1935 0131 06       		.uleb128 0x6
+ 1936 0132 40       		.uleb128 0x40
+ 1937 0133 18       		.uleb128 0x18
+ 1938 0134 9742     		.uleb128 0x2117
+ 1939 0136 19       		.uleb128 0x19
+ 1940 0137 01       		.uleb128 0x1
+ 1941 0138 13       		.uleb128 0x13
+ 1942 0139 00       		.byte	0
+ 1943 013a 00       		.byte	0
+ 1944 013b 1A       		.uleb128 0x1a
+ 1945 013c 34       		.uleb128 0x34
+ 1946 013d 00       		.byte	0
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 46
+
+
+ 1947 013e 03       		.uleb128 0x3
+ 1948 013f 0E       		.uleb128 0xe
+ 1949 0140 3A       		.uleb128 0x3a
+ 1950 0141 0B       		.uleb128 0xb
+ 1951 0142 3B       		.uleb128 0x3b
+ 1952 0143 0B       		.uleb128 0xb
+ 1953 0144 49       		.uleb128 0x49
+ 1954 0145 13       		.uleb128 0x13
+ 1955 0146 00       		.byte	0
+ 1956 0147 00       		.byte	0
+ 1957 0148 1B       		.uleb128 0x1b
+ 1958 0149 1D       		.uleb128 0x1d
+ 1959 014a 00       		.byte	0
+ 1960 014b 31       		.uleb128 0x31
+ 1961 014c 13       		.uleb128 0x13
+ 1962 014d 11       		.uleb128 0x11
+ 1963 014e 01       		.uleb128 0x1
+ 1964 014f 12       		.uleb128 0x12
+ 1965 0150 06       		.uleb128 0x6
+ 1966 0151 58       		.uleb128 0x58
+ 1967 0152 0B       		.uleb128 0xb
+ 1968 0153 59       		.uleb128 0x59
+ 1969 0154 0B       		.uleb128 0xb
+ 1970 0155 00       		.byte	0
+ 1971 0156 00       		.byte	0
+ 1972 0157 1C       		.uleb128 0x1c
+ 1973 0158 1D       		.uleb128 0x1d
+ 1974 0159 01       		.byte	0x1
+ 1975 015a 31       		.uleb128 0x31
+ 1976 015b 13       		.uleb128 0x13
+ 1977 015c 11       		.uleb128 0x11
+ 1978 015d 01       		.uleb128 0x1
+ 1979 015e 12       		.uleb128 0x12
+ 1980 015f 06       		.uleb128 0x6
+ 1981 0160 58       		.uleb128 0x58
+ 1982 0161 0B       		.uleb128 0xb
+ 1983 0162 59       		.uleb128 0x59
+ 1984 0163 0B       		.uleb128 0xb
+ 1985 0164 01       		.uleb128 0x1
+ 1986 0165 13       		.uleb128 0x13
+ 1987 0166 00       		.byte	0
+ 1988 0167 00       		.byte	0
+ 1989 0168 1D       		.uleb128 0x1d
+ 1990 0169 05       		.uleb128 0x5
+ 1991 016a 00       		.byte	0
+ 1992 016b 31       		.uleb128 0x31
+ 1993 016c 13       		.uleb128 0x13
+ 1994 016d 02       		.uleb128 0x2
+ 1995 016e 17       		.uleb128 0x17
+ 1996 016f 00       		.byte	0
+ 1997 0170 00       		.byte	0
+ 1998 0171 1E       		.uleb128 0x1e
+ 1999 0172 898201   		.uleb128 0x4109
+ 2000 0175 01       		.byte	0x1
+ 2001 0176 11       		.uleb128 0x11
+ 2002 0177 01       		.uleb128 0x1
+ 2003 0178 31       		.uleb128 0x31
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 47
+
+
+ 2004 0179 13       		.uleb128 0x13
+ 2005 017a 00       		.byte	0
+ 2006 017b 00       		.byte	0
+ 2007 017c 1F       		.uleb128 0x1f
+ 2008 017d 8A8201   		.uleb128 0x410a
+ 2009 0180 00       		.byte	0
+ 2010 0181 02       		.uleb128 0x2
+ 2011 0182 18       		.uleb128 0x18
+ 2012 0183 9142     		.uleb128 0x2111
+ 2013 0185 18       		.uleb128 0x18
+ 2014 0186 00       		.byte	0
+ 2015 0187 00       		.byte	0
+ 2016 0188 20       		.uleb128 0x20
+ 2017 0189 898201   		.uleb128 0x4109
+ 2018 018c 01       		.byte	0x1
+ 2019 018d 11       		.uleb128 0x11
+ 2020 018e 01       		.uleb128 0x1
+ 2021 018f 31       		.uleb128 0x31
+ 2022 0190 13       		.uleb128 0x13
+ 2023 0191 01       		.uleb128 0x1
+ 2024 0192 13       		.uleb128 0x13
+ 2025 0193 00       		.byte	0
+ 2026 0194 00       		.byte	0
+ 2027 0195 21       		.uleb128 0x21
+ 2028 0196 34       		.uleb128 0x34
+ 2029 0197 00       		.byte	0
+ 2030 0198 03       		.uleb128 0x3
+ 2031 0199 0E       		.uleb128 0xe
+ 2032 019a 3A       		.uleb128 0x3a
+ 2033 019b 0B       		.uleb128 0xb
+ 2034 019c 3B       		.uleb128 0x3b
+ 2035 019d 0B       		.uleb128 0xb
+ 2036 019e 49       		.uleb128 0x49
+ 2037 019f 13       		.uleb128 0x13
+ 2038 01a0 3F       		.uleb128 0x3f
+ 2039 01a1 19       		.uleb128 0x19
+ 2040 01a2 3C       		.uleb128 0x3c
+ 2041 01a3 19       		.uleb128 0x19
+ 2042 01a4 00       		.byte	0
+ 2043 01a5 00       		.byte	0
+ 2044 01a6 22       		.uleb128 0x22
+ 2045 01a7 34       		.uleb128 0x34
+ 2046 01a8 00       		.byte	0
+ 2047 01a9 03       		.uleb128 0x3
+ 2048 01aa 0E       		.uleb128 0xe
+ 2049 01ab 3A       		.uleb128 0x3a
+ 2050 01ac 0B       		.uleb128 0xb
+ 2051 01ad 3B       		.uleb128 0x3b
+ 2052 01ae 05       		.uleb128 0x5
+ 2053 01af 49       		.uleb128 0x49
+ 2054 01b0 13       		.uleb128 0x13
+ 2055 01b1 3F       		.uleb128 0x3f
+ 2056 01b2 19       		.uleb128 0x19
+ 2057 01b3 3C       		.uleb128 0x3c
+ 2058 01b4 19       		.uleb128 0x19
+ 2059 01b5 00       		.byte	0
+ 2060 01b6 00       		.byte	0
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 48
+
+
+ 2061 01b7 23       		.uleb128 0x23
+ 2062 01b8 2E       		.uleb128 0x2e
+ 2063 01b9 00       		.byte	0
+ 2064 01ba 3F       		.uleb128 0x3f
+ 2065 01bb 19       		.uleb128 0x19
+ 2066 01bc 3C       		.uleb128 0x3c
+ 2067 01bd 19       		.uleb128 0x19
+ 2068 01be 6E       		.uleb128 0x6e
+ 2069 01bf 0E       		.uleb128 0xe
+ 2070 01c0 03       		.uleb128 0x3
+ 2071 01c1 0E       		.uleb128 0xe
+ 2072 01c2 3A       		.uleb128 0x3a
+ 2073 01c3 0B       		.uleb128 0xb
+ 2074 01c4 3B       		.uleb128 0x3b
+ 2075 01c5 05       		.uleb128 0x5
+ 2076 01c6 00       		.byte	0
+ 2077 01c7 00       		.byte	0
+ 2078 01c8 00       		.byte	0
+ 2079              		.section	.debug_loc,"",%progbits
+ 2080              	.Ldebug_loc0:
+ 2081              	.LLST0:
+ 2082 0000 0A000000 		.4byte	.LVL0
+ 2083 0004 32000000 		.4byte	.LVL2
+ 2084 0008 0200     		.2byte	0x2
+ 2085 000a 3E       		.byte	0x3e
+ 2086 000b 9F       		.byte	0x9f
+ 2087 000c 00000000 		.4byte	0
+ 2088 0010 00000000 		.4byte	0
+ 2089              		.section	.debug_aranges,"",%progbits
+ 2090 0000 1C000000 		.4byte	0x1c
+ 2091 0004 0200     		.2byte	0x2
+ 2092 0006 00000000 		.4byte	.Ldebug_info0
+ 2093 000a 04       		.byte	0x4
+ 2094 000b 00       		.byte	0
+ 2095 000c 0000     		.2byte	0
+ 2096 000e 0000     		.2byte	0
+ 2097 0010 00000000 		.4byte	.LFB549
+ 2098 0014 5C000000 		.4byte	.LFE549-.LFB549
+ 2099 0018 00000000 		.4byte	0
+ 2100 001c 00000000 		.4byte	0
+ 2101              		.section	.debug_ranges,"",%progbits
+ 2102              	.Ldebug_ranges0:
+ 2103 0000 00000000 		.4byte	.LFB549
+ 2104 0004 5C000000 		.4byte	.LFE549
+ 2105 0008 00000000 		.4byte	0
+ 2106 000c 00000000 		.4byte	0
+ 2107              		.section	.debug_line,"",%progbits
+ 2108              	.Ldebug_line0:
+ 2109 0000 44040000 		.section	.debug_str,"MS",%progbits,1
+ 2109      02000C04 
+ 2109      00000201 
+ 2109      FB0E0D00 
+ 2109      01010101 
+ 2110              	.LASF62:
+ 2111 0000 70726F74 		.ascii	"protBusMasterMask\000"
+ 2111      4275734D 
+ 2111      61737465 
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 49
+
+
+ 2111      724D6173 
+ 2111      6B00
+ 2112              	.LASF192:
+ 2113 0012 72784275 		.ascii	"rxBufSize\000"
+ 2113      6653697A 
+ 2113      6500
+ 2114              	.LASF72:
+ 2115 001c 666C6173 		.ascii	"flashCtlMainWs3Freq\000"
+ 2115      6843746C 
+ 2115      4D61696E 
+ 2115      57733346 
+ 2115      72657100 
+ 2116              	.LASF94:
+ 2117 0030 6770696F 		.ascii	"gpioPrtCfgInOffset\000"
+ 2117      50727443 
+ 2117      6667496E 
+ 2117      4F666673 
+ 2117      657400
+ 2118              	.LASF178:
+ 2119 0043 736C6176 		.ascii	"slaveRxBufferIdx\000"
+ 2119      65527842 
+ 2119      75666665 
+ 2119      72496478 
+ 2119      00
+ 2120              	.LASF166:
+ 2121 0054 6D617374 		.ascii	"masterBuffer\000"
+ 2121      65724275 
+ 2121      66666572 
+ 2121      00
+ 2122              	.LASF38:
+ 2123 0061 63727970 		.ascii	"cryptoVersion\000"
+ 2123      746F5665 
+ 2123      7273696F 
+ 2123      6E00
+ 2124              	.LASF56:
+ 2125 006f 70657269 		.ascii	"periClockNr\000"
+ 2125      436C6F63 
+ 2125      6B4E7200 
+ 2126              	.LASF34:
+ 2127 007b 70617373 		.ascii	"passBase\000"
+ 2127      42617365 
+ 2127      00
+ 2128              	.LASF219:
+ 2129 0084 6D61696E 		.ascii	"main_cm0p.c\000"
+ 2129      5F636D30 
+ 2129      702E6300 
+ 2130              	.LASF110:
+ 2131 0090 63707573 		.ascii	"cpussRam2Ctl0\000"
+ 2131      7352616D 
+ 2131      3243746C 
+ 2131      3000
+ 2132              	.LASF47:
+ 2133 009e 63707573 		.ascii	"cpussIpcIrqNr\000"
+ 2133      73497063 
+ 2133      4972714E 
+ 2133      7200
+ 2134              	.LASF3:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 50
+
+
+ 2135 00ac 5F5F7569 		.ascii	"__uint8_t\000"
+ 2135      6E74385F 
+ 2135      7400
+ 2136              	.LASF170:
+ 2137 00b6 736C6176 		.ascii	"slaveStatus\000"
+ 2137      65537461 
+ 2137      74757300 
+ 2138              	.LASF49:
+ 2139 00c2 63707573 		.ascii	"cpussFlashPaSize\000"
+ 2139      73466C61 
+ 2139      73685061 
+ 2139      53697A65 
+ 2139      00
+ 2140              	.LASF98:
+ 2141 00d3 63707573 		.ascii	"cpussCm4ClockCtlOffset\000"
+ 2141      73436D34 
+ 2141      436C6F63 
+ 2141      6B43746C 
+ 2141      4F666673 
+ 2142              	.LASF19:
+ 2143 00ea 52454C45 		.ascii	"RELEASE\000"
+ 2143      41534500 
+ 2144              	.LASF27:
+ 2145 00f2 63707573 		.ascii	"cpussBase\000"
+ 2145      73426173 
+ 2145      6500
+ 2146              	.LASF76:
+ 2147 00fc 64774368 		.ascii	"dwChCtlPrioPos\000"
+ 2147      43746C50 
+ 2147      72696F50 
+ 2147      6F7300
+ 2148              	.LASF148:
+ 2149 010b 73617449 		.ascii	"satIntrMask\000"
+ 2149      6E74724D 
+ 2149      61736B00 
+ 2150              	.LASF207:
+ 2151 0117 4144435F 		.ascii	"ADC_currentConfig\000"
+ 2151      63757272 
+ 2151      656E7443 
+ 2151      6F6E6669 
+ 2151      6700
+ 2152              	.LASF11:
+ 2153 0129 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2153      206C6F6E 
+ 2153      6720756E 
+ 2153      7369676E 
+ 2153      65642069 
+ 2154              	.LASF225:
+ 2155 0140 64617461 		.ascii	"data\000"
+ 2155      00
+ 2156              	.LASF80:
+ 2157 0145 70657269 		.ascii	"periTrCmdOffset\000"
+ 2157      5472436D 
+ 2157      644F6666 
+ 2157      73657400 
+ 2158              	.LASF187:
+ 2159 0155 72785269 		.ascii	"rxRingBuf\000"
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 51
+
+
+ 2159      6E674275 
+ 2159      6600
+ 2160              	.LASF104:
+ 2161 015f 63707573 		.ascii	"cpussSysTickCtlOffset\000"
+ 2161      73537973 
+ 2161      5469636B 
+ 2161      43746C4F 
+ 2161      66667365 
+ 2162              	.LASF163:
+ 2163 0175 6D617374 		.ascii	"masterStatus\000"
+ 2163      65725374 
+ 2163      61747573 
+ 2163      00
+ 2164              	.LASF194:
+ 2165 0182 74784275 		.ascii	"txBuf\000"
+ 2165      6600
+ 2166              	.LASF127:
+ 2167 0188 7765656B 		.ascii	"weekOfMonth\000"
+ 2167      4F664D6F 
+ 2167      6E746800 
+ 2168              	.LASF65:
+ 2169 0194 666C6173 		.ascii	"flashPipeRequired\000"
+ 2169      68506970 
+ 2169      65526571 
+ 2169      75697265 
+ 2169      6400
+ 2170              	.LASF177:
+ 2171 01a6 736C6176 		.ascii	"slaveRxBufferSize\000"
+ 2171      65527842 
+ 2171      75666665 
+ 2171      7253697A 
+ 2171      6500
+ 2172              	.LASF183:
+ 2173 01b8 63795F73 		.ascii	"cy_stc_scb_i2c_context\000"
+ 2173      74635F73 
+ 2173      63625F69 
+ 2173      32635F63 
+ 2173      6F6E7465 
+ 2174              	.LASF69:
+ 2175 01cf 666C6173 		.ascii	"flashCtlMainWs0Freq\000"
+ 2175      6843746C 
+ 2175      4D61696E 
+ 2175      57733046 
+ 2175      72657100 
+ 2176              	.LASF14:
+ 2177 01e3 696E7431 		.ascii	"int16_t\000"
+ 2177      365F7400 
+ 2178              	.LASF121:
+ 2179 01eb 43595F52 		.ascii	"CY_RTC_DST_RELATIVE\000"
+ 2179      54435F44 
+ 2179      53545F52 
+ 2179      454C4154 
+ 2179      49564500 
+ 2180              	.LASF10:
+ 2181 01ff 6C6F6E67 		.ascii	"long long int\000"
+ 2181      206C6F6E 
+ 2181      6720696E 
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 52
+
+
+ 2181      7400
+ 2182              	.LASF2:
+ 2183 020d 7369676E 		.ascii	"signed char\000"
+ 2183      65642063 
+ 2183      68617200 
+ 2184              	.LASF85:
+ 2185 0219 70657269 		.ascii	"periDivCmdTypeSelPos\000"
+ 2185      44697643 
+ 2185      6D645479 
+ 2185      70655365 
+ 2185      6C506F73 
+ 2186              	.LASF138:
+ 2187 022e 63795F65 		.ascii	"cy_en_sar_range_detect_condition_t\000"
+ 2187      6E5F7361 
+ 2187      725F7261 
+ 2187      6E67655F 
+ 2187      64657465 
+ 2188              	.LASF203:
+ 2189 0251 636C6B44 		.ascii	"clkDivider\000"
+ 2189      69766964 
+ 2189      657200
+ 2190              	.LASF43:
+ 2191 025c 69706356 		.ascii	"ipcVersion\000"
+ 2191      65727369 
+ 2191      6F6E00
+ 2192              	.LASF105:
+ 2193 0267 63707573 		.ascii	"cpussCm0NmiCtlOffset\000"
+ 2193      73436D30 
+ 2193      4E6D6943 
+ 2193      746C4F66 
+ 2193      66736574 
+ 2194              	.LASF53:
+ 2195 027c 73727373 		.ascii	"srssNumClkpath\000"
+ 2195      4E756D43 
+ 2195      6C6B7061 
+ 2195      746800
+ 2196              	.LASF32:
+ 2197 028b 6873696F 		.ascii	"hsiomBase\000"
+ 2197      6D426173 
+ 2197      6500
+ 2198              	.LASF131:
+ 2199 0295 73746172 		.ascii	"startDst\000"
+ 2199      74447374 
+ 2199      00
+ 2200              	.LASF134:
+ 2201 029e 43595F53 		.ascii	"CY_SAR_RANGE_COND_BELOW\000"
+ 2201      41525F52 
+ 2201      414E4745 
+ 2201      5F434F4E 
+ 2201      445F4245 
+ 2202              	.LASF123:
+ 2203 02b6 63795F65 		.ascii	"cy_en_rtc_dst_format_t\000"
+ 2203      6E5F7274 
+ 2203      635F6473 
+ 2203      745F666F 
+ 2203      726D6174 
+ 2204              	.LASF162:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 53
+
+
+ 2205 02cd 73746174 		.ascii	"state\000"
+ 2205      6500
+ 2206              	.LASF158:
+ 2207 02d3 63795F63 		.ascii	"cy_cb_scb_i2c_handle_events_t\000"
+ 2207      625F7363 
+ 2207      625F6932 
+ 2207      635F6861 
+ 2207      6E646C65 
+ 2208              	.LASF7:
+ 2209 02f1 6C6F6E67 		.ascii	"long int\000"
+ 2209      20696E74 
+ 2209      00
+ 2210              	.LASF95:
+ 2211 02fa 6770696F 		.ascii	"gpioPrtCfgOutOffset\000"
+ 2211      50727443 
+ 2211      66674F75 
+ 2211      744F6666 
+ 2211      73657400 
+ 2212              	.LASF165:
+ 2213 030e 6D617374 		.ascii	"masterRdDir\000"
+ 2213      65725264 
+ 2213      44697200 
+ 2214              	.LASF211:
+ 2215 031a 5254435F 		.ascii	"RTC_1_rtcDstStatus\000"
+ 2215      315F7274 
+ 2215      63447374 
+ 2215      53746174 
+ 2215      757300
+ 2216              	.LASF63:
+ 2217 032d 63727970 		.ascii	"cryptoMemSize\000"
+ 2217      746F4D65 
+ 2217      6D53697A 
+ 2217      6500
+ 2218              	.LASF29:
+ 2219 033b 70657269 		.ascii	"periBase\000"
+ 2219      42617365 
+ 2219      00
+ 2220              	.LASF61:
+ 2221 0344 73797350 		.ascii	"sysPmSimoPresent\000"
+ 2221      6D53696D 
+ 2221      6F507265 
+ 2221      73656E74 
+ 2221      00
+ 2222              	.LASF136:
+ 2223 0355 43595F53 		.ascii	"CY_SAR_RANGE_COND_ABOVE\000"
+ 2223      41525F52 
+ 2223      414E4745 
+ 2223      5F434F4E 
+ 2223      445F4142 
+ 2224              	.LASF15:
+ 2225 036d 75696E74 		.ascii	"uint16_t\000"
+ 2225      31365F74 
+ 2225      00
+ 2226              	.LASF117:
+ 2227 0376 646F7562 		.ascii	"double\000"
+ 2227      6C6500
+ 2228              	.LASF90:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 54
+
+
+ 2229 037d 70657269 		.ascii	"periDiv16_5CtlOffset\000"
+ 2229      44697631 
+ 2229      365F3543 
+ 2229      746C4F66 
+ 2229      66736574 
+ 2230              	.LASF54:
+ 2231 0392 73727373 		.ascii	"srssNumPll\000"
+ 2231      4E756D50 
+ 2231      6C6C00
+ 2232              	.LASF204:
+ 2233 039d 4144435F 		.ascii	"ADC_CONFIG_STRUCT\000"
+ 2233      434F4E46 
+ 2233      49475F53 
+ 2233      54525543 
+ 2233      5400
+ 2234              	.LASF88:
+ 2235 03af 70657269 		.ascii	"periDiv8CtlOffset\000"
+ 2235      44697638 
+ 2235      43746C4F 
+ 2235      66667365 
+ 2235      7400
+ 2236              	.LASF6:
+ 2237 03c1 73686F72 		.ascii	"short unsigned int\000"
+ 2237      7420756E 
+ 2237      7369676E 
+ 2237      65642069 
+ 2237      6E7400
+ 2238              	.LASF18:
+ 2239 03d4 41435155 		.ascii	"ACQUIRE\000"
+ 2239      49524500 
+ 2240              	.LASF180:
+ 2241 03dc 63624164 		.ascii	"cbAddr\000"
+ 2241      647200
+ 2242              	.LASF28:
+ 2243 03e3 666C6173 		.ascii	"flashcBase\000"
+ 2243      68634261 
+ 2243      736500
+ 2244              	.LASF8:
+ 2245 03ee 5F5F7569 		.ascii	"__uint32_t\000"
+ 2245      6E743332 
+ 2245      5F7400
+ 2246              	.LASF58:
+ 2247 03f9 70617373 		.ascii	"passSarChannels\000"
+ 2247      53617243 
+ 2247      68616E6E 
+ 2247      656C7300 
+ 2248              	.LASF201:
+ 2249 0409 6877436F 		.ascii	"hwConfigStc\000"
+ 2249      6E666967 
+ 2249      53746300 
+ 2250              	.LASF22:
+ 2251 0415 4C4F434B 		.ascii	"LOCK_STATUS\000"
+ 2251      5F535441 
+ 2251      54555300 
+ 2252              	.LASF4:
+ 2253 0421 5F5F696E 		.ascii	"__int16_t\000"
+ 2253      7431365F 
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 55
+
+
+ 2253      7400
+ 2254              	.LASF193:
+ 2255 042b 72784275 		.ascii	"rxBufIdx\000"
+ 2255      66496478 
+ 2255      00
+ 2256              	.LASF139:
+ 2257 0434 6374726C 		.ascii	"ctrl\000"
+ 2257      00
+ 2258              	.LASF86:
+ 2259 0439 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
+ 2259      44697643 
+ 2259      6D645061 
+ 2259      44697653 
+ 2259      656C506F 
+ 2260              	.LASF101:
+ 2261 044f 63707573 		.ascii	"cpussCm4PwrCtlOffset\000"
+ 2261      73436D34 
+ 2261      50777243 
+ 2261      746C4F66 
+ 2261      66736574 
+ 2262              	.LASF195:
+ 2263 0464 74784275 		.ascii	"txBufSize\000"
+ 2263      6653697A 
+ 2263      6500
+ 2264              	.LASF176:
+ 2265 046e 736C6176 		.ascii	"slaveRxBuffer\000"
+ 2265      65527842 
+ 2265      75666665 
+ 2265      7200
+ 2266              	.LASF96:
+ 2267 047c 6770696F 		.ascii	"gpioPrtCfgSioOffset\000"
+ 2267      50727443 
+ 2267      66675369 
+ 2267      6F4F6666 
+ 2267      73657400 
+ 2268              	.LASF48:
+ 2269 0490 63707573 		.ascii	"cpussDwChNr\000"
+ 2269      73447743 
+ 2269      684E7200 
+ 2270              	.LASF129:
+ 2271 049c 6D6F6E74 		.ascii	"month\000"
+ 2271      6800
+ 2272              	.LASF12:
+ 2273 04a2 756E7369 		.ascii	"unsigned int\000"
+ 2273      676E6564 
+ 2273      20696E74 
+ 2273      00
+ 2274              	.LASF174:
+ 2275 04af 736C6176 		.ascii	"slaveTxBufferIdx\000"
+ 2275      65547842 
+ 2275      75666665 
+ 2275      72496478 
+ 2275      00
+ 2276              	.LASF45:
+ 2277 04c0 70726F74 		.ascii	"protVersion\000"
+ 2277      56657273 
+ 2277      696F6E00 
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 56
+
+
+ 2278              	.LASF171:
+ 2279 04cc 736C6176 		.ascii	"slaveRdBufEmpty\000"
+ 2279      65526442 
+ 2279      7566456D 
+ 2279      70747900 
+ 2280              	.LASF114:
+ 2281 04dc 63686172 		.ascii	"char_t\000"
+ 2281      5F7400
+ 2282              	.LASF81:
+ 2283 04e3 70657269 		.ascii	"periTrCmdGrSelMsk\000"
+ 2283      5472436D 
+ 2283      64477253 
+ 2283      656C4D73 
+ 2283      6B00
+ 2284              	.LASF9:
+ 2285 04f5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2285      20756E73 
+ 2285      69676E65 
+ 2285      6420696E 
+ 2285      7400
+ 2286              	.LASF182:
+ 2287 0507 63795F63 		.ascii	"cy_cb_scb_uart_handle_events_t\000"
+ 2287      625F7363 
+ 2287      625F7561 
+ 2287      72745F68 
+ 2287      616E646C 
+ 2288              	.LASF209:
+ 2289 0526 55415254 		.ascii	"UART_context\000"
+ 2289      5F636F6E 
+ 2289      74657874 
+ 2289      00
+ 2290              	.LASF46:
+ 2291 0533 63707573 		.ascii	"cpussIpcNr\000"
+ 2291      73497063 
+ 2291      4E7200
+ 2292              	.LASF120:
+ 2293 053e 43595F53 		.ascii	"CY_SYSPM_WAIT_FOR_EVENT\000"
+ 2293      5953504D 
+ 2293      5F574149 
+ 2293      545F464F 
+ 2293      525F4556 
+ 2294              	.LASF185:
+ 2295 0556 74785374 		.ascii	"txStatus\000"
+ 2295      61747573 
+ 2295      00
+ 2296              	.LASF161:
+ 2297 055f 75736554 		.ascii	"useTxFifo\000"
+ 2297      78466966 
+ 2297      6F00
+ 2298              	.LASF141:
+ 2299 0569 73616D70 		.ascii	"sampleTime01\000"
+ 2299      6C655469 
+ 2299      6D653031 
+ 2299      00
+ 2300              	.LASF82:
+ 2301 0576 70657269 		.ascii	"periTrGrOffset\000"
+ 2301      54724772 
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 57
+
+
+ 2301      4F666673 
+ 2301      657400
+ 2302              	.LASF109:
+ 2303 0585 63707573 		.ascii	"cpussRam1Ctl0\000"
+ 2303      7352616D 
+ 2303      3143746C 
+ 2303      3000
+ 2304              	.LASF143:
+ 2305 0593 72616E67 		.ascii	"rangeThres\000"
+ 2305      65546872 
+ 2305      657300
+ 2306              	.LASF21:
+ 2307 059e 44415441 		.ascii	"DATA\000"
+ 2307      00
+ 2308              	.LASF179:
+ 2309 05a3 63624576 		.ascii	"cbEvents\000"
+ 2309      656E7473 
+ 2309      00
+ 2310              	.LASF93:
+ 2311 05ac 6770696F 		.ascii	"gpioPrtCfgOffset\000"
+ 2311      50727443 
+ 2311      66674F66 
+ 2311      66736574 
+ 2311      00
+ 2312              	.LASF214:
+ 2313 05bd 43795F53 		.ascii	"Cy_SysEnableCM4\000"
+ 2313      7973456E 
+ 2313      61626C65 
+ 2313      434D3400 
+ 2314              	.LASF41:
+ 2315 05cd 6770696F 		.ascii	"gpioVersion\000"
+ 2315      56657273 
+ 2315      696F6E00 
+ 2316              	.LASF200:
+ 2317 05d9 6E756D43 		.ascii	"numChannels\000"
+ 2317      68616E6E 
+ 2317      656C7300 
+ 2318              	.LASF113:
+ 2319 05e5 63795F73 		.ascii	"cy_stc_device_t\000"
+ 2319      74635F64 
+ 2319      65766963 
+ 2319      655F7400 
+ 2320              	.LASF146:
+ 2321 05f5 6368616E 		.ascii	"chanConfig\000"
+ 2321      436F6E66 
+ 2321      696700
+ 2322              	.LASF20:
+ 2323 0600 4E4F5449 		.ascii	"NOTIFY\000"
+ 2323      465900
+ 2324              	.LASF122:
+ 2325 0607 43595F52 		.ascii	"CY_RTC_DST_FIXED\000"
+ 2325      54435F44 
+ 2325      53545F46 
+ 2325      49584544 
+ 2325      00
+ 2326              	.LASF31:
+ 2327 0618 70726F74 		.ascii	"protBase\000"
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 58
+
+
+ 2327      42617365 
+ 2327      00
+ 2328              	.LASF102:
+ 2329 0621 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
+ 2329      73547269 
+ 2329      6D52616D 
+ 2329      43746C4F 
+ 2329      66667365 
+ 2330              	.LASF128:
+ 2331 0637 6461794F 		.ascii	"dayOfWeek\000"
+ 2331      66576565 
+ 2331      6B00
+ 2332              	.LASF97:
+ 2333 0641 63707573 		.ascii	"cpussCm0ClockCtlOffset\000"
+ 2333      73436D30 
+ 2333      436C6F63 
+ 2333      6B43746C 
+ 2333      4F666673 
+ 2334              	.LASF36:
+ 2335 0658 63727970 		.ascii	"cryptoBase\000"
+ 2335      746F4261 
+ 2335      736500
+ 2336              	.LASF157:
+ 2337 0663 63795F65 		.ascii	"cy_en_scb_i2c_command_t\000"
+ 2337      6E5F7363 
+ 2337      625F6932 
+ 2337      635F636F 
+ 2337      6D6D616E 
+ 2338              	.LASF100:
+ 2339 067b 63707573 		.ascii	"cpussCm0StatusOffset\000"
+ 2339      73436D30 
+ 2339      53746174 
+ 2339      75734F66 
+ 2339      66736574 
+ 2340              	.LASF17:
+ 2341 0690 73697A65 		.ascii	"sizetype\000"
+ 2341      74797065 
+ 2341      00
+ 2342              	.LASF74:
+ 2343 0699 64774368 		.ascii	"dwChOffset\000"
+ 2343      4F666673 
+ 2343      657400
+ 2344              	.LASF202:
+ 2345 06a4 6D697363 		.ascii	"miscConfig\000"
+ 2345      436F6E66 
+ 2345      696700
+ 2346              	.LASF210:
+ 2347 06af 4932435F 		.ascii	"I2C_context\000"
+ 2347      636F6E74 
+ 2347      65787400 
+ 2348              	.LASF168:
+ 2349 06bb 6D617374 		.ascii	"masterBufferIdx\000"
+ 2349      65724275 
+ 2349      66666572 
+ 2349      49647800 
+ 2350              	.LASF142:
+ 2351 06cb 73616D70 		.ascii	"sampleTime23\000"
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 59
+
+
+ 2351      6C655469 
+ 2351      6D653233 
+ 2351      00
+ 2352              	.LASF87:
+ 2353 06d8 70657269 		.ascii	"periDivCmdPaTypeSelPos\000"
+ 2353      44697643 
+ 2353      6D645061 
+ 2353      54797065 
+ 2353      53656C50 
+ 2354              	.LASF59:
+ 2355 06ef 65704D6F 		.ascii	"epMonitorNr\000"
+ 2355      6E69746F 
+ 2355      724E7200 
+ 2356              	.LASF152:
+ 2357 06fb 636F6E66 		.ascii	"configRouting\000"
+ 2357      6967526F 
+ 2357      7574696E 
+ 2357      6700
+ 2358              	.LASF155:
+ 2359 0709 43595F53 		.ascii	"CY_SCB_I2C_ACK\000"
+ 2359      43425F49 
+ 2359      32435F41 
+ 2359      434B00
+ 2360              	.LASF78:
+ 2361 0718 64775374 		.ascii	"dwStatusChIdxPos\000"
+ 2361      61747573 
+ 2361      43684964 
+ 2361      78506F73 
+ 2361      00
+ 2362              	.LASF60:
+ 2363 0729 75646250 		.ascii	"udbPresent\000"
+ 2363      72657365 
+ 2363      6E7400
+ 2364              	.LASF186:
+ 2365 0734 72785374 		.ascii	"rxStatus\000"
+ 2365      61747573 
+ 2365      00
+ 2366              	.LASF40:
+ 2367 073d 666C6173 		.ascii	"flashcVersion\000"
+ 2367      68635665 
+ 2367      7273696F 
+ 2367      6E00
+ 2368              	.LASF57:
+ 2369 074b 736D6966 		.ascii	"smifDeviceNr\000"
+ 2369      44657669 
+ 2369      63654E72 
+ 2369      00
+ 2370              	.LASF221:
+ 2371 0758 5F5F656E 		.ascii	"__enable_irq\000"
+ 2371      61626C65 
+ 2371      5F697271 
+ 2371      00
+ 2372              	.LASF125:
+ 2373 0765 686F7572 		.ascii	"hour\000"
+ 2373      00
+ 2374              	.LASF149:
+ 2375 076a 72616E67 		.ascii	"rangeIntrMask\000"
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 60
+
+
+ 2375      65496E74 
+ 2375      724D6173 
+ 2375      6B00
+ 2376              	.LASF108:
+ 2377 0778 63707573 		.ascii	"cpussRam0Ctl0\000"
+ 2377      7352616D 
+ 2377      3043746C 
+ 2377      3000
+ 2378              	.LASF44:
+ 2379 0786 70657269 		.ascii	"periVersion\000"
+ 2379      56657273 
+ 2379      696F6E00 
+ 2380              	.LASF116:
+ 2381 0792 666C6F61 		.ascii	"float\000"
+ 2381      7400
+ 2382              	.LASF126:
+ 2383 0798 6461794F 		.ascii	"dayOfMonth\000"
+ 2383      664D6F6E 
+ 2383      746800
+ 2384              	.LASF206:
+ 2385 07a3 63795F52 		.ascii	"cy_RTC_daysInMonthTbl\000"
+ 2385      54435F64 
+ 2385      61797349 
+ 2385      6E4D6F6E 
+ 2385      74685462 
+ 2386              	.LASF79:
+ 2387 07b9 64775374 		.ascii	"dwStatusChIdxMsk\000"
+ 2387      61747573 
+ 2387      43684964 
+ 2387      784D736B 
+ 2387      00
+ 2388              	.LASF208:
+ 2389 07ca 4144435F 		.ascii	"ADC_allConfigs\000"
+ 2389      616C6C43 
+ 2389      6F6E6669 
+ 2389      677300
+ 2390              	.LASF205:
+ 2391 07d9 63795F64 		.ascii	"cy_device\000"
+ 2391      65766963 
+ 2391      6500
+ 2392              	.LASF107:
+ 2393 07e3 63707573 		.ascii	"cpussRomCtl\000"
+ 2393      73526F6D 
+ 2393      43746C00 
+ 2394              	.LASF217:
+ 2395 07ef 43795F53 		.ascii	"Cy_SysPm_CpuEnterDeepSleep\000"
+ 2395      7973506D 
+ 2395      5F437075 
+ 2395      456E7465 
+ 2395      72446565 
+ 2396              	.LASF77:
+ 2397 080a 64774368 		.ascii	"dwChCtlPreemptablePos\000"
+ 2397      43746C50 
+ 2397      7265656D 
+ 2397      70746162 
+ 2397      6C65506F 
+ 2398              	.LASF196:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 61
+
+
+ 2399 0820 74784C65 		.ascii	"txLeftToTransmit\000"
+ 2399      6674546F 
+ 2399      5472616E 
+ 2399      736D6974 
+ 2399      00
+ 2400              	.LASF145:
+ 2401 0831 6368616E 		.ascii	"chanEn\000"
+ 2401      456E00
+ 2402              	.LASF30:
+ 2403 0838 75646242 		.ascii	"udbBase\000"
+ 2403      61736500 
+ 2404              	.LASF135:
+ 2405 0840 43595F53 		.ascii	"CY_SAR_RANGE_COND_INSIDE\000"
+ 2405      41525F52 
+ 2405      414E4745 
+ 2405      5F434F4E 
+ 2405      445F494E 
+ 2406              	.LASF118:
+ 2407 0859 5F426F6F 		.ascii	"_Bool\000"
+ 2407      6C00
+ 2408              	.LASF1:
+ 2409 085f 756E7369 		.ascii	"unsigned char\000"
+ 2409      676E6564 
+ 2409      20636861 
+ 2409      7200
+ 2410              	.LASF73:
+ 2411 086d 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
+ 2411      6843746C 
+ 2411      4D61696E 
+ 2411      57733446 
+ 2411      72657100 
+ 2412              	.LASF112:
+ 2413 0881 6970634C 		.ascii	"ipcLockStatusOffset\000"
+ 2413      6F636B53 
+ 2413      74617475 
+ 2413      734F6666 
+ 2413      73657400 
+ 2414              	.LASF91:
+ 2415 0895 70657269 		.ascii	"periDiv24_5CtlOffset\000"
+ 2415      44697632 
+ 2415      345F3543 
+ 2415      746C4F66 
+ 2415      66736574 
+ 2416              	.LASF0:
+ 2417 08aa 73686F72 		.ascii	"short int\000"
+ 2417      7420696E 
+ 2417      7400
+ 2418              	.LASF150:
+ 2419 08b4 6D757853 		.ascii	"muxSwitch\000"
+ 2419      77697463 
+ 2419      6800
+ 2420              	.LASF24:
+ 2421 08be 4950435F 		.ascii	"IPC_STRUCT_V1_Type\000"
+ 2421      53545255 
+ 2421      43545F56 
+ 2421      315F5479 
+ 2421      706500
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 62
+
+
+ 2422              	.LASF147:
+ 2423 08d1 696E7472 		.ascii	"intrMask\000"
+ 2423      4D61736B 
+ 2423      00
+ 2424              	.LASF103:
+ 2425 08da 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
+ 2425      73547269 
+ 2425      6D526F6D 
+ 2425      43746C4F 
+ 2425      66667365 
+ 2426              	.LASF23:
+ 2427 08f0 52455345 		.ascii	"RESERVED\000"
+ 2427      52564544 
+ 2427      00
+ 2428              	.LASF167:
+ 2429 08f9 6D617374 		.ascii	"masterBufferSize\000"
+ 2429      65724275 
+ 2429      66666572 
+ 2429      53697A65 
+ 2429      00
+ 2430              	.LASF84:
+ 2431 090a 70657269 		.ascii	"periDivCmdDivSelMsk\000"
+ 2431      44697643 
+ 2431      6D644469 
+ 2431      7653656C 
+ 2431      4D736B00 
+ 2432              	.LASF156:
+ 2433 091e 43595F53 		.ascii	"CY_SCB_I2C_NAK\000"
+ 2433      43425F49 
+ 2433      32435F4E 
+ 2433      414B00
+ 2434              	.LASF124:
+ 2435 092d 666F726D 		.ascii	"format\000"
+ 2435      617400
+ 2436              	.LASF71:
+ 2437 0934 666C6173 		.ascii	"flashCtlMainWs2Freq\000"
+ 2437      6843746C 
+ 2437      4D61696E 
+ 2437      57733246 
+ 2437      72657100 
+ 2438              	.LASF164:
+ 2439 0948 6D617374 		.ascii	"masterPause\000"
+ 2439      65725061 
+ 2439      75736500 
+ 2440              	.LASF159:
+ 2441 0954 63795F63 		.ascii	"cy_cb_scb_i2c_handle_addr_t\000"
+ 2441      625F7363 
+ 2441      625F6932 
+ 2441      635F6861 
+ 2441      6E646C65 
+ 2442              	.LASF169:
+ 2443 0970 6D617374 		.ascii	"masterNumBytes\000"
+ 2443      65724E75 
+ 2443      6D427974 
+ 2443      657300
+ 2444              	.LASF175:
+ 2445 097f 736C6176 		.ascii	"slaveTxBufferCnt\000"
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 63
+
+
+ 2445      65547842 
+ 2445      75666665 
+ 2445      72436E74 
+ 2445      00
+ 2446              	.LASF68:
+ 2447 0990 666C6173 		.ascii	"flashEraseDelay\000"
+ 2447      68457261 
+ 2447      73654465 
+ 2447      6C617900 
+ 2448              	.LASF51:
+ 2449 09a0 63707573 		.ascii	"cpussFmIrq\000"
+ 2449      73466D49 
+ 2449      727100
+ 2450              	.LASF83:
+ 2451 09ab 70657269 		.ascii	"periTrGrSize\000"
+ 2451      54724772 
+ 2451      53697A65 
+ 2451      00
+ 2452              	.LASF216:
+ 2453 09b8 43795F53 		.ascii	"Cy_SysLib_Delay\000"
+ 2453      79734C69 
+ 2453      625F4465 
+ 2453      6C617900 
+ 2454              	.LASF181:
+ 2455 09c8 63795F73 		.ascii	"cy_stc_scb_i2c_context_t\000"
+ 2455      74635F73 
+ 2455      63625F69 
+ 2455      32635F63 
+ 2455      6F6E7465 
+ 2456              	.LASF153:
+ 2457 09e1 76726566 		.ascii	"vrefMvValue\000"
+ 2457      4D765661 
+ 2457      6C756500 
+ 2458              	.LASF218:
+ 2459 09ed 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2459      43313120 
+ 2459      352E342E 
+ 2459      31203230 
+ 2459      31363036 
+ 2460 0a20 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
+ 2460      20726576 
+ 2460      6973696F 
+ 2460      6E203233 
+ 2460      37373135 
+ 2461 0a53 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
+ 2461      67202D66 
+ 2461      66756E63 
+ 2461      74696F6E 
+ 2461      2D736563 
+ 2462              	.LASF26:
+ 2463 0a7f 6C6F6E67 		.ascii	"long double\000"
+ 2463      20646F75 
+ 2463      626C6500 
+ 2464              	.LASF115:
+ 2465 0a8b 63686172 		.ascii	"char\000"
+ 2465      00
+ 2466              	.LASF70:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 64
+
+
+ 2467 0a90 666C6173 		.ascii	"flashCtlMainWs1Freq\000"
+ 2467      6843746C 
+ 2467      4D61696E 
+ 2467      57733146 
+ 2467      72657100 
+ 2468              	.LASF215:
+ 2469 0aa4 43795F49 		.ascii	"Cy_IPC_Drv_SendMsgWord\000"
+ 2469      50435F44 
+ 2469      72765F53 
+ 2469      656E644D 
+ 2469      7367576F 
+ 2470              	.LASF5:
+ 2471 0abb 5F5F7569 		.ascii	"__uint16_t\000"
+ 2471      6E743136 
+ 2471      5F7400
+ 2472              	.LASF89:
+ 2473 0ac6 70657269 		.ascii	"periDiv16CtlOffset\000"
+ 2473      44697631 
+ 2473      3643746C 
+ 2473      4F666673 
+ 2473      657400
+ 2474              	.LASF99:
+ 2475 0ad9 63707573 		.ascii	"cpussCm4StatusOffset\000"
+ 2475      73436D34 
+ 2475      53746174 
+ 2475      75734F66 
+ 2475      66736574 
+ 2476              	.LASF42:
+ 2477 0aee 6873696F 		.ascii	"hsiomVersion\000"
+ 2477      6D566572 
+ 2477      73696F6E 
+ 2477      00
+ 2478              	.LASF223:
+ 2479 0afb 69706349 		.ascii	"ipcIndex\000"
+ 2479      6E646578 
+ 2479      00
+ 2480              	.LASF67:
+ 2481 0b04 666C6173 		.ascii	"flashProgramDelay\000"
+ 2481      6850726F 
+ 2481      6772616D 
+ 2481      44656C61 
+ 2481      7900
+ 2482              	.LASF33:
+ 2483 0b16 6770696F 		.ascii	"gpioBase\000"
+ 2483      42617365 
+ 2483      00
+ 2484              	.LASF189:
+ 2485 0b1f 72785269 		.ascii	"rxRingBufHead\000"
+ 2485      6E674275 
+ 2485      66486561 
+ 2485      6400
+ 2486              	.LASF188:
+ 2487 0b2d 72785269 		.ascii	"rxRingBufSize\000"
+ 2487      6E674275 
+ 2487      6653697A 
+ 2487      6500
+ 2488              	.LASF213:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 65
+
+
+ 2489 0b3b 43795F53 		.ascii	"Cy_SysLib_AssertFailed\000"
+ 2489      79734C69 
+ 2489      625F4173 
+ 2489      73657274 
+ 2489      4661696C 
+ 2490              	.LASF75:
+ 2491 0b52 64774368 		.ascii	"dwChSize\000"
+ 2491      53697A65 
+ 2491      00
+ 2492              	.LASF111:
+ 2493 0b5b 69706353 		.ascii	"ipcStructSize\000"
+ 2493      74727563 
+ 2493      7453697A 
+ 2493      6500
+ 2494              	.LASF160:
+ 2495 0b69 75736552 		.ascii	"useRxFifo\000"
+ 2495      78466966 
+ 2495      6F00
+ 2496              	.LASF50:
+ 2497 0b73 63707573 		.ascii	"cpussIpc0Irq\000"
+ 2497      73497063 
+ 2497      30497271 
+ 2497      00
+ 2498              	.LASF130:
+ 2499 0b80 63795F73 		.ascii	"cy_stc_rtc_dst_format_t\000"
+ 2499      74635F72 
+ 2499      74635F64 
+ 2499      73745F66 
+ 2499      6F726D61 
+ 2500              	.LASF197:
+ 2501 0b98 696E6974 		.ascii	"initKey\000"
+ 2501      4B657900 
+ 2502              	.LASF191:
+ 2503 0ba0 72784275 		.ascii	"rxBuf\000"
+ 2503      6600
+ 2504              	.LASF172:
+ 2505 0ba6 736C6176 		.ascii	"slaveTxBuffer\000"
+ 2505      65547842 
+ 2505      75666665 
+ 2505      7200
+ 2506              	.LASF173:
+ 2507 0bb4 736C6176 		.ascii	"slaveTxBufferSize\000"
+ 2507      65547842 
+ 2507      75666665 
+ 2507      7253697A 
+ 2507      6500
+ 2508              	.LASF198:
+ 2509 0bc6 63795F73 		.ascii	"cy_stc_scb_uart_context_t\000"
+ 2509      74635F73 
+ 2509      63625F75 
+ 2509      6172745F 
+ 2509      636F6E74 
+ 2510              	.LASF55:
+ 2511 0be0 73727373 		.ascii	"srssNumHfroot\000"
+ 2511      4E756D48 
+ 2511      66726F6F 
+ 2511      7400
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 66
+
+
+ 2512              	.LASF144:
+ 2513 0bee 72616E67 		.ascii	"rangeCond\000"
+ 2513      65436F6E 
+ 2513      6400
+ 2514              	.LASF52:
+ 2515 0bf8 63707573 		.ascii	"cpussNotConnectedIrq\000"
+ 2515      734E6F74 
+ 2515      436F6E6E 
+ 2515      65637465 
+ 2515      64497271 
+ 2516              	.LASF106:
+ 2517 0c0d 63707573 		.ascii	"cpussCm4NmiCtlOffset\000"
+ 2517      73436D34 
+ 2517      4E6D6943 
+ 2517      746C4F66 
+ 2517      66736574 
+ 2518              	.LASF66:
+ 2519 0c22 666C6173 		.ascii	"flashWriteDelay\000"
+ 2519      68577269 
+ 2519      74654465 
+ 2519      6C617900 
+ 2520              	.LASF140:
+ 2521 0c32 73616D70 		.ascii	"sampleCtrl\000"
+ 2521      6C654374 
+ 2521      726C00
+ 2522              	.LASF13:
+ 2523 0c3d 75696E74 		.ascii	"uint8_t\000"
+ 2523      385F7400 
+ 2524              	.LASF119:
+ 2525 0c45 43595F53 		.ascii	"CY_SYSPM_WAIT_FOR_INTERRUPT\000"
+ 2525      5953504D 
+ 2525      5F574149 
+ 2525      545F464F 
+ 2525      525F494E 
+ 2526              	.LASF220:
+ 2527 0c61 443A5C63 		.ascii	"D:\\cypress\\client\\shanghai kinetic\\software\\03"
+ 2527      79707265 
+ 2527      73735C63 
+ 2527      6C69656E 
+ 2527      745C7368 
+ 2528 0c8f 32305C44 		.ascii	"20\\Design01.cydsn\000"
+ 2528      65736967 
+ 2528      6E30312E 
+ 2528      63796473 
+ 2528      6E00
+ 2529              	.LASF133:
+ 2530 0ca1 63795F73 		.ascii	"cy_stc_rtc_dst_t\000"
+ 2530      74635F72 
+ 2530      74635F64 
+ 2530      73745F74 
+ 2530      00
+ 2531              	.LASF92:
+ 2532 0cb2 6770696F 		.ascii	"gpioPrtIntrCfgOffset\000"
+ 2532      50727449 
+ 2532      6E747243 
+ 2532      66674F66 
+ 2532      66736574 
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 67
+
+
+ 2533              	.LASF137:
+ 2534 0cc7 43595F53 		.ascii	"CY_SAR_RANGE_COND_OUTSIDE\000"
+ 2534      41525F52 
+ 2534      414E4745 
+ 2534      5F434F4E 
+ 2534      445F4F55 
+ 2535              	.LASF190:
+ 2536 0ce1 72785269 		.ascii	"rxRingBufTail\000"
+ 2536      6E674275 
+ 2536      66546169 
+ 2536      6C00
+ 2537              	.LASF222:
+ 2538 0cef 43795F49 		.ascii	"Cy_IPC_Drv_GetIpcBaseAddress\000"
+ 2538      50435F44 
+ 2538      72765F47 
+ 2538      65744970 
+ 2538      63426173 
+ 2539              	.LASF199:
+ 2540 0d0c 6368616E 		.ascii	"channelBase\000"
+ 2540      6E656C42 
+ 2540      61736500 
+ 2541              	.LASF154:
+ 2542 0d18 63795F73 		.ascii	"cy_stc_sar_config_t\000"
+ 2542      74635F73 
+ 2542      61725F63 
+ 2542      6F6E6669 
+ 2542      675F7400 
+ 2543              	.LASF25:
+ 2544 0d2c 4950435F 		.ascii	"IPC_STRUCT_Type\000"
+ 2544      53545255 
+ 2544      43545F54 
+ 2544      79706500 
+ 2545              	.LASF132:
+ 2546 0d3c 73746F70 		.ascii	"stopDst\000"
+ 2546      44737400 
+ 2547              	.LASF151:
+ 2548 0d44 6D757853 		.ascii	"muxSwitchSqCtrl\000"
+ 2548      77697463 
+ 2548      68537143 
+ 2548      74726C00 
+ 2549              	.LASF39:
+ 2550 0d54 64775665 		.ascii	"dwVersion\000"
+ 2550      7273696F 
+ 2550      6E00
+ 2551              	.LASF35:
+ 2552 0d5e 69706342 		.ascii	"ipcBase\000"
+ 2552      61736500 
+ 2553              	.LASF224:
+ 2554 0d66 6D61696E 		.ascii	"main\000"
+ 2554      00
+ 2555              	.LASF184:
+ 2556 0d6b 63795F73 		.ascii	"cy_stc_scb_uart_context\000"
+ 2556      74635F73 
+ 2556      63625F75 
+ 2556      6172745F 
+ 2556      636F6E74 
+ 2557              	.LASF212:
+ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccKtJSAW.s 			page 68
+
+
+ 2558 0d83 5254435F 		.ascii	"RTC_1_dstConfig\000"
+ 2558      315F6473 
+ 2558      74436F6E 
+ 2558      66696700 
+ 2559              	.LASF37:
+ 2560 0d93 63707573 		.ascii	"cpussVersion\000"
+ 2560      73566572 
+ 2560      73696F6E 
+ 2560      00
+ 2561              	.LASF16:
+ 2562 0da0 75696E74 		.ascii	"uint32_t\000"
+ 2562      33325F74 
+ 2562      00
+ 2563              	.LASF64:
+ 2564 0da9 666C6173 		.ascii	"flashRwwRequired\000"
+ 2564      68527777 
+ 2564      52657175 
+ 2564      69726564 
+ 2564      00
+ 2565              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

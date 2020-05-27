@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="us-ascii"?>
+
+<fileSet version="1" anchorPath="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp" xsi:schemaLocation="http://cypress.com/xsd/cypathdictionary cypathdictionary.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cypress.com/xsd/cypathdictionary">
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cyfitter_cfg.h" value="HEADER;;;;;" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cyfitter_sysint_cfg.h" value="HEADER;;;;;Pins and Interrupts" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cyfitter_sysint_cfg.c" value="SOURCE_C;CortexM0p,CortexM4;;;;Pins and Interrupts" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cyfitter_cfg.c" value="SOURCE_C;CortexM0p;;;;" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cymetadata.c" value="SOURCE_C;CortexM0p,CortexM4;;;;" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cydevice_trm.h" value="HEADER;;;;;" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cydevicegnu_trm.inc" value="HEADER;;;;;" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cydevicerv_trm.inc" value="HEADER;;;;;" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cydeviceiar_trm.inc" value="HEADER;;;;;" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cyfitter.h" value="HEADER;;;;;" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cyfitter_gpio.h" value="HEADER;;;;;Pins and Interrupts" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cyfitter_sysint.h" value="HEADER;;;;;Pins and Interrupts" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cydisabledsheets.h" value="HEADER;;;;;" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\BLE.h" value="HEADER;;;;;BLE" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\BLE.c" value="SOURCE_C;CortexM0p,CortexM4;;;;BLE" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\BLE_config.c" value="SOURCE_C;CortexM0p,CortexM4;;;;BLE" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\BLE_config.h" value="HEADER;;;;;BLE" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\BLE_ias_config.c" value="SOURCE_C;CortexM0p,CortexM4;;;;BLE" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\project.h" value="OTHER;;;;;" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cycodeshareexport.ld" value="OTHER;;;;;" />
+  <file name="D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\codegentemp\cycodeshareimport.scat" value="OTHER;;;;;" />
+</fileSet>

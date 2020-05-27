@@ -1,0 +1,12 @@
+D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\Design01.cyprj|09c137ef-9914-4c1c-8b9a-c6e3bb0c753f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|11661122-bf81-4efd-8e2c-732d6b0f9d98
+C:\Users\SimonChen\Documents\PSoC Creator\4.3\Downloads ( 4.3).cylib\Downloads ( 4.3).cyprj|17962b01-46c6-4b08-b7b7-8831930ae367
+C:\Users\SimonChen\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|f3e81ae2-c49a-43b9-b5a2-f3aa12443709
+C:\Users\SimonChen\Documents\PSoC Creator\4.1\Downloads ( 4.1).cylib\Downloads ( 4.1).cyprj|69e6c3f4-531f-41cc-bd5c-322731573535
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|d6838640-899d-4625-a03e-c5c0294e4b1b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c6cbffd8-9099-43d6-9fd8-f1a57e808804
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|07c54c17-7643-49f6-930d-1aded3dbc7c7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|f184b18f-fc87-4e48-86c1-979732ecb4e9
+D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE220974_MultiConfig_Scan_ADC_DieTemp01.cydsn\CE220974_MultiConfig_Scan_ADC_DieTemp01.cyprj|86eb43ed-68c3-44ce-b53c-c75735ef82d2
+D:\cypress\client\shanghai kinetic\software\0320\Design01_Copy_01.cydsn\Design01_Copy_01.cyprj|0ea45a83-6cb1-4f5e-ae87-53e854f9c939
+D:\cypress\client\shanghai kinetic\software\0320\Design01.cydsn\CE217637_BLE_Find_Me01.cydsn\CE217637_BLE_Find_Me01.cyprj|983cee3b-6f3d-47ec-ba5d-998265922f0e
