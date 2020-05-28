@@ -1,13 +1,13 @@
 /***************************************************************************//**
 * \file CY_BLE.h
-* \version 2.10
+* \version 2.20
 * 
 * \brief
 *  Contains the function prototypes and constants available to the BLE component.
 * 
 ********************************************************************************
 * \copyright
-* Copyright 2017-2018, Cypress Semiconductor Corporation.  All rights reserved.
+* Copyright 2017-2019, Cypress Semiconductor Corporation.  All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.

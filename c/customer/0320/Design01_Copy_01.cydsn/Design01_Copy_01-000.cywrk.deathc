@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ble_application.c">
+<ExpandedNodeIds>
+<v>Design01_Copy_01-000</v>
+<v>Design01_Copy_01-000\Design01_Copy_01</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\TopDesign</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Design01_Copy_01.cydwr</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Design01_Copy_01.cydwr\Pins</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Design01_Copy_01.cydwr\Analog</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Design01_Copy_01.cydwr\DMA</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Design01_Copy_01.cydwr\Clocks</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Design01_Copy_01.cydwr\Interrupts</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Design01_Copy_01.cydwr\System</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Design01_Copy_01.cydwr\Directives</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\ARM GCC Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\ARM GCC Generic\cy8c6xx7_cm0plus.ld</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\ARM IAR Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\ARM IAR Generic\cy8c6xx7_cm0plus.icf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\ARM MDK Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\ARM MDK Generic\cy8c6xx7_cm0plus.scat</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\Header Files</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\Header Files\custom_ipc.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\Source Files</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\Source Files\ARM GCC Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\Source Files\ARM GCC Generic\startup_psoc6_01_cm0plus.S</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\Source Files\ARM IAR Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\Source Files\ARM IAR Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\Source Files\ARM MDK Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\Source Files\ARM MDK Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\Source Files\main_cm0p.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM0p (Core 0)\Source Files\system_psoc6_cm0plus.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\ARM GCC Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\ARM GCC Generic\cy8c6xx7_cm4_dual.ld</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\ARM IAR Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\ARM IAR Generic\cy8c6xx7_cm4_dual.icf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\ARM MDK Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\ARM MDK Generic\cy8c6xx7_cm4_dual.scat</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\algorithm.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\ble_application.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_adc.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_crypto.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_flash.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_i2c.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_ipc.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_mcwdt.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_rtc.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_uart.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\lowpower_clock.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\MAX30102.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ARM GCC Generic\startup_psoc6_01_cm4.S</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ARM IAR Generic\startup_psoc6_01_cm4.s</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ARM MDK Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ARM MDK Generic\startup_psoc6_01_cm4.s</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\algorithm.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ble_application.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_adc.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_crypto.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_flash.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_i2c.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_ipc.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_mcwdt.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_rtc.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_uart.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\lowpower_clock.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\main_cm4.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\MAX30102.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\system_psoc6_cm4.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Shared Files</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Shared Files\cy_ble_config.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Shared Files\cyapicallbacks.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Shared Files\system_psoc6.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Generated_Source</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Generated_Source\PSoC6</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\ARM GCC Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\ARM GCC Generic\cy8c6xx7_cm4_dual.ld</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\ARM IAR Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\ARM IAR Generic\cy8c6xx7_cm4_dual.icf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\ARM MDK Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\ARM MDK Generic\cy8c6xx7_cm4_dual.scat</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\algorithm.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\ble_application.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_adc.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_crypto.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_flash.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_i2c.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_ipc.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_mcwdt.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_rtc.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\custom_uart.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\lowpower_clock.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Header Files\MAX30102.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ARM GCC Generic\startup_psoc6_01_cm4.S</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ARM IAR Generic\startup_psoc6_01_cm4.s</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ARM MDK Generic</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ARM MDK Generic\startup_psoc6_01_cm4.s</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\algorithm.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\ble_application.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_adc.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_crypto.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_flash.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_i2c.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_ipc.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_mcwdt.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_rtc.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\custom_uart.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\lowpower_clock.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\main_cm4.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\MAX30102.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CM4 (Core 1)\Source Files\system_psoc6_cm4.c</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Shared Files</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Shared Files\cy_ble_config.h</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Shared Files\cyapicallbacks.h</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Design01_Copy_01-000</v>
+<v>Design01_Copy_01-000\Design01_Copy_01</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\TopDesign</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Design01_Copy_01-000</v>
+<v>Design01_Copy_01-000\Design01_Copy_01</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\TopDesign</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Design01_Copy_01-000</v>
+<v>Design01_Copy_01-000\Design01_Copy_01</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\ADC_INIT.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\BLE_config.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\BLE_custom_config.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_aios.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ancs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ans.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bas.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bcs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bls.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bms.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bts.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_cgms.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_cps.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_cscs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_cts.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_custom.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_dis.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ess.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_event_handler.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_gap.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_gatt.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_gls.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hal_int.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hal_pvt.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hids.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hps.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hrs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hts.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ias.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ips.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_lls.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_lns.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ndcs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_pass.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_plxs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_rscs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_rtus.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_scps.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_tps.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_uds.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_wpts.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_wss.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_mcwdt.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_rtc.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sar.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\main_cm0p.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\MCWDT_PDL.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\RTC_1.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm0plus.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm0plus.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Design01_Copy_01.elf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Design01_Copy_01.hex</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Design01_Copy_01.map</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\ADC_INIT.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\algorithm.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\ble_application.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\BLE_config.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\BLE_custom_config.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\custom_adc.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\custom_crypto.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\custom_flash.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\custom_i2c.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\custom_ipc.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\custom_mcwdt.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\custom_rtc.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\custom_uart.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_aios.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_ancs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_ans.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_bas.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_bcs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_bls.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_bms.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_bts.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_cgms.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_cps.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_cscs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_cts.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_custom.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_dis.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_ess.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_event_handler.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_gap.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_gatt.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_gls.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_hal_int.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_hal_pvt.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_hids.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_hps.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_hrs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_hts.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_ias.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_ips.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_lls.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_lns.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_ndcs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_pass.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_plxs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_rscs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_rtus.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_scps.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_tps.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_uds.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_wpts.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_wss.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_mcwdt.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_rtc.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sar.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\lowpower_clock.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\main_cm4.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\MAX30102.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\MCWDT_PDL.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\RTC_1.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm4.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm4.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Design01_Copy_01.elf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Design01_Copy_01.hex</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM4\ARM_GCC_541\Debug\Design01_Copy_01.map</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Design01_Copy_01.gpdsc</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Design01_Copy_01.rpt</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Design01_Copy_01_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Design01_Copy_01-000</v>
+<v>Design01_Copy_01-000\Design01_Copy_01</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\ADC_INIT.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\BLE_config.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\BLE_custom_config.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_aios.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ancs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ans.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bas.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bcs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bls.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bms.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bts.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_cgms.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_cps.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_cscs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_cts.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_custom.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_dis.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ess.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_event_handler.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_gap.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_gatt.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_gls.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hal_int.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hal_pvt.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hids.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hps.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hrs.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hts.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ias.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ips.lst</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_lls.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Design01_Copy_01-000</v>
+<v>Design01_Copy_01-000\Design01_Copy_01</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\PSoC 6 Architecture TRM</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\PSoC 63 Family Datasheet</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Peripheral Driver Library</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\System Reference Guides</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\BLE_PDL_v2_20.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\GPIO_PDL_v1_0</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\MCWDT_PDL_v1_10.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\RTC_PDL_v2_0.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Scan_ADC_P6_v3_10.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\SCB_I2C_PDL_v2_0.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\SCB_UART_PDL_v2_0.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\SysInt_PDL_v1_0.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Design01_Copy_01-000</v>
+<v>Design01_Copy_01-000\Design01_Copy_01</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\PSoC 6 Architecture TRM</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\PSoC 63 Family Datasheet</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Peripheral Driver Library</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\System Reference Guides</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\BLE_PDL_v2_20.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\GPIO_PDL_v1_0</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\MCWDT_PDL_v1_10.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\RTC_PDL_v2_0.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\Scan_ADC_P6_v3_10.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\SCB_I2C_PDL_v2_0.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\SCB_UART_PDL_v2_0.pdf</v>
+<v>Design01_Copy_01-000\Design01_Copy_01\SysInt_PDL_v1_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\main_cm0p.c" />
+<name v=".\main_cm4.c" />
+<name v=".\TopDesign\TopDesign.cysch" />
+<name v=".\ble_application.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="981, 623" SelectedTabbedMdiWindow="44973644-feaa-4ba0-9365-2ec641f41830"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="c8190cb4-28c4-4b1e-a87f-e126d98ba6dd" /><DocumentWindow Key="D:\Git_workspace\Git_Workspace\c\customer\0320\Design01_Copy_01.cydsn\main_cm0p.c" Guid="c421b4d7-c44c-49c8-9716-3664c5d18f46" /><DocumentWindow Key="D:\Git_workspace\Git_Workspace\c\customer\0320\Design01_Copy_01.cydsn\main_cm4.c" Guid="5b96171e-1921-4a7b-a462-cab03b60f44e" /><DocumentWindow Key="D:\Git_workspace\Git_Workspace\c\customer\0320\Design01_Copy_01.cydsn\TopDesign\TopDesign.cysch" Guid="b445dae6-8c07-4a87-b861-4c161935822a" /><DocumentWindow Key="D:\Git_workspace\Git_Workspace\c\customer\0320\Design01_Copy_01.cydsn\ble_application.c" Guid="44973644-feaa-4ba0-9365-2ec641f41830" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

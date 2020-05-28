@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file CY_BLE_custom_config.c
-* \version 2.10
+* \version 2.20
 * 
 * \brief
 *  This file contains the source code of initialization of the config structure for
@@ -8,7 +8,7 @@
 *
 ********************************************************************************
 * \copyright
-* Copyright 2017-2018, Cypress Semiconductor Corporation.  All rights reserved.
+* Copyright 2017-2019, Cypress Semiconductor Corporation.  All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.

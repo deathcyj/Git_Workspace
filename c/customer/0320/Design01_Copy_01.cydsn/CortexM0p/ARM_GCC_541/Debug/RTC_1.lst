@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
   28:Generated_Source\PSoC6/RTC_1.c **** {
   29:Generated_Source\PSoC6/RTC_1.c ****     /* Initiate time and date */
   30:Generated_Source\PSoC6/RTC_1.c ****     .sec       = RTC_1_INITIAL_DATE_SEC,
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 2
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 2
 
 
   31:Generated_Source\PSoC6/RTC_1.c ****     .min       = RTC_1_INITIAL_DATE_MIN,
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
   85:Generated_Source\PSoC6/RTC_1.c **** * \globalvars
   86:Generated_Source\PSoC6/RTC_1.c **** * \ref RTC_1_initVar
   87:Generated_Source\PSoC6/RTC_1.c **** *
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 3
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 3
 
 
   88:Generated_Source\PSoC6/RTC_1.c **** *******************************************************************************/
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  127:Generated_Source\PSoC6/RTC_1.c ****                 
  128:Generated_Source\PSoC6/RTC_1.c ****                 /* Wait for previous RTC update */
  129:Generated_Source\PSoC6/RTC_1.c ****                 Cy_SysLib_Delay(RTC_1_DELAY_BEFORE_DST);
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 4
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 4
 
 
  130:Generated_Source\PSoC6/RTC_1.c ****             #endif /* (0u != RTC_1_TIME_RESET_ON_START) */
@@ -215,12 +215,12 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
   61              	RTC_1_config:
   62 0000 00000000 		.word	0
   63 0004 00000000 		.word	0
-  64 0008 0B000000 		.word	11
+  64 0008 14000000 		.word	20
   65 000c 00       		.space	1
   66 000d 00       		.byte	0
   67 000e 0000     		.space	2
-  68 0010 04000000 		.word	4
-  69 0014 1B000000 		.word	27
+  68 0010 05000000 		.word	5
+  69 0014 1C000000 		.word	28
   70 0018 05000000 		.word	5
   71 001c 14000000 		.word	20
   72              		.bss
@@ -235,10 +235,10 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
   81 0001 00       		.space	1
   82              		.text
   83              	.Letext0:
-  84              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
-  85              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+  84              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  85              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
   86              		.file 4 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/device/cy_device.h"
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 5
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 5
 
 
   87              		.file 5 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/rtc/cy_rtc.h"
@@ -249,21 +249,21 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
   92 0006 00000000 		.4byte	.Ldebug_abbrev0
   93 000a 04       		.byte	0x4
   94 000b 01       		.uleb128 0x1
-  95 000c B1060000 		.4byte	.LASF140
+  95 000c 69060000 		.4byte	.LASF140
   96 0010 0C       		.byte	0xc
-  97 0011 2F040000 		.4byte	.LASF141
-  98 0015 7A030000 		.4byte	.LASF142
+  97 0011 E7030000 		.4byte	.LASF141
+  98 0015 60070000 		.4byte	.LASF142
   99 0019 00000000 		.4byte	.Ldebug_ranges0+0
  100 001d 00000000 		.4byte	0
  101 0021 00000000 		.4byte	.Ldebug_line0
  102 0025 02       		.uleb128 0x2
  103 0026 02       		.byte	0x2
  104 0027 05       		.byte	0x5
- 105 0028 47060000 		.4byte	.LASF0
+ 105 0028 FF050000 		.4byte	.LASF0
  106 002c 02       		.uleb128 0x2
  107 002d 01       		.byte	0x1
  108 002e 08       		.byte	0x8
- 109 002f 25060000 		.4byte	.LASF1
+ 109 002f DD050000 		.4byte	.LASF1
  110 0033 02       		.uleb128 0x2
  111 0034 01       		.byte	0x1
  112 0035 06       		.byte	0x6
@@ -279,14 +279,14 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  122 004b 29       		.byte	0x29
  123 004c 25000000 		.4byte	0x25
  124 0050 03       		.uleb128 0x3
- 125 0051 6E070000 		.4byte	.LASF5
+ 125 0051 26070000 		.4byte	.LASF5
  126 0055 02       		.byte	0x2
  127 0056 2B       		.byte	0x2b
  128 0057 5B000000 		.4byte	0x5b
  129 005b 02       		.uleb128 0x2
  130 005c 02       		.byte	0x2
  131 005d 07       		.byte	0x7
- 132 005e D3070000 		.4byte	.LASF6
+ 132 005e D1070000 		.4byte	.LASF6
  133 0062 02       		.uleb128 0x2
  134 0063 04       		.byte	0x4
  135 0064 05       		.byte	0x5
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  141 0070 74000000 		.4byte	0x74
  142 0074 02       		.uleb128 0x2
  143 0075 04       		.byte	0x4
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 6
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 6
 
 
  144 0076 07       		.byte	0x7
@@ -320,7 +320,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  160 0092 07       		.byte	0x7
  161 0093 FD020000 		.4byte	.LASF12
  162 0097 03       		.uleb128 0x3
- 163 0098 5D080000 		.4byte	.LASF13
+ 163 0098 5B080000 		.4byte	.LASF13
  164 009c 03       		.byte	0x3
  165 009d 18       		.byte	0x18
  166 009e 3A000000 		.4byte	0x3a
@@ -330,23 +330,23 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  170 00a8 20       		.byte	0x20
  171 00a9 45000000 		.4byte	0x45
  172 00ad 03       		.uleb128 0x3
- 173 00ae FD030000 		.4byte	.LASF15
+ 173 00ae B5030000 		.4byte	.LASF15
  174 00b2 03       		.byte	0x3
  175 00b3 24       		.byte	0x24
  176 00b4 50000000 		.4byte	0x50
  177 00b8 03       		.uleb128 0x3
- 178 00b9 93060000 		.4byte	.LASF16
+ 178 00b9 4B060000 		.4byte	.LASF16
  179 00bd 03       		.byte	0x3
  180 00be 30       		.byte	0x30
  181 00bf 69000000 		.4byte	0x69
  182 00c3 02       		.uleb128 0x2
  183 00c4 04       		.byte	0x4
  184 00c5 07       		.byte	0x7
- 185 00c6 D6040000 		.4byte	.LASF17
+ 185 00c6 8E040000 		.4byte	.LASF17
  186 00ca 02       		.uleb128 0x2
  187 00cb 08       		.byte	0x8
  188 00cc 04       		.byte	0x4
- 189 00cd 43070000 		.4byte	.LASF18
+ 189 00cd FB060000 		.4byte	.LASF18
  190 00d1 05       		.uleb128 0x5
  191 00d2 B8       		.byte	0xb8
  192 00d3 04       		.byte	0x4
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  198 00df 37       		.byte	0x37
  199 00e0 B8000000 		.4byte	0xb8
  200 00e4 00       		.byte	0
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 7
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 7
 
 
  201 00e5 06       		.uleb128 0x6
@@ -374,7 +374,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  211 00f8 B8000000 		.4byte	0xb8
  212 00fc 08       		.byte	0x8
  213 00fd 06       		.uleb128 0x6
- 214 00fe 17060000 		.4byte	.LASF22
+ 214 00fe CF050000 		.4byte	.LASF22
  215 0102 04       		.byte	0x4
  216 0103 3A       		.byte	0x3a
  217 0104 B8000000 		.4byte	0xb8
@@ -404,21 +404,21 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  241 0134 B8000000 		.4byte	0xb8
  242 0138 1C       		.byte	0x1c
  243 0139 06       		.uleb128 0x6
- 244 013a B7080000 		.4byte	.LASF27
+ 244 013a B5080000 		.4byte	.LASF27
  245 013e 04       		.byte	0x4
  246 013f 3F       		.byte	0x3f
  247 0140 B8000000 		.4byte	0xb8
  248 0144 20       		.byte	0x20
  249 0145 06       		.uleb128 0x6
- 250 0146 63050000 		.4byte	.LASF28
+ 250 0146 1B050000 		.4byte	.LASF28
  251 014a 04       		.byte	0x4
  252 014b 40       		.byte	0x40
  253 014c B8000000 		.4byte	0xb8
  254 0150 24       		.byte	0x24
  255 0151 06       		.uleb128 0x6
- 256 0152 A8040000 		.4byte	.LASF29
+ 256 0152 60040000 		.4byte	.LASF29
  257 0156 04       		.byte	0x4
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 8
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 8
 
 
  258 0157 43       		.byte	0x43
@@ -431,25 +431,25 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  265 0164 97000000 		.4byte	0x97
  266 0168 29       		.byte	0x29
  267 0169 06       		.uleb128 0x6
- 268 016a AD080000 		.4byte	.LASF31
+ 268 016a AB080000 		.4byte	.LASF31
  269 016e 04       		.byte	0x4
  270 016f 45       		.byte	0x45
  271 0170 97000000 		.4byte	0x97
  272 0174 2A       		.byte	0x2a
  273 0175 06       		.uleb128 0x6
- 274 0176 55050000 		.4byte	.LASF32
+ 274 0176 0D050000 		.4byte	.LASF32
  275 017a 04       		.byte	0x4
  276 017b 46       		.byte	0x46
  277 017c 97000000 		.4byte	0x97
  278 0180 2B       		.byte	0x2b
  279 0181 06       		.uleb128 0x6
- 280 0182 F1030000 		.4byte	.LASF33
+ 280 0182 A9030000 		.4byte	.LASF33
  281 0186 04       		.byte	0x4
  282 0187 47       		.byte	0x47
  283 0188 97000000 		.4byte	0x97
  284 018c 2C       		.byte	0x2c
  285 018d 06       		.uleb128 0x6
- 286 018e A8070000 		.4byte	.LASF34
+ 286 018e A6070000 		.4byte	.LASF34
  287 0192 04       		.byte	0x4
  288 0193 48       		.byte	0x48
  289 0194 97000000 		.4byte	0x97
@@ -461,13 +461,13 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  295 01a0 97000000 		.4byte	0x97
  296 01a4 2E       		.byte	0x2e
  297 01a5 06       		.uleb128 0x6
- 298 01a6 B5040000 		.4byte	.LASF36
+ 298 01a6 6D040000 		.4byte	.LASF36
  299 01aa 04       		.byte	0x4
  300 01ab 4A       		.byte	0x4a
  301 01ac 97000000 		.4byte	0x97
  302 01b0 2F       		.byte	0x2f
  303 01b1 06       		.uleb128 0x6
- 304 01b2 54070000 		.4byte	.LASF37
+ 304 01b2 0C070000 		.4byte	.LASF37
  305 01b6 04       		.byte	0x4
  306 01b7 4B       		.byte	0x4b
  307 01b8 97000000 		.4byte	0x97
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  312 01c3 4E       		.byte	0x4e
  313 01c4 97000000 		.4byte	0x97
  314 01c8 31       		.byte	0x31
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 9
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 9
 
 
  315 01c9 06       		.uleb128 0x6
@@ -494,13 +494,13 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  325 01dc 97000000 		.4byte	0x97
  326 01e0 33       		.byte	0x33
  327 01e1 06       		.uleb128 0x6
- 328 01e2 EA040000 		.4byte	.LASF41
+ 328 01e2 A2040000 		.4byte	.LASF41
  329 01e6 04       		.byte	0x4
  330 01e7 51       		.byte	0x51
  331 01e8 97000000 		.4byte	0x97
  332 01ec 34       		.byte	0x34
  333 01ed 06       		.uleb128 0x6
- 334 01ee 02080000 		.4byte	.LASF42
+ 334 01ee 00080000 		.4byte	.LASF42
  335 01f2 04       		.byte	0x4
  336 01f3 52       		.byte	0x52
  337 01f4 A2000000 		.4byte	0xa2
@@ -512,7 +512,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  343 0200 A2000000 		.4byte	0xa2
  344 0204 38       		.byte	0x38
  345 0205 06       		.uleb128 0x6
- 346 0206 38080000 		.4byte	.LASF44
+ 346 0206 36080000 		.4byte	.LASF44
  347 020a 04       		.byte	0x4
  348 020b 54       		.byte	0x54
  349 020c A2000000 		.4byte	0xa2
@@ -530,7 +530,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  361 0224 97000000 		.4byte	0x97
  362 0228 3D       		.byte	0x3d
  363 0229 06       		.uleb128 0x6
- 364 022a 75060000 		.4byte	.LASF47
+ 364 022a 2D060000 		.4byte	.LASF47
  365 022e 04       		.byte	0x4
  366 022f 57       		.byte	0x57
  367 0230 97000000 		.4byte	0x97
@@ -538,14 +538,14 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  369 0235 06       		.uleb128 0x6
  370 0236 5B000000 		.4byte	.LASF48
  371 023a 04       		.byte	0x4
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 10
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 10
 
 
  372 023b 58       		.byte	0x58
  373 023c 97000000 		.4byte	0x97
  374 0240 3F       		.byte	0x3f
  375 0241 06       		.uleb128 0x6
- 376 0242 6E050000 		.4byte	.LASF49
+ 376 0242 26050000 		.4byte	.LASF49
  377 0246 04       		.byte	0x4
  378 0247 59       		.byte	0x59
  379 0248 97000000 		.4byte	0x97
@@ -557,13 +557,13 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  385 0254 97000000 		.4byte	0x97
  386 0258 41       		.byte	0x41
  387 0259 06       		.uleb128 0x6
- 388 025a 4E040000 		.4byte	.LASF51
+ 388 025a 06040000 		.4byte	.LASF51
  389 025e 04       		.byte	0x4
  390 025f 5B       		.byte	0x5b
  391 0260 97000000 		.4byte	0x97
  392 0264 42       		.byte	0x42
  393 0265 06       		.uleb128 0x6
- 394 0266 3D050000 		.4byte	.LASF52
+ 394 0266 F5040000 		.4byte	.LASF52
  395 026a 04       		.byte	0x4
  396 026b 5C       		.byte	0x5c
  397 026c 97000000 		.4byte	0x97
@@ -587,7 +587,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  415 0290 B8000000 		.4byte	0xb8
  416 0294 4C       		.byte	0x4c
  417 0295 06       		.uleb128 0x6
- 418 0296 F7080000 		.4byte	.LASF56
+ 418 0296 F5080000 		.4byte	.LASF56
  419 029a 04       		.byte	0x4
  420 029b 60       		.byte	0x60
  421 029c 97000000 		.4byte	0x97
@@ -598,23 +598,23 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  426 02a7 61       		.byte	0x61
  427 02a8 97000000 		.4byte	0x97
  428 02ac 51       		.byte	0x51
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 11
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 11
 
 
  429 02ad 06       		.uleb128 0x6
- 430 02ae 4D080000 		.4byte	.LASF58
+ 430 02ae 4B080000 		.4byte	.LASF58
  431 02b2 04       		.byte	0x4
  432 02b3 62       		.byte	0x62
  433 02b4 97000000 		.4byte	0x97
  434 02b8 52       		.byte	0x52
  435 02b9 06       		.uleb128 0x6
- 436 02ba D5080000 		.4byte	.LASF59
+ 436 02ba D3080000 		.4byte	.LASF59
  437 02be 04       		.byte	0x4
  438 02bf 63       		.byte	0x63
  439 02c0 97000000 		.4byte	0x97
  440 02c4 53       		.byte	0x53
  441 02c5 06       		.uleb128 0x6
- 442 02c6 83060000 		.4byte	.LASF60
+ 442 02c6 3B060000 		.4byte	.LASF60
  443 02ca 04       		.byte	0x4
  444 02cb 64       		.byte	0x64
  445 02cc 97000000 		.4byte	0x97
@@ -626,7 +626,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  451 02d8 97000000 		.4byte	0x97
  452 02dc 55       		.byte	0x55
  453 02dd 06       		.uleb128 0x6
- 454 02de BF070000 		.4byte	.LASF62
+ 454 02de BD070000 		.4byte	.LASF62
  455 02e2 04       		.byte	0x4
  456 02e3 66       		.byte	0x66
  457 02e4 97000000 		.4byte	0x97
@@ -644,21 +644,21 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  469 02fc 97000000 		.4byte	0x97
  470 0300 58       		.byte	0x58
  471 0301 06       		.uleb128 0x6
- 472 0302 33060000 		.4byte	.LASF65
+ 472 0302 EB050000 		.4byte	.LASF65
  473 0306 04       		.byte	0x4
  474 0307 69       		.byte	0x69
  475 0308 97000000 		.4byte	0x97
  476 030c 59       		.byte	0x59
  477 030d 06       		.uleb128 0x6
- 478 030e DF040000 		.4byte	.LASF66
+ 478 030e 97040000 		.4byte	.LASF66
  479 0312 04       		.byte	0x4
  480 0313 6E       		.byte	0x6e
  481 0314 AD000000 		.4byte	0xad
  482 0318 5A       		.byte	0x5a
  483 0319 06       		.uleb128 0x6
- 484 031a E6070000 		.4byte	.LASF67
+ 484 031a E4070000 		.4byte	.LASF67
  485 031e 04       		.byte	0x4
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 12
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 12
 
 
  486 031f 6F       		.byte	0x6f
@@ -671,19 +671,19 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  493 032c 97000000 		.4byte	0x97
  494 0330 5E       		.byte	0x5e
  495 0331 06       		.uleb128 0x6
- 496 0332 F0050000 		.4byte	.LASF69
+ 496 0332 A8050000 		.4byte	.LASF69
  497 0336 04       		.byte	0x4
  498 0337 71       		.byte	0x71
  499 0338 97000000 		.4byte	0x97
  500 033c 5F       		.byte	0x5f
  501 033d 06       		.uleb128 0x6
- 502 033e 2C050000 		.4byte	.LASF70
+ 502 033e E4040000 		.4byte	.LASF70
  503 0342 04       		.byte	0x4
  504 0343 72       		.byte	0x72
  505 0344 97000000 		.4byte	0x97
  506 0348 60       		.byte	0x60
  507 0349 06       		.uleb128 0x6
- 508 034a A7050000 		.4byte	.LASF71
+ 508 034a 5F050000 		.4byte	.LASF71
  509 034e 04       		.byte	0x4
  510 034f 73       		.byte	0x73
  511 0350 B8000000 		.4byte	0xb8
@@ -701,24 +701,24 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  523 0368 AD000000 		.4byte	0xad
  524 036c 6A       		.byte	0x6a
  525 036d 06       		.uleb128 0x6
- 526 036e C2030000 		.4byte	.LASF74
+ 526 036e 7A030000 		.4byte	.LASF74
  527 0372 04       		.byte	0x4
  528 0373 78       		.byte	0x78
  529 0374 AD000000 		.4byte	0xad
  530 0378 6C       		.byte	0x6c
  531 0379 06       		.uleb128 0x6
- 532 037a E4030000 		.4byte	.LASF75
+ 532 037a 9C030000 		.4byte	.LASF75
  533 037e 04       		.byte	0x4
  534 037f 79       		.byte	0x79
  535 0380 AD000000 		.4byte	0xad
  536 0384 6E       		.byte	0x6e
  537 0385 06       		.uleb128 0x6
- 538 0386 51060000 		.4byte	.LASF76
+ 538 0386 09060000 		.4byte	.LASF76
  539 038a 04       		.byte	0x4
  540 038b 7B       		.byte	0x7b
  541 038c 97000000 		.4byte	0x97
  542 0390 70       		.byte	0x70
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 13
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 13
 
 
  543 0391 06       		.uleb128 0x6
@@ -728,13 +728,13 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  547 0398 97000000 		.4byte	0x97
  548 039c 71       		.byte	0x71
  549 039d 06       		.uleb128 0x6
- 550 039e BF080000 		.4byte	.LASF78
+ 550 039e BD080000 		.4byte	.LASF78
  551 03a2 04       		.byte	0x4
  552 03a3 7D       		.byte	0x7d
  553 03a4 97000000 		.4byte	0x97
  554 03a8 72       		.byte	0x72
  555 03a9 06       		.uleb128 0x6
- 556 03aa FB040000 		.4byte	.LASF79
+ 556 03aa B3040000 		.4byte	.LASF79
  557 03ae 04       		.byte	0x4
  558 03af 7E       		.byte	0x7e
  559 03b0 97000000 		.4byte	0x97
@@ -746,7 +746,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  565 03bc AD000000 		.4byte	0xad
  566 03c0 74       		.byte	0x74
  567 03c1 06       		.uleb128 0x6
- 568 03c2 95070000 		.4byte	.LASF81
+ 568 03c2 4D070000 		.4byte	.LASF81
  569 03c6 04       		.byte	0x4
  570 03c7 81       		.byte	0x81
  571 03c8 AD000000 		.4byte	0xad
@@ -764,13 +764,13 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  583 03e0 AD000000 		.4byte	0xad
  584 03e4 7A       		.byte	0x7a
  585 03e5 06       		.uleb128 0x6
- 586 03e6 7A080000 		.4byte	.LASF84
+ 586 03e6 78080000 		.4byte	.LASF84
  587 03ea 04       		.byte	0x4
  588 03eb 86       		.byte	0x86
  589 03ec 97000000 		.4byte	0x97
  590 03f0 7C       		.byte	0x7c
  591 03f1 06       		.uleb128 0x6
- 592 03f2 27080000 		.4byte	.LASF85
+ 592 03f2 25080000 		.4byte	.LASF85
  593 03f6 04       		.byte	0x4
  594 03f7 87       		.byte	0x87
  595 03f8 97000000 		.4byte	0x97
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  597 03fd 06       		.uleb128 0x6
  598 03fe 26000000 		.4byte	.LASF86
  599 0402 04       		.byte	0x4
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 14
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 14
 
 
  600 0403 88       		.byte	0x88
@@ -797,7 +797,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  613 041c 97000000 		.4byte	0x97
  614 0420 80       		.byte	0x80
  615 0421 06       		.uleb128 0x6
- 616 0422 91040000 		.4byte	.LASF89
+ 616 0422 49040000 		.4byte	.LASF89
  617 0426 04       		.byte	0x4
  618 0427 8D       		.byte	0x8d
  619 0428 B8000000 		.4byte	0xb8
@@ -809,13 +809,13 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  625 0434 B8000000 		.4byte	0xb8
  626 0438 88       		.byte	0x88
  627 0439 06       		.uleb128 0x6
- 628 043a 65080000 		.4byte	.LASF91
+ 628 043a 63080000 		.4byte	.LASF91
  629 043e 04       		.byte	0x4
  630 043f 8F       		.byte	0x8f
  631 0440 B8000000 		.4byte	0xb8
  632 0444 8C       		.byte	0x8c
  633 0445 06       		.uleb128 0x6
- 634 0446 C1040000 		.4byte	.LASF92
+ 634 0446 79040000 		.4byte	.LASF92
  635 044a 04       		.byte	0x4
  636 044b 90       		.byte	0x90
  637 044c B8000000 		.4byte	0xb8
@@ -827,18 +827,18 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  643 0458 B8000000 		.4byte	0xb8
  644 045c 94       		.byte	0x94
  645 045d 06       		.uleb128 0x6
- 646 045e 71040000 		.4byte	.LASF94
+ 646 045e 29040000 		.4byte	.LASF94
  647 0462 04       		.byte	0x4
  648 0463 92       		.byte	0x92
  649 0464 B8000000 		.4byte	0xb8
  650 0468 98       		.byte	0x98
  651 0469 06       		.uleb128 0x6
- 652 046a 8F080000 		.4byte	.LASF95
+ 652 046a 8D080000 		.4byte	.LASF95
  653 046e 04       		.byte	0x4
  654 046f 93       		.byte	0x93
  655 0470 B8000000 		.4byte	0xb8
  656 0474 9C       		.byte	0x9c
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 15
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 15
 
 
  657 0475 06       		.uleb128 0x6
@@ -854,37 +854,37 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  667 0488 AD000000 		.4byte	0xad
  668 048c A4       		.byte	0xa4
  669 048d 06       		.uleb128 0x6
- 670 048e 9C060000 		.4byte	.LASF98
+ 670 048e 54060000 		.4byte	.LASF98
  671 0492 04       		.byte	0x4
  672 0493 96       		.byte	0x96
  673 0494 AD000000 		.4byte	0xad
  674 0498 A6       		.byte	0xa6
  675 0499 06       		.uleb128 0x6
- 676 049a E4050000 		.4byte	.LASF99
+ 676 049a 9C050000 		.4byte	.LASF99
  677 049e 04       		.byte	0x4
  678 049f 97       		.byte	0x97
  679 04a0 AD000000 		.4byte	0xad
  680 04a4 A8       		.byte	0xa8
  681 04a5 06       		.uleb128 0x6
- 682 04a6 60070000 		.4byte	.LASF100
+ 682 04a6 18070000 		.4byte	.LASF100
  683 04aa 04       		.byte	0x4
  684 04ab 98       		.byte	0x98
  685 04ac AD000000 		.4byte	0xad
  686 04b0 AA       		.byte	0xaa
  687 04b1 06       		.uleb128 0x6
- 688 04b2 D6030000 		.4byte	.LASF101
+ 688 04b2 8E030000 		.4byte	.LASF101
  689 04b6 04       		.byte	0x4
  690 04b7 99       		.byte	0x99
  691 04b8 AD000000 		.4byte	0xad
  692 04bc AC       		.byte	0xac
  693 04bd 06       		.uleb128 0x6
- 694 04be 1E050000 		.4byte	.LASF102
+ 694 04be D6040000 		.4byte	.LASF102
  695 04c2 04       		.byte	0x4
  696 04c3 9A       		.byte	0x9a
  697 04c4 AD000000 		.4byte	0xad
  698 04c8 AE       		.byte	0xae
  699 04c9 06       		.uleb128 0x6
- 700 04ca F4070000 		.4byte	.LASF103
+ 700 04ca F2070000 		.4byte	.LASF103
  701 04ce 04       		.byte	0x4
  702 04cf 9D       		.byte	0x9d
  703 04d0 AD000000 		.4byte	0xad
@@ -897,8 +897,8 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  710 04e0 B4       		.byte	0xb4
  711 04e1 00       		.byte	0
  712 04e2 03       		.uleb128 0x3
- 713 04e3 1F040000 		.4byte	.LASF105
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 16
+ 713 04e3 D7030000 		.4byte	.LASF105
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 16
 
 
  714 04e7 04       		.byte	0x4
@@ -907,11 +907,11 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  717 04ed 02       		.uleb128 0x2
  718 04ee 01       		.byte	0x1
  719 04ef 08       		.byte	0x8
- 720 04f0 4F070000 		.4byte	.LASF106
+ 720 04f0 07070000 		.4byte	.LASF106
  721 04f4 02       		.uleb128 0x2
  722 04f5 04       		.byte	0x4
  723 04f6 04       		.byte	0x4
- 724 04f7 80050000 		.4byte	.LASF107
+ 724 04f7 38050000 		.4byte	.LASF107
  725 04fb 02       		.uleb128 0x2
  726 04fc 08       		.byte	0x8
  727 04fd 04       		.byte	0x4
@@ -926,11 +926,11 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  736 0510 0A030000 		.4byte	.LASF109
  737 0514 00       		.byte	0
  738 0515 08       		.uleb128 0x8
- 739 0516 B8050000 		.4byte	.LASF110
+ 739 0516 70050000 		.4byte	.LASF110
  740 051a 01       		.byte	0x1
  741 051b 00       		.byte	0
  742 051c 09       		.uleb128 0x9
- 743 051d 06040000 		.4byte	.LASF111
+ 743 051d BE030000 		.4byte	.LASF111
  744 0521 05       		.byte	0x5
  745 0522 6601     		.2byte	0x166
  746 0524 02050000 		.4byte	0x502
@@ -948,7 +948,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  758 0540 01       		.byte	0x1
  759 0541 00       		.byte	0
  760 0542 09       		.uleb128 0x9
- 761 0543 5A040000 		.4byte	.LASF114
+ 761 0543 12040000 		.4byte	.LASF114
  762 0547 05       		.byte	0x5
  763 0548 7401     		.2byte	0x174
  764 054a 28050000 		.4byte	0x528
@@ -958,23 +958,23 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  768 0554 05       		.byte	0x5
  769 0555 7801     		.2byte	0x178
  770 0557 68050000 		.4byte	0x568
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 17
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 17
 
 
  771 055b 08       		.uleb128 0x8
- 772 055c B5070000 		.4byte	.LASF115
+ 772 055c B3070000 		.4byte	.LASF115
  773 0560 00       		.byte	0
  774 0561 08       		.uleb128 0x8
- 775 0562 8B070000 		.4byte	.LASF116
+ 775 0562 43070000 		.4byte	.LASF116
  776 0566 01       		.byte	0x1
  777 0567 00       		.byte	0
  778 0568 09       		.uleb128 0x9
- 779 0569 C8050000 		.4byte	.LASF117
+ 779 0569 80050000 		.4byte	.LASF117
  780 056d 05       		.byte	0x5
  781 056e 7B01     		.2byte	0x17b
  782 0570 4E050000 		.4byte	0x54e
  783 0574 0A       		.uleb128 0xa
- 784 0575 79070000 		.4byte	.LASF143
+ 784 0575 31070000 		.4byte	.LASF143
  785 0579 20       		.byte	0x20
  786 057a 05       		.byte	0x5
  787 057b 9301     		.2byte	0x193
@@ -992,33 +992,33 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  799 0596 B8000000 		.4byte	0xb8
  800 059a 04       		.byte	0x4
  801 059b 0C       		.uleb128 0xc
- 802 059c 7B050000 		.4byte	.LASF118
+ 802 059c 33050000 		.4byte	.LASF118
  803 05a0 05       		.byte	0x5
  804 05a1 9801     		.2byte	0x198
  805 05a3 B8000000 		.4byte	0xb8
  806 05a7 08       		.byte	0x8
  807 05a8 0C       		.uleb128 0xc
- 808 05a9 EF070000 		.4byte	.LASF119
+ 808 05a9 ED070000 		.4byte	.LASF119
  809 05ad 05       		.byte	0x5
  810 05ae 9B01     		.2byte	0x19b
  811 05b0 68050000 		.4byte	0x568
  812 05b4 0C       		.byte	0xc
  813 05b5 0C       		.uleb128 0xc
- 814 05b6 6C060000 		.4byte	.LASF120
+ 814 05b6 24060000 		.4byte	.LASF120
  815 05ba 05       		.byte	0x5
  816 05bb 9E01     		.2byte	0x19e
  817 05bd 1C050000 		.4byte	0x51c
  818 05c1 0D       		.byte	0xd
  819 05c2 0C       		.uleb128 0xc
- 820 05c3 87040000 		.4byte	.LASF121
+ 820 05c3 3F040000 		.4byte	.LASF121
  821 05c7 05       		.byte	0x5
  822 05c8 9F01     		.2byte	0x19f
  823 05ca B8000000 		.4byte	0xb8
  824 05ce 10       		.byte	0x10
  825 05cf 0C       		.uleb128 0xc
- 826 05d0 D1030000 		.4byte	.LASF122
+ 826 05d0 89030000 		.4byte	.LASF122
  827 05d4 05       		.byte	0x5
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 18
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 18
 
 
  828 05d5 A201     		.2byte	0x1a2
@@ -1048,19 +1048,19 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  852 0606 D501     		.2byte	0x1d5
  853 0608 5B060000 		.4byte	0x65b
  854 060c 0C       		.uleb128 0xc
- 855 060d 65060000 		.4byte	.LASF126
+ 855 060d 1D060000 		.4byte	.LASF126
  856 0611 05       		.byte	0x5
  857 0612 D701     		.2byte	0x1d7
  858 0614 42050000 		.4byte	0x542
  859 0618 00       		.byte	0
  860 0619 0C       		.uleb128 0xc
- 861 061a 7B050000 		.4byte	.LASF118
+ 861 061a 33050000 		.4byte	.LASF118
  862 061e 05       		.byte	0x5
  863 061f DA01     		.2byte	0x1da
  864 0621 B8000000 		.4byte	0xb8
  865 0625 04       		.byte	0x4
  866 0626 0C       		.uleb128 0xc
- 867 0627 86050000 		.4byte	.LASF127
+ 867 0627 3E050000 		.4byte	.LASF127
  868 062b 05       		.byte	0x5
  869 062c DC01     		.2byte	0x1dc
  870 062e B8000000 		.4byte	0xb8
@@ -1072,13 +1072,13 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  876 063b B8000000 		.4byte	0xb8
  877 063f 0C       		.byte	0xc
  878 0640 0C       		.uleb128 0xc
- 879 0641 87040000 		.4byte	.LASF121
+ 879 0641 3F040000 		.4byte	.LASF121
  880 0645 05       		.byte	0x5
  881 0646 E301     		.2byte	0x1e3
  882 0648 B8000000 		.4byte	0xb8
  883 064c 10       		.byte	0x10
  884 064d 0C       		.uleb128 0xc
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 19
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 19
 
 
  885 064e F7020000 		.4byte	.LASF123
@@ -1088,7 +1088,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  889 0659 14       		.byte	0x14
  890 065a 00       		.byte	0
  891 065b 09       		.uleb128 0x9
- 892 065c 0F080000 		.4byte	.LASF129
+ 892 065c 0D080000 		.4byte	.LASF129
  893 0660 05       		.byte	0x5
  894 0661 E901     		.2byte	0x1e9
  895 0663 03060000 		.4byte	0x603
@@ -1104,19 +1104,19 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  905 0678 5B060000 		.4byte	0x65b
  906 067c 00       		.byte	0
  907 067d 0C       		.uleb128 0xc
- 908 067e A5080000 		.4byte	.LASF131
+ 908 067e A3080000 		.4byte	.LASF131
  909 0682 05       		.byte	0x5
  910 0683 EF01     		.2byte	0x1ef
  911 0685 5B060000 		.4byte	0x65b
  912 0689 18       		.byte	0x18
  913 068a 00       		.byte	0
  914 068b 09       		.uleb128 0x9
- 915 068c 06060000 		.4byte	.LASF132
+ 915 068c BE050000 		.4byte	.LASF132
  916 0690 05       		.byte	0x5
  917 0691 F001     		.2byte	0x1f0
  918 0693 67060000 		.4byte	0x667
  919 0697 0E       		.uleb128 0xe
- 920 0698 12050000 		.4byte	.LASF144
+ 920 0698 CA040000 		.4byte	.LASF144
  921 069c 01       		.byte	0x1
  922 069d 59       		.byte	0x59
  923 069e 00000000 		.4byte	.LFB111
@@ -1124,7 +1124,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  925 06a6 01       		.uleb128 0x1
  926 06a7 9C       		.byte	0x9c
  927 06a8 0F       		.uleb128 0xf
- 928 06a9 DA050000 		.4byte	.LASF133
+ 928 06a9 92050000 		.4byte	.LASF133
  929 06ad 04       		.byte	0x4
  930 06ae A7       		.byte	0xa7
  931 06af B3060000 		.4byte	0x6b3
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  939 06c3 CE060000 		.4byte	0x6ce
  940 06c7 13       		.uleb128 0x13
  941 06c8 C3000000 		.4byte	0xc3
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 20
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 20
 
 
  942 06cc 0B       		.byte	0xb
@@ -1146,7 +1146,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  944 06ce 11       		.uleb128 0x11
  945 06cf 97000000 		.4byte	0x97
  946 06d3 14       		.uleb128 0x14
- 947 06d4 91050000 		.4byte	.LASF134
+ 947 06d4 49050000 		.4byte	.LASF134
  948 06d8 05       		.byte	0x5
  949 06d9 0303     		.2byte	0x303
  950 06db DF060000 		.4byte	0x6df
@@ -1171,9 +1171,9 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  969 0706 02       		.uleb128 0x2
  970 0707 01       		.byte	0x1
  971 0708 02       		.byte	0x2
- 972 0709 1F060000 		.4byte	.LASF137
+ 972 0709 D7050000 		.4byte	.LASF137
  973 070d 15       		.uleb128 0x15
- 974 070e E7080000 		.4byte	.LASF138
+ 974 070e E5080000 		.4byte	.LASF138
  975 0712 01       		.byte	0x1
  976 0713 48       		.byte	0x48
  977 0714 1E070000 		.4byte	0x71e
@@ -1183,7 +1183,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  981 071e 11       		.uleb128 0x11
  982 071f 8B060000 		.4byte	0x68b
  983 0723 15       		.uleb128 0x15
- 984 0724 48050000 		.4byte	.LASF139
+ 984 0724 00050000 		.4byte	.LASF139
  985 0728 01       		.byte	0x1
  986 0729 1B       		.byte	0x1b
  987 072a 34070000 		.4byte	0x734
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  996 0000 01       		.uleb128 0x1
  997 0001 11       		.uleb128 0x11
  998 0002 01       		.byte	0x1
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 21
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 21
 
 
  999 0003 25       		.uleb128 0x25
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  1053 0039 0B       		.uleb128 0xb
  1054 003a 0B       		.uleb128 0xb
  1055 003b 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 22
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 22
 
 
  1056 003c 0B       		.uleb128 0xb
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  1110 0072 05       		.uleb128 0x5
  1111 0073 49       		.uleb128 0x49
  1112 0074 13       		.uleb128 0x13
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 23
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 23
 
 
  1113 0075 00       		.byte	0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  1167 00ab 3B       		.uleb128 0x3b
  1168 00ac 05       		.uleb128 0x5
  1169 00ad 01       		.uleb128 0x1
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 24
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 24
 
 
  1170 00ae 13       		.uleb128 0x13
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  1224 00e5 00       		.byte	0
  1225 00e6 49       		.uleb128 0x49
  1226 00e7 13       		.uleb128 0x13
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 25
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 25
 
 
  1227 00e8 00       		.byte	0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  1281 011e 00       		.byte	0
  1282              		.section	.debug_aranges,"",%progbits
  1283 0000 1C000000 		.4byte	0x1c
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 26
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 26
 
 
  1284 0004 0200     		.2byte	0x2
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  1314      436C6F63 
  1314      6B4E7200 
  1315              	.LASF26:
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 27
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 27
 
 
  1316 0067 70617373 		.ascii	"passBase\000"
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  1337              	.LASF57:
  1338 0116 666C6173 		.ascii	"flashPipeRequired\000"
  1338      68506970 
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 28
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 28
 
 
  1338      65526571 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  1360      6D426173 
  1360      6500
  1361              	.LASF130:
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 29
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 29
 
 
  1362 01c9 73746172 		.ascii	"startDst\000"
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  1384      66736574 
  1385              	.LASF46:
  1386 0261 73727373 		.ascii	"srssNumPll\000"
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 30
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 30
 
 
  1386      4E756D50 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  1408      00
  1409              	.LASF109:
  1410 030a 43595F52 		.ascii	"CY_RTC_24_HOURS\000"
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 31
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 31
 
 
  1410      54435F32 
@@ -1836,389 +1836,389 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  1422      4D61696E 
  1422      57733246 
  1422      72657100 
- 1423              	.LASF142:
- 1424 037a 443A5C63 		.ascii	"D:\\cypress\\client\\shanghai kinetic\\software\\03"
- 1424      79707265 
- 1424      73735C63 
- 1424      6C69656E 
- 1424      745C7368 
- 1425 03a8 32305C44 		.ascii	"20\\Design01_Copy_01.cydsn\000"
- 1425      65736967 
- 1425      6E30315F 
- 1425      436F7079 
- 1425      5F30312E 
- 1426              	.LASF74:
- 1427 03c2 70657269 		.ascii	"periTrGrOffset\000"
- 1427      54724772 
- 1427      4F666673 
- 1427      657400
- 1428              	.LASF122:
- 1429 03d1 64617465 		.ascii	"date\000"
- 1429      00
- 1430              	.LASF101:
- 1431 03d6 63707573 		.ascii	"cpussRam1Ctl0\000"
- 1431      7352616D 
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 32
+ 1423              	.LASF74:
+ 1424 037a 70657269 		.ascii	"periTrGrOffset\000"
+ 1424      54724772 
+ 1424      4F666673 
+ 1424      657400
+ 1425              	.LASF122:
+ 1426 0389 64617465 		.ascii	"date\000"
+ 1426      00
+ 1427              	.LASF101:
+ 1428 038e 63707573 		.ascii	"cpussRam1Ctl0\000"
+ 1428      7352616D 
+ 1428      3143746C 
+ 1428      3000
+ 1429              	.LASF75:
+ 1430 039c 70657269 		.ascii	"periTrGrSize\000"
+ 1430      54724772 
+ 1430      53697A65 
+ 1430      00
+ 1431              	.LASF33:
+ 1432 03a9 6770696F 		.ascii	"gpioVersion\000"
+ 1432      56657273 
+ 1432      696F6E00 
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 32
 
 
- 1431      3143746C 
- 1431      3000
- 1432              	.LASF75:
- 1433 03e4 70657269 		.ascii	"periTrGrSize\000"
- 1433      54724772 
- 1433      53697A65 
- 1433      00
- 1434              	.LASF33:
- 1435 03f1 6770696F 		.ascii	"gpioVersion\000"
- 1435      56657273 
- 1435      696F6E00 
- 1436              	.LASF15:
- 1437 03fd 75696E74 		.ascii	"uint16_t\000"
- 1437      31365F74 
- 1437      00
- 1438              	.LASF111:
- 1439 0406 63795F65 		.ascii	"cy_en_rtc_hours_format_t\000"
- 1439      6E5F7274 
- 1439      635F686F 
- 1439      7572735F 
- 1439      666F726D 
- 1440              	.LASF105:
- 1441 041f 63795F73 		.ascii	"cy_stc_device_t\000"
- 1441      74635F64 
- 1441      65766963 
- 1441      655F7400 
- 1442              	.LASF141:
- 1443 042f 47656E65 		.ascii	"Generated_Source\\PSoC6\\RTC_1.c\000"
- 1443      72617465 
- 1443      645F536F 
- 1443      75726365 
- 1443      5C50536F 
- 1444              	.LASF51:
- 1445 044e 65704D6F 		.ascii	"epMonitorNr\000"
- 1445      6E69746F 
- 1445      724E7200 
- 1446              	.LASF114:
- 1447 045a 63795F65 		.ascii	"cy_en_rtc_dst_format_t\000"
- 1447      6E5F7274 
- 1447      635F6473 
- 1447      745F666F 
- 1447      726D6174 
- 1448              	.LASF94:
- 1449 0471 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
- 1449      73547269 
- 1449      6D52616D 
- 1449      43746C4F 
- 1449      66667365 
- 1450              	.LASF121:
- 1451 0487 6461794F 		.ascii	"dayOfWeek\000"
- 1451      66576565 
- 1451      6B00
- 1452              	.LASF89:
- 1453 0491 63707573 		.ascii	"cpussCm0ClockCtlOffset\000"
- 1453      73436D30 
- 1453      436C6F63 
- 1453      6B43746C 
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 33
+ 1433              	.LASF15:
+ 1434 03b5 75696E74 		.ascii	"uint16_t\000"
+ 1434      31365F74 
+ 1434      00
+ 1435              	.LASF111:
+ 1436 03be 63795F65 		.ascii	"cy_en_rtc_hours_format_t\000"
+ 1436      6E5F7274 
+ 1436      635F686F 
+ 1436      7572735F 
+ 1436      666F726D 
+ 1437              	.LASF105:
+ 1438 03d7 63795F73 		.ascii	"cy_stc_device_t\000"
+ 1438      74635F64 
+ 1438      65766963 
+ 1438      655F7400 
+ 1439              	.LASF141:
+ 1440 03e7 47656E65 		.ascii	"Generated_Source\\PSoC6\\RTC_1.c\000"
+ 1440      72617465 
+ 1440      645F536F 
+ 1440      75726365 
+ 1440      5C50536F 
+ 1441              	.LASF51:
+ 1442 0406 65704D6F 		.ascii	"epMonitorNr\000"
+ 1442      6E69746F 
+ 1442      724E7200 
+ 1443              	.LASF114:
+ 1444 0412 63795F65 		.ascii	"cy_en_rtc_dst_format_t\000"
+ 1444      6E5F7274 
+ 1444      635F6473 
+ 1444      745F666F 
+ 1444      726D6174 
+ 1445              	.LASF94:
+ 1446 0429 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
+ 1446      73547269 
+ 1446      6D52616D 
+ 1446      43746C4F 
+ 1446      66667365 
+ 1447              	.LASF121:
+ 1448 043f 6461794F 		.ascii	"dayOfWeek\000"
+ 1448      66576565 
+ 1448      6B00
+ 1449              	.LASF89:
+ 1450 0449 63707573 		.ascii	"cpussCm0ClockCtlOffset\000"
+ 1450      73436D30 
+ 1450      436C6F63 
+ 1450      6B43746C 
+ 1450      4F666673 
+ 1451              	.LASF29:
+ 1452 0460 63707573 		.ascii	"cpussVersion\000"
+ 1452      73566572 
+ 1452      73696F6E 
+ 1452      00
+ 1453              	.LASF36:
+ 1454 046d 70657269 		.ascii	"periVersion\000"
+ 1454      56657273 
+ 1454      696F6E00 
+ 1455              	.LASF92:
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 33
 
 
- 1453      4F666673 
- 1454              	.LASF29:
- 1455 04a8 63707573 		.ascii	"cpussVersion\000"
- 1455      73566572 
- 1455      73696F6E 
- 1455      00
- 1456              	.LASF36:
- 1457 04b5 70657269 		.ascii	"periVersion\000"
- 1457      56657273 
- 1457      696F6E00 
- 1458              	.LASF92:
- 1459 04c1 63707573 		.ascii	"cpussCm0StatusOffset\000"
- 1459      73436D30 
- 1459      53746174 
- 1459      75734F66 
- 1459      66736574 
- 1460              	.LASF17:
- 1461 04d6 73697A65 		.ascii	"sizetype\000"
- 1461      74797065 
- 1461      00
- 1462              	.LASF66:
- 1463 04df 64774368 		.ascii	"dwChOffset\000"
- 1463      4F666673 
- 1463      657400
- 1464              	.LASF41:
- 1465 04ea 63707573 		.ascii	"cpussFlashPaSize\000"
- 1465      73466C61 
- 1465      73685061 
- 1465      53697A65 
- 1465      00
- 1466              	.LASF79:
- 1467 04fb 70657269 		.ascii	"periDivCmdPaTypeSelPos\000"
- 1467      44697643 
- 1467      6D645061 
- 1467      54797065 
- 1467      53656C50 
- 1468              	.LASF144:
- 1469 0512 5254435F 		.ascii	"RTC_1_Start\000"
- 1469      315F5374 
- 1469      61727400 
- 1470              	.LASF102:
- 1471 051e 63707573 		.ascii	"cpussRam2Ctl0\000"
- 1471      7352616D 
- 1471      3243746C 
- 1471      3000
- 1472              	.LASF70:
- 1473 052c 64775374 		.ascii	"dwStatusChIdxPos\000"
- 1473      61747573 
- 1473      43684964 
- 1473      78506F73 
- 1473      00
- 1474              	.LASF52:
- 1475 053d 75646250 		.ascii	"udbPresent\000"
- 1475      72657365 
- 1475      6E7400
- 1476              	.LASF139:
- 1477 0548 5254435F 		.ascii	"RTC_1_config\000"
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 34
+ 1456 0479 63707573 		.ascii	"cpussCm0StatusOffset\000"
+ 1456      73436D30 
+ 1456      53746174 
+ 1456      75734F66 
+ 1456      66736574 
+ 1457              	.LASF17:
+ 1458 048e 73697A65 		.ascii	"sizetype\000"
+ 1458      74797065 
+ 1458      00
+ 1459              	.LASF66:
+ 1460 0497 64774368 		.ascii	"dwChOffset\000"
+ 1460      4F666673 
+ 1460      657400
+ 1461              	.LASF41:
+ 1462 04a2 63707573 		.ascii	"cpussFlashPaSize\000"
+ 1462      73466C61 
+ 1462      73685061 
+ 1462      53697A65 
+ 1462      00
+ 1463              	.LASF79:
+ 1464 04b3 70657269 		.ascii	"periDivCmdPaTypeSelPos\000"
+ 1464      44697643 
+ 1464      6D645061 
+ 1464      54797065 
+ 1464      53656C50 
+ 1465              	.LASF144:
+ 1466 04ca 5254435F 		.ascii	"RTC_1_Start\000"
+ 1466      315F5374 
+ 1466      61727400 
+ 1467              	.LASF102:
+ 1468 04d6 63707573 		.ascii	"cpussRam2Ctl0\000"
+ 1468      7352616D 
+ 1468      3243746C 
+ 1468      3000
+ 1469              	.LASF70:
+ 1470 04e4 64775374 		.ascii	"dwStatusChIdxPos\000"
+ 1470      61747573 
+ 1470      43684964 
+ 1470      78506F73 
+ 1470      00
+ 1471              	.LASF52:
+ 1472 04f5 75646250 		.ascii	"udbPresent\000"
+ 1472      72657365 
+ 1472      6E7400
+ 1473              	.LASF139:
+ 1474 0500 5254435F 		.ascii	"RTC_1_config\000"
+ 1474      315F636F 
+ 1474      6E666967 
+ 1474      00
+ 1475              	.LASF32:
+ 1476 050d 666C6173 		.ascii	"flashcVersion\000"
+ 1476      68635665 
+ 1476      7273696F 
+ 1476      6E00
+ 1477              	.LASF28:
+ 1478 051b 63727970 		.ascii	"cryptoBase\000"
+ 1478      746F4261 
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 34
 
 
- 1477      315F636F 
- 1477      6E666967 
- 1477      00
- 1478              	.LASF32:
- 1479 0555 666C6173 		.ascii	"flashcVersion\000"
- 1479      68635665 
- 1479      7273696F 
- 1479      6E00
- 1480              	.LASF28:
- 1481 0563 63727970 		.ascii	"cryptoBase\000"
- 1481      746F4261 
- 1481      736500
- 1482              	.LASF49:
- 1483 056e 736D6966 		.ascii	"smifDeviceNr\000"
- 1483      44657669 
- 1483      63654E72 
- 1483      00
- 1484              	.LASF118:
- 1485 057b 686F7572 		.ascii	"hour\000"
- 1485      00
- 1486              	.LASF107:
- 1487 0580 666C6F61 		.ascii	"float\000"
- 1487      7400
- 1488              	.LASF127:
- 1489 0586 6461794F 		.ascii	"dayOfMonth\000"
- 1489      664D6F6E 
- 1489      746800
- 1490              	.LASF134:
- 1491 0591 63795F52 		.ascii	"cy_RTC_daysInMonthTbl\000"
- 1491      54435F64 
- 1491      61797349 
- 1491      6E4D6F6E 
- 1491      74685462 
- 1492              	.LASF71:
- 1493 05a7 64775374 		.ascii	"dwStatusChIdxMsk\000"
- 1493      61747573 
- 1493      43684964 
- 1493      784D736B 
- 1493      00
- 1494              	.LASF110:
- 1495 05b8 43595F52 		.ascii	"CY_RTC_12_HOURS\000"
- 1495      54435F31 
- 1495      325F484F 
- 1495      55525300 
- 1496              	.LASF117:
- 1497 05c8 63795F65 		.ascii	"cy_en_rtc_am_pm_t\000"
- 1497      6E5F7274 
- 1497      635F616D 
- 1497      5F706D5F 
- 1497      7400
- 1498              	.LASF133:
- 1499 05da 63795F64 		.ascii	"cy_device\000"
- 1499      65766963 
- 1499      6500
- 1500              	.LASF99:
- 1501 05e4 63707573 		.ascii	"cpussRomCtl\000"
- 1501      73526F6D 
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 35
+ 1478      736500
+ 1479              	.LASF49:
+ 1480 0526 736D6966 		.ascii	"smifDeviceNr\000"
+ 1480      44657669 
+ 1480      63654E72 
+ 1480      00
+ 1481              	.LASF118:
+ 1482 0533 686F7572 		.ascii	"hour\000"
+ 1482      00
+ 1483              	.LASF107:
+ 1484 0538 666C6F61 		.ascii	"float\000"
+ 1484      7400
+ 1485              	.LASF127:
+ 1486 053e 6461794F 		.ascii	"dayOfMonth\000"
+ 1486      664D6F6E 
+ 1486      746800
+ 1487              	.LASF134:
+ 1488 0549 63795F52 		.ascii	"cy_RTC_daysInMonthTbl\000"
+ 1488      54435F64 
+ 1488      61797349 
+ 1488      6E4D6F6E 
+ 1488      74685462 
+ 1489              	.LASF71:
+ 1490 055f 64775374 		.ascii	"dwStatusChIdxMsk\000"
+ 1490      61747573 
+ 1490      43684964 
+ 1490      784D736B 
+ 1490      00
+ 1491              	.LASF110:
+ 1492 0570 43595F52 		.ascii	"CY_RTC_12_HOURS\000"
+ 1492      54435F31 
+ 1492      325F484F 
+ 1492      55525300 
+ 1493              	.LASF117:
+ 1494 0580 63795F65 		.ascii	"cy_en_rtc_am_pm_t\000"
+ 1494      6E5F7274 
+ 1494      635F616D 
+ 1494      5F706D5F 
+ 1494      7400
+ 1495              	.LASF133:
+ 1496 0592 63795F64 		.ascii	"cy_device\000"
+ 1496      65766963 
+ 1496      6500
+ 1497              	.LASF99:
+ 1498 059c 63707573 		.ascii	"cpussRomCtl\000"
+ 1498      73526F6D 
+ 1498      43746C00 
+ 1499              	.LASF69:
+ 1500 05a8 64774368 		.ascii	"dwChCtlPreemptablePos\000"
+ 1500      43746C50 
+ 1500      7265656D 
+ 1500      70746162 
+ 1500      6C65506F 
+ 1501              	.LASF132:
+ 1502 05be 63795F73 		.ascii	"cy_stc_rtc_dst_t\000"
+ 1502      74635F72 
+ 1502      74635F64 
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 35
 
 
- 1501      43746C00 
- 1502              	.LASF69:
- 1503 05f0 64774368 		.ascii	"dwChCtlPreemptablePos\000"
- 1503      43746C50 
- 1503      7265656D 
- 1503      70746162 
- 1503      6C65506F 
- 1504              	.LASF132:
- 1505 0606 63795F73 		.ascii	"cy_stc_rtc_dst_t\000"
- 1505      74635F72 
- 1505      74635F64 
- 1505      73745F74 
- 1505      00
- 1506              	.LASF22:
- 1507 0617 75646242 		.ascii	"udbBase\000"
- 1507      61736500 
- 1508              	.LASF137:
- 1509 061f 5F426F6F 		.ascii	"_Bool\000"
- 1509      6C00
- 1510              	.LASF1:
- 1511 0625 756E7369 		.ascii	"unsigned char\000"
- 1511      676E6564 
- 1511      20636861 
- 1511      7200
- 1512              	.LASF65:
- 1513 0633 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
- 1513      6843746C 
- 1513      4D61696E 
- 1513      57733446 
- 1513      72657100 
- 1514              	.LASF0:
- 1515 0647 73686F72 		.ascii	"short int\000"
- 1515      7420696E 
- 1515      7400
- 1516              	.LASF76:
- 1517 0651 70657269 		.ascii	"periDivCmdDivSelMsk\000"
- 1517      44697643 
- 1517      6D644469 
- 1517      7653656C 
- 1517      4D736B00 
- 1518              	.LASF126:
- 1519 0665 666F726D 		.ascii	"format\000"
- 1519      617400
- 1520              	.LASF120:
- 1521 066c 6872466F 		.ascii	"hrFormat\000"
- 1521      726D6174 
- 1521      00
- 1522              	.LASF47:
- 1523 0675 73727373 		.ascii	"srssNumHfroot\000"
- 1523      4E756D48 
- 1523      66726F6F 
- 1523      7400
- 1524              	.LASF60:
- 1525 0683 666C6173 		.ascii	"flashEraseDelay\000"
- 1525      68457261 
- 1525      73654465 
- 1525      6C617900 
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 36
+ 1502      73745F74 
+ 1502      00
+ 1503              	.LASF22:
+ 1504 05cf 75646242 		.ascii	"udbBase\000"
+ 1504      61736500 
+ 1505              	.LASF137:
+ 1506 05d7 5F426F6F 		.ascii	"_Bool\000"
+ 1506      6C00
+ 1507              	.LASF1:
+ 1508 05dd 756E7369 		.ascii	"unsigned char\000"
+ 1508      676E6564 
+ 1508      20636861 
+ 1508      7200
+ 1509              	.LASF65:
+ 1510 05eb 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
+ 1510      6843746C 
+ 1510      4D61696E 
+ 1510      57733446 
+ 1510      72657100 
+ 1511              	.LASF0:
+ 1512 05ff 73686F72 		.ascii	"short int\000"
+ 1512      7420696E 
+ 1512      7400
+ 1513              	.LASF76:
+ 1514 0609 70657269 		.ascii	"periDivCmdDivSelMsk\000"
+ 1514      44697643 
+ 1514      6D644469 
+ 1514      7653656C 
+ 1514      4D736B00 
+ 1515              	.LASF126:
+ 1516 061d 666F726D 		.ascii	"format\000"
+ 1516      617400
+ 1517              	.LASF120:
+ 1518 0624 6872466F 		.ascii	"hrFormat\000"
+ 1518      726D6174 
+ 1518      00
+ 1519              	.LASF47:
+ 1520 062d 73727373 		.ascii	"srssNumHfroot\000"
+ 1520      4E756D48 
+ 1520      66726F6F 
+ 1520      7400
+ 1521              	.LASF60:
+ 1522 063b 666C6173 		.ascii	"flashEraseDelay\000"
+ 1522      68457261 
+ 1522      73654465 
+ 1522      6C617900 
+ 1523              	.LASF16:
+ 1524 064b 75696E74 		.ascii	"uint32_t\000"
+ 1524      33325F74 
+ 1524      00
+ 1525              	.LASF98:
+ 1526 0654 63707573 		.ascii	"cpussCm4NmiCtlOffset\000"
+ 1526      73436D34 
+ 1526      4E6D6943 
+ 1526      746C4F66 
+ 1526      66736574 
+ 1527              	.LASF140:
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 36
 
 
- 1526              	.LASF16:
- 1527 0693 75696E74 		.ascii	"uint32_t\000"
- 1527      33325F74 
- 1527      00
- 1528              	.LASF98:
- 1529 069c 63707573 		.ascii	"cpussCm4NmiCtlOffset\000"
- 1529      73436D34 
- 1529      4E6D6943 
- 1529      746C4F66 
- 1529      66736574 
- 1530              	.LASF140:
- 1531 06b1 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1531      43313120 
- 1531      352E342E 
- 1531      31203230 
- 1531      31363036 
- 1532 06e4 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
- 1532      20726576 
- 1532      6973696F 
- 1532      6E203233 
- 1532      37373135 
- 1533 0717 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
- 1533      67202D66 
- 1533      66756E63 
- 1533      74696F6E 
- 1533      2D736563 
- 1534              	.LASF18:
- 1535 0743 6C6F6E67 		.ascii	"long double\000"
- 1535      20646F75 
- 1535      626C6500 
- 1536              	.LASF106:
- 1537 074f 63686172 		.ascii	"char\000"
- 1537      00
- 1538              	.LASF37:
- 1539 0754 70726F74 		.ascii	"protVersion\000"
- 1539      56657273 
- 1539      696F6E00 
- 1540              	.LASF100:
- 1541 0760 63707573 		.ascii	"cpussRam0Ctl0\000"
- 1541      7352616D 
- 1541      3043746C 
- 1541      3000
- 1542              	.LASF5:
- 1543 076e 5F5F7569 		.ascii	"__uint16_t\000"
- 1543      6E743136 
- 1543      5F7400
- 1544              	.LASF143:
- 1545 0779 63795F73 		.ascii	"cy_stc_rtc_config\000"
- 1545      74635F72 
- 1545      74635F63 
- 1545      6F6E6669 
- 1545      6700
- 1546              	.LASF116:
- 1547 078b 43595F52 		.ascii	"CY_RTC_PM\000"
- 1547      54435F50 
- 1547      4D00
- 1548              	.LASF81:
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 37
+ 1528 0669 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1528      43313120 
+ 1528      352E342E 
+ 1528      31203230 
+ 1528      31363036 
+ 1529 069c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0plus -mthumb -"
+ 1529      20726576 
+ 1529      6973696F 
+ 1529      6E203233 
+ 1529      37373135 
+ 1530 06cf 67202D4F 		.ascii	"g -Og -ffunction-sections -ffat-lto-objects\000"
+ 1530      67202D66 
+ 1530      66756E63 
+ 1530      74696F6E 
+ 1530      2D736563 
+ 1531              	.LASF18:
+ 1532 06fb 6C6F6E67 		.ascii	"long double\000"
+ 1532      20646F75 
+ 1532      626C6500 
+ 1533              	.LASF106:
+ 1534 0707 63686172 		.ascii	"char\000"
+ 1534      00
+ 1535              	.LASF37:
+ 1536 070c 70726F74 		.ascii	"protVersion\000"
+ 1536      56657273 
+ 1536      696F6E00 
+ 1537              	.LASF100:
+ 1538 0718 63707573 		.ascii	"cpussRam0Ctl0\000"
+ 1538      7352616D 
+ 1538      3043746C 
+ 1538      3000
+ 1539              	.LASF5:
+ 1540 0726 5F5F7569 		.ascii	"__uint16_t\000"
+ 1540      6E743136 
+ 1540      5F7400
+ 1541              	.LASF143:
+ 1542 0731 63795F73 		.ascii	"cy_stc_rtc_config\000"
+ 1542      74635F72 
+ 1542      74635F63 
+ 1542      6F6E6669 
+ 1542      6700
+ 1543              	.LASF116:
+ 1544 0743 43595F52 		.ascii	"CY_RTC_PM\000"
+ 1544      54435F50 
+ 1544      4D00
+ 1545              	.LASF81:
+ 1546 074d 70657269 		.ascii	"periDiv16CtlOffset\000"
+ 1546      44697631 
+ 1546      3643746C 
+ 1546      4F666673 
+ 1546      657400
+ 1547              	.LASF142:
+ 1548 0760 443A5C47 		.ascii	"D:\\Git_workspace\\Git_Workspace\\c\\customer\\0320"
+ 1548      69745F77 
+ 1548      6F726B73 
+ 1548      70616365 
+ 1548      5C476974 
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 37
 
 
- 1549 0795 70657269 		.ascii	"periDiv16CtlOffset\000"
- 1549      44697631 
- 1549      3643746C 
- 1549      4F666673 
- 1549      657400
+ 1549 078e 5C446573 		.ascii	"\\Design01_Copy_01.cydsn\000"
+ 1549      69676E30 
+ 1549      315F436F 
+ 1549      70795F30 
+ 1549      312E6379 
  1550              	.LASF34:
- 1551 07a8 6873696F 		.ascii	"hsiomVersion\000"
+ 1551 07a6 6873696F 		.ascii	"hsiomVersion\000"
  1551      6D566572 
  1551      73696F6E 
  1551      00
  1552              	.LASF115:
- 1553 07b5 43595F52 		.ascii	"CY_RTC_AM\000"
+ 1553 07b3 43595F52 		.ascii	"CY_RTC_AM\000"
  1553      54435F41 
  1553      4D00
  1554              	.LASF62:
- 1555 07bf 666C6173 		.ascii	"flashCtlMainWs1Freq\000"
+ 1555 07bd 666C6173 		.ascii	"flashCtlMainWs1Freq\000"
  1555      6843746C 
  1555      4D61696E 
  1555      57733146 
  1555      72657100 
  1556              	.LASF6:
- 1557 07d3 73686F72 		.ascii	"short unsigned int\000"
+ 1557 07d1 73686F72 		.ascii	"short unsigned int\000"
  1557      7420756E 
  1557      7369676E 
  1557      65642069 
  1557      6E7400
  1558              	.LASF67:
- 1559 07e6 64774368 		.ascii	"dwChSize\000"
+ 1559 07e4 64774368 		.ascii	"dwChSize\000"
  1559      53697A65 
  1559      00
  1560              	.LASF119:
- 1561 07ef 616D506D 		.ascii	"amPm\000"
+ 1561 07ed 616D506D 		.ascii	"amPm\000"
  1561      00
  1562              	.LASF103:
- 1563 07f4 69706353 		.ascii	"ipcStructSize\000"
+ 1563 07f2 69706353 		.ascii	"ipcStructSize\000"
  1563      74727563 
  1563      7453697A 
  1563      6500
  1564              	.LASF42:
- 1565 0802 63707573 		.ascii	"cpussIpc0Irq\000"
+ 1565 0800 63707573 		.ascii	"cpussIpc0Irq\000"
  1565      73497063 
  1565      30497271 
  1565      00
  1566              	.LASF129:
- 1567 080f 63795F73 		.ascii	"cy_stc_rtc_dst_format_t\000"
+ 1567 080d 63795F73 		.ascii	"cy_stc_rtc_dst_format_t\000"
  1567      74635F72 
  1567      74635F64 
  1567      73745F66 
  1567      6F726D61 
  1568              	.LASF85:
- 1569 0827 6770696F 		.ascii	"gpioPrtCfgOffset\000"
+ 1569 0825 6770696F 		.ascii	"gpioPrtCfgOffset\000"
  1569      50727443 
  1569      66674F66 
  1569      66736574 
  1569      00
  1570              	.LASF44:
- 1571 0838 63707573 		.ascii	"cpussNotConnectedIrq\000"
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 38
+ 1571 0836 63707573 		.ascii	"cpussNotConnectedIrq\000"
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 38
 
 
  1571      734E6F74 
@@ -2226,63 +2226,63 @@ ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 1
  1571      65637465 
  1571      64497271 
  1572              	.LASF58:
- 1573 084d 666C6173 		.ascii	"flashWriteDelay\000"
+ 1573 084b 666C6173 		.ascii	"flashWriteDelay\000"
  1573      68577269 
  1573      74654465 
  1573      6C617900 
  1574              	.LASF13:
- 1575 085d 75696E74 		.ascii	"uint8_t\000"
+ 1575 085b 75696E74 		.ascii	"uint8_t\000"
  1575      385F7400 
  1576              	.LASF91:
- 1577 0865 63707573 		.ascii	"cpussCm4StatusOffset\000"
+ 1577 0863 63707573 		.ascii	"cpussCm4StatusOffset\000"
  1577      73436D34 
  1577      53746174 
  1577      75734F66 
  1577      66736574 
  1578              	.LASF84:
- 1579 087a 6770696F 		.ascii	"gpioPrtIntrCfgOffset\000"
+ 1579 0878 6770696F 		.ascii	"gpioPrtIntrCfgOffset\000"
  1579      50727449 
  1579      6E747243 
  1579      66674F66 
  1579      66736574 
  1580              	.LASF95:
- 1581 088f 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
+ 1581 088d 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
  1581      73547269 
  1581      6D526F6D 
  1581      43746C4F 
  1581      66667365 
  1582              	.LASF131:
- 1583 08a5 73746F70 		.ascii	"stopDst\000"
+ 1583 08a3 73746F70 		.ascii	"stopDst\000"
  1583      44737400 
  1584              	.LASF31:
- 1585 08ad 64775665 		.ascii	"dwVersion\000"
+ 1585 08ab 64775665 		.ascii	"dwVersion\000"
  1585      7273696F 
  1585      6E00
  1586              	.LASF27:
- 1587 08b7 69706342 		.ascii	"ipcBase\000"
+ 1587 08b5 69706342 		.ascii	"ipcBase\000"
  1587      61736500 
  1588              	.LASF78:
- 1589 08bf 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
+ 1589 08bd 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
  1589      44697643 
  1589      6D645061 
  1589      44697653 
  1589      656C506F 
  1590              	.LASF59:
- 1591 08d5 666C6173 		.ascii	"flashProgramDelay\000"
+ 1591 08d3 666C6173 		.ascii	"flashProgramDelay\000"
  1591      6850726F 
  1591      6772616D 
  1591      44656C61 
  1591      7900
  1592              	.LASF138:
- 1593 08e7 5254435F 		.ascii	"RTC_1_dstConfig\000"
+ 1593 08e5 5254435F 		.ascii	"RTC_1_dstConfig\000"
  1593      315F6473 
  1593      74436F6E 
  1593      66696700 
-ARM GAS  C:\Users\SimonChen\AppData\Local\Temp\ccyydy7e.s 			page 39
+ARM GAS  C:\Users\deathc\AppData\Local\Temp\ccMHlGnF.s 			page 39
 
 
  1594              	.LASF56:
- 1595 08f7 666C6173 		.ascii	"flashRwwRequired\000"
+ 1595 08f5 666C6173 		.ascii	"flashRwwRequired\000"
  1595      68527777 
  1595      52657175 
  1595      69726564 

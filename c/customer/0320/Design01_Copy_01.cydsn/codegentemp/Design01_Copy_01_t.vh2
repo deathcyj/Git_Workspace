@@ -1,6 +1,6 @@
--- Project:   D:\cypress\client\shanghai kinetic\software\0320\Design01_Copy_01.cydsn\Design01_Copy_01.cyprj
--- Generated: 05/27/2020 11:53:58
--- PSoC Creator  4.3 Early Access
+-- Project:   D:\Git_workspace\Git_Workspace\c\customer\0320\Design01_Copy_01.cydsn\Design01_Copy_01.cyprj
+-- Generated: 05/28/2020 20:24:48
+-- PSoC Creator  4.2
 
 ENTITY Design01_Copy_01 IS
     PORT(
@@ -65,30 +65,30 @@ ARCHITECTURE __DEFAULT__ OF Design01_Copy_01 IS
     SIGNAL Net_123 : bit;
     SIGNAL Net_135 : bit;
     SIGNAL Net_136 : bit;
-    SIGNAL Net_165 : bit;
-    SIGNAL Net_166 : bit;
-    SIGNAL Net_167 : bit;
     SIGNAL Net_174 : bit;
-    SIGNAL Net_235 : bit;
-    SIGNAL Net_236 : bit;
-    SIGNAL Net_237 : bit;
-    SIGNAL Net_238_0 : bit;
-    SIGNAL Net_238_1 : bit;
-    SIGNAL Net_238_2 : bit;
-    SIGNAL Net_238_3 : bit;
-    SIGNAL Net_239 : bit;
-    SIGNAL Net_240_0 : bit;
-    SIGNAL Net_240_1 : bit;
-    SIGNAL Net_240_10 : bit;
-    SIGNAL Net_240_11 : bit;
-    SIGNAL Net_240_2 : bit;
-    SIGNAL Net_240_3 : bit;
-    SIGNAL Net_240_4 : bit;
-    SIGNAL Net_240_5 : bit;
-    SIGNAL Net_240_6 : bit;
-    SIGNAL Net_240_7 : bit;
-    SIGNAL Net_240_8 : bit;
-    SIGNAL Net_240_9 : bit;
+    SIGNAL Net_246 : bit;
+    SIGNAL Net_247 : bit;
+    SIGNAL Net_248 : bit;
+    SIGNAL Net_249_0 : bit;
+    SIGNAL Net_249_1 : bit;
+    SIGNAL Net_249_2 : bit;
+    SIGNAL Net_249_3 : bit;
+    SIGNAL Net_250 : bit;
+    SIGNAL Net_251_0 : bit;
+    SIGNAL Net_251_1 : bit;
+    SIGNAL Net_251_10 : bit;
+    SIGNAL Net_251_11 : bit;
+    SIGNAL Net_251_2 : bit;
+    SIGNAL Net_251_3 : bit;
+    SIGNAL Net_251_4 : bit;
+    SIGNAL Net_251_5 : bit;
+    SIGNAL Net_251_6 : bit;
+    SIGNAL Net_251_7 : bit;
+    SIGNAL Net_251_8 : bit;
+    SIGNAL Net_251_9 : bit;
+    SIGNAL Net_256 : bit;
+    SIGNAL Net_257 : bit;
+    SIGNAL Net_258 : bit;
     SIGNAL Net_44 : bit;
     SIGNAL Net_50 : bit;
     SIGNAL Pin_1(0)__PA : bit;
@@ -1567,26 +1567,26 @@ BEGIN
             cy_registers => "",
             edge_trigger => 1)
         PORT MAP(
-            dsi_sar_sample_done => Net_235,
-            dsi_sar_chan_id_valid => Net_237,
-            dsi_sar_data_valid => Net_239,
-            tr_sar_out => Net_236,
-            dsi_sar_data_11 => Net_240_11,
-            dsi_sar_data_10 => Net_240_10,
-            dsi_sar_data_9 => Net_240_9,
-            dsi_sar_data_8 => Net_240_8,
-            dsi_sar_data_7 => Net_240_7,
-            dsi_sar_data_6 => Net_240_6,
-            dsi_sar_data_5 => Net_240_5,
-            dsi_sar_data_4 => Net_240_4,
-            dsi_sar_data_3 => Net_240_3,
-            dsi_sar_data_2 => Net_240_2,
-            dsi_sar_data_1 => Net_240_1,
-            dsi_sar_data_0 => Net_240_0,
-            dsi_sar_chan_id_3 => Net_238_3,
-            dsi_sar_chan_id_2 => Net_238_2,
-            dsi_sar_chan_id_1 => Net_238_1,
-            dsi_sar_chan_id_0 => Net_238_0,
+            dsi_sar_sample_done => Net_246,
+            dsi_sar_chan_id_valid => Net_248,
+            dsi_sar_data_valid => Net_250,
+            tr_sar_out => Net_247,
+            dsi_sar_data_11 => Net_251_11,
+            dsi_sar_data_10 => Net_251_10,
+            dsi_sar_data_9 => Net_251_9,
+            dsi_sar_data_8 => Net_251_8,
+            dsi_sar_data_7 => Net_251_7,
+            dsi_sar_data_6 => Net_251_6,
+            dsi_sar_data_5 => Net_251_5,
+            dsi_sar_data_4 => Net_251_4,
+            dsi_sar_data_3 => Net_251_3,
+            dsi_sar_data_2 => Net_251_2,
+            dsi_sar_data_1 => Net_251_1,
+            dsi_sar_data_0 => Net_251_0,
+            dsi_sar_chan_id_3 => Net_249_3,
+            dsi_sar_chan_id_2 => Net_249_2,
+            dsi_sar_chan_id_1 => Net_249_1,
+            dsi_sar_chan_id_0 => Net_249_0,
             dsi_sar_cfg_st_sel_1 => open,
             dsi_sar_cfg_st_sel_0 => open,
             dsi_sar_cfg_average => open,
@@ -1685,9 +1685,9 @@ BEGIN
             cy_registers => "",
             low_power => 1)
         PORT MAP(
-            ext_pa_lna_chip_en_out => Net_167,
-            ext_lna_rx_ctl_out => Net_166,
-            ext_pa_tx_ctl_out => Net_165,
+            ext_pa_lna_chip_en_out => Net_258,
+            ext_lna_rx_ctl_out => Net_257,
+            ext_pa_tx_ctl_out => Net_256,
             interrupt => \BLE:Net_1\);
 
     \BLE:bless_isr\:interrupt

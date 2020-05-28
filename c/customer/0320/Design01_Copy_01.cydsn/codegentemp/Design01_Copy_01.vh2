@@ -2,7 +2,7 @@
 --	Conversion of Design01_Copy_01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed May 27 11:53:40 2020
+--	Thu May 28 20:24:32 2020
 --
 
 USE cypress.cypress.all;
@@ -43,26 +43,26 @@ TERMINAL Net_39 : bit;
 SIGNAL \ADC:Net_34\ : bit;
 SIGNAL \ADC:Net_33\ : bit;
 TERMINAL \ADC:vref\ : bit;
-SIGNAL Net_235 : bit;
-SIGNAL Net_237 : bit;
-SIGNAL Net_239 : bit;
-SIGNAL Net_236 : bit;
-SIGNAL Net_240_11 : bit;
-SIGNAL Net_240_10 : bit;
-SIGNAL Net_240_9 : bit;
-SIGNAL Net_240_8 : bit;
-SIGNAL Net_240_7 : bit;
-SIGNAL Net_240_6 : bit;
-SIGNAL Net_240_5 : bit;
-SIGNAL Net_240_4 : bit;
-SIGNAL Net_240_3 : bit;
-SIGNAL Net_240_2 : bit;
-SIGNAL Net_240_1 : bit;
-SIGNAL Net_240_0 : bit;
-SIGNAL Net_238_3 : bit;
-SIGNAL Net_238_2 : bit;
-SIGNAL Net_238_1 : bit;
-SIGNAL Net_238_0 : bit;
+SIGNAL Net_246 : bit;
+SIGNAL Net_248 : bit;
+SIGNAL Net_250 : bit;
+SIGNAL Net_247 : bit;
+SIGNAL Net_251_11 : bit;
+SIGNAL Net_251_10 : bit;
+SIGNAL Net_251_9 : bit;
+SIGNAL Net_251_8 : bit;
+SIGNAL Net_251_7 : bit;
+SIGNAL Net_251_6 : bit;
+SIGNAL Net_251_5 : bit;
+SIGNAL Net_251_4 : bit;
+SIGNAL Net_251_3 : bit;
+SIGNAL Net_251_2 : bit;
+SIGNAL Net_251_1 : bit;
+SIGNAL Net_251_0 : bit;
+SIGNAL Net_249_3 : bit;
+SIGNAL Net_249_2 : bit;
+SIGNAL Net_249_1 : bit;
+SIGNAL Net_249_0 : bit;
 TERMINAL \ADC:Net_107\ : bit;
 TERMINAL Net_41 : bit;
 TERMINAL \ADC:Net_110\ : bit;
@@ -334,16 +334,16 @@ TERMINAL \ADC:Net_458\ : bit;
 TERMINAL \ADC:vrefBus_3\ : bit;
 TERMINAL \ADC:Net_459\ : bit;
 TERMINAL \ADC:Net_1448\ : bit;
-SIGNAL Net_242 : bit;
-TERMINAL Net_243_0 : bit;
-TERMINAL Net_243_1 : bit;
+SIGNAL Net_253 : bit;
+TERMINAL Net_254_0 : bit;
+TERMINAL Net_254_1 : bit;
 TERMINAL \ADC:Net_1379\ : bit;
 TERMINAL \ADC:Net_1385\ : bit;
 TERMINAL \ADC:Net_1388\ : bit;
 TERMINAL \ADC:Net_1382\ : bit;
 TERMINAL \ADC:Net_102\ : bit;
-TERMINAL Net_244 : bit;
-TERMINAL Net_241 : bit;
+TERMINAL Net_255 : bit;
+TERMINAL Net_252 : bit;
 SIGNAL one : bit;
 SIGNAL zero : bit;
 SIGNAL tmpFB_0__Pin_1_net_0 : bit;
@@ -411,9 +411,9 @@ TERMINAL \I2C:tmpSIOVREF__scl_net_0\ : bit;
 SIGNAL \I2C:tmpFB_0__sda_net_0\ : bit;
 TERMINAL \I2C:tmpSIOVREF__sda_net_0\ : bit;
 SIGNAL \RTC_1:Net_3\ : bit;
-SIGNAL Net_167 : bit;
-SIGNAL Net_166 : bit;
-SIGNAL Net_165 : bit;
+SIGNAL Net_258 : bit;
+SIGNAL Net_257 : bit;
+SIGNAL Net_256 : bit;
 SIGNAL \BLE:Net_1\ : bit;
 SIGNAL Net_123 : bit;
 SIGNAL tmpFB_0__Pin_3_net_0 : bit;
@@ -515,14 +515,14 @@ zero <=  ('0') ;
 		vminus=>\ADC:muxoutMinus\,
 		vref=>\ADC:vref\,
 		ext_vref=>\ADC:Net_408\,
-		dsi_sar_sample_done=>Net_235,
-		dsi_sar_chan_id_valid=>Net_237,
-		dsi_sar_data_valid=>Net_239,
-		tr_sar_out=>Net_236,
-		dsi_sar_data=>(Net_240_11, Net_240_10, Net_240_9, Net_240_8,
-			Net_240_7, Net_240_6, Net_240_5, Net_240_4,
-			Net_240_3, Net_240_2, Net_240_1, Net_240_0),
-		dsi_sar_chan_id=>(Net_238_3, Net_238_2, Net_238_1, Net_238_0),
+		dsi_sar_sample_done=>Net_246,
+		dsi_sar_chan_id_valid=>Net_248,
+		dsi_sar_data_valid=>Net_250,
+		tr_sar_out=>Net_247,
+		dsi_sar_data=>(Net_251_11, Net_251_10, Net_251_9, Net_251_8,
+			Net_251_7, Net_251_6, Net_251_5, Net_251_4,
+			Net_251_3, Net_251_2, Net_251_1, Net_251_0),
+		dsi_sar_chan_id=>(Net_249_3, Net_249_2, Net_249_1, Net_249_0),
 		dsi_sar_cfg_st_sel=>(zero, zero),
 		dsi_sar_cfg_average=>zero,
 		dsi_sar_cfg_differential=>zero,
@@ -1492,9 +1492,9 @@ zero <=  ('0') ;
 \ADC:cy_analog_noconnect_87\:cy_analog_noconnect_v1_0
 	PORT MAP(noconnect=>\ADC:Net_1448\);
 \ADC:cy_analog_noconnect_fvint\:cy_analog_noconnect_v1_0
-	PORT MAP(noconnect=>Net_243_0);
+	PORT MAP(noconnect=>Net_254_0);
 \ADC:cy_analog_noconnect_fvint_1\:cy_analog_noconnect_v1_0
-	PORT MAP(noconnect=>Net_243_1);
+	PORT MAP(noconnect=>Net_254_1);
 \ADC:vRef_4\:cy_vref_v1_0
 	GENERIC MAP(guid=>"6E0C5DC9-D531-4D01-9B49-536487FE4A82",
 		name=>"Bandgap Reference",
@@ -1530,8 +1530,8 @@ zero <=  ('0') ;
 \ADC:vagnd__cy_connect_v1_0\:cy_connect_v1_0
 	GENERIC MAP(sig_width=>1,
 		is_net_join=>'0')
-	PORT MAP(signal1=>Net_244,
-		signal2=>Net_241);
+	PORT MAP(signal1=>Net_255,
+		signal2=>Net_252);
 Pin_1:cy_mxs40_gpio_v1_0
 	GENERIC MAP(cy_registers=>"",
 		width=>1,
@@ -1751,9 +1751,9 @@ Pin_2:cy_mxs40_gpio_v1_0
 \BLE:cy_mxs40_ble\:cy_mxs40_ble_v1_0
 	GENERIC MAP(cy_registers=>"",
 		low_power=>'1')
-	PORT MAP(ext_pa_lna_chip_en_out=>Net_167,
-		ext_lna_rx_ctl_out=>Net_166,
-		ext_pa_tx_ctl_out=>Net_165,
+	PORT MAP(ext_pa_lna_chip_en_out=>Net_258,
+		ext_lna_rx_ctl_out=>Net_257,
+		ext_pa_tx_ctl_out=>Net_256,
 		interrupt=>\BLE:Net_1\);
 \BLE:bless_isr\:cy_mxs40_isr_v1_0
 	GENERIC MAP(cy_registers=>"",

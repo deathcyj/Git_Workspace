@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file CY_BLE.c
-* \version 2.10
+* \version 2.20
 * 
 * \brief
 *  This file contains the source code of initialization of the config structure
@@ -8,7 +8,7 @@
 * 
 ********************************************************************************
 * \copyright
-* Copyright 2017-2018, Cypress Semiconductor Corporation.  All rights reserved.
+* Copyright 2017-2019, Cypress Semiconductor Corporation.  All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -337,7 +337,6 @@ static const cy_stc_ble_gatts_db_t cy_ble_gattDB[0x17u] = {
 
 #endif /* CY_BLE_MODE_PROFILE */
 
-#if (CY_BLE_GAP_ROLE_CENTRAL || CY_BLE_GAP_ROLE_PERIPHERAL)
 /** Initialize BLE configuration parameters structure */
 static const cy_stc_ble_params_t cy_ble_params =
 {
@@ -351,7 +350,6 @@ static const cy_stc_ble_params_t cy_ble_params =
     
         .gattDbIndexCount                   = 0x0017u,
 };
-#endif  /* (CY_BLE_GAP_ROLE_CENTRAL || CY_BLE_GAP_ROLE_PERIPHERAL) */
 
 cy_stc_ble_gap_bd_addr_t cy_ble_deviceAddress = {{0x00u, 0x00u, 0x00u, 0x50u, 0xA0u, 0x00u}, 0x00u };
 
@@ -407,12 +405,8 @@ cy_stc_ble_config_t cy_ble_config =
         .authInfo = NULL,
     #endif /* (CY_BLE_GAP_ROLE_CENTRAL || CY_BLE_GAP_ROLE_PERIPHERAL */
 
-    #if (CY_BLE_GAP_ROLE_CENTRAL || CY_BLE_GAP_ROLE_PERIPHERAL)
-        /* Initialize the BLE configuration parameters structure */
-        .params   = &cy_ble_params,
-    #else
-        .params = NULL,
-    #endif /* (CY_BLE_GAP_ROLE_CENTRAL || CY_BLE_GAP_ROLE_PERIPHERAL */
+    /* Initialize the BLE configuration parameters structure */
+    .params   = &cy_ble_params,
 
     /* An application layer event callback function to receive service events from the BLE Component. */
     .callbackFunc   = NULL,

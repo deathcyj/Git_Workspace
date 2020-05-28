@@ -123,12 +123,6 @@
     #include "cy8c6247bfi_d54.h"
 #elif defined (CYBLE_416045_02)
     #include "cyble_416045_02.h"
-#elif defined (CY8C6336LQI_BLF02)
-    #include "cy8c6336lqi_blf02.h"
-#elif defined (CY8C6336LQI_BLF42)
-    #include "cy8c6336lqi_blf42.h"
-#elif defined (CY8C6347LQI_BLD52)
-    #include "cy8c6347lqi_bld52.h"
 #elif defined (CY8C624ABZI_D44)
     #include "cy8c624abzi_d44.h"
 #elif defined (CY8C624AAZI_D44)
