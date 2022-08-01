@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 this is branch master.do something.
-=======
-this is newbranch.
->>>>>>> newbranch
-=======
-this is a test.
->>>>>>> testing
