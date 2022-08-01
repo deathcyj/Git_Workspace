@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 this is branch master.do something.
+=======
+this is newbranch.
+>>>>>>> newbranch
